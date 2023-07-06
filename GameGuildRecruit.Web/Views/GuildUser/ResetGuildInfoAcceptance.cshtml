@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Reset Guild Info Acceptance";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        btn-text-left {
+            text-align: left;
+        }
+
+        btn-text-right {
+            text-align: right;
+        }
+
+        body {
+            background-image: url("/Img/Background/BG10.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <h2 class="text-center" style="color:black">@ViewBag.Title</h2>
+    <hr />
+    <div class="text-center">
+        <h1 class="bs-danger text-warning">Are You Sure You Want To Reset Guild Info?</h1>
+        <hr/>
+        <h1 class="bs-danger text-warning">If You Reset You Will Lose All The Contacts!</h1>
+        <hr />
+        <form class="mb-3" asp-controller="GuildUser" asp-action="ResetGuildInfo">
+            <input class="btn btn-danger" type="submit" value="Reset Guild Info" />
+        </form>
+    </div>
+  
+
+   
+
+
+</body>
+</html>
+
+
+

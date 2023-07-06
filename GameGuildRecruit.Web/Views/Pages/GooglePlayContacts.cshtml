@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ContactPlayerViewModel>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("/Img/GooglePlay/GP5.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .box {
+            width: 210px;
+            height: 90px;
+            overflow: scroll;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <div class="text-center row">
+        @foreach (var contact in Model)
+        {
+            <div class="card col-4" style="width: 14rem;">
+                @if (contact.Feedback != null)
+                {
+                    <form class="input-group-sm" asp-controller="Pages" asp-action="GooglePlayGetContactFeedback" asp-route-id="@contact.Id">
+                        <input type="submit" value="See Feedback" class="fs-6 btn btn-outline-info mb-3 p-2" />
+                    </form>
+                }
+                else
+                {
+                    <button type="button" class="btn btn-secondary" disabled>Stil No Feedback</button>
+                }
+                <div class="card-header">@contact.NickName</div>
+                <a class="link-info" href="@contact.UrlLink" style="height: 1rem;" target="_blank">Visit @contact.NickName Info Page</a>
+                @*<div class="card-body text-primary" style="height: 3rem;">
+                    <h6 class="card-title mt-1"> Candidat In "@contact.GuildName" Guild</h6>
+                </div>*@
+                <hr />
+                <div class="box text-primary">@contact.Description</div>
+                @if (contact.IsAccepted == true)
+                {
+                    <button type="button" class="btn btn-success" disabled>Contact is Accept</button>
+                }
+                else if (contact.IsAccepted == null)
+                {
+                    <button type="button" class="btn btn-secondary" disabled>Waiting For Approval</button>
+                }
+                else
+                {
+                    <button type="button" class="btn btn-danger" disabled>Contact is Rejected</button>
+                }
+            </div>
+        }
+    </div>
+
+
+
+</body>
+</html>

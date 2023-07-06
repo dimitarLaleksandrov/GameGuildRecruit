@@ -1,0 +1,57 @@
+﻿@model ContactPlayerFormModel
+@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewBag.Title = "ContactFeedback";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("/Img/Diablo/D11.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+    </header>
+   @* <div>
+        <h2 class="display-16 text-center" style="color:black">@Model.NickName</h2>
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Main Page</a>
+    </div>*@
+    <hr />
+    <div class="display-16 text-center">
+        <a class="" style="height: 3rem; color:black" href="@Model.UrlLink" target="_blank">Visit "@Model.UrlLink" Info Page</a>
+    </div>
+    <div class="display-16 text-center">
+        <div class="card-body text-primary">
+            <p class="fs-2" style="color:black">Contact Description</p>
+            <h3 class="card-title mt-1" style="color:black">@Model.Description</h3>
+        </div>
+    </div>
+    <hr />
+    @if (Model.Feedback != null)
+    {
+        <div class="display-16 text-center">
+            <div class="card-body text-primary">
+                <p class="fs-2" style="color:black">Feedback</p>
+                <h3 class="card-title mt-1" style="color:black">@Model.Feedback</h3>
+            </div>
+        </div>
+    }
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,30 @@
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\bin\Debug\net6.0\GameGuildRecruit.Web.Data.Models.deps.json
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\bin\Debug\net6.0\GameGuildRecruit.Web.Data.Models.dll
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\bin\Debug\net6.0\GameGuildRecruit.Web.Data.Models.pdb
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\bin\Debug\net6.0\GameGuildRecruit.Web.Common.dll
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\bin\Debug\net6.0\GameGuildRecruit.Web.Common.pdb
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.csproj.AssemblyReference.cache
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.AssemblyInfoInputs.cache
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.AssemblyInfo.cs
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.csproj.CoreCompileInputs.cache
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.csproj.CopyComplete
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.dll
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\refint\GameGuildRecruit.Web.Data.Models.dll
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.pdb
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\ref\GameGuildRecruit.Web.Data.Models.dll
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\bin\Debug\net6.0\GameGuildRecruit.Web.Data.Models.deps.json
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\bin\Debug\net6.0\GameGuildRecruit.Web.Data.Models.dll
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\bin\Debug\net6.0\GameGuildRecruit.Web.Data.Models.pdb
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\bin\Debug\net6.0\GameGuildRecruit.Web.Common.dll
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\bin\Debug\net6.0\GameGuildRecruit.Web.Common.pdb
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.csproj.AssemblyReference.cache
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.AssemblyInfoInputs.cache
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.AssemblyInfo.cs
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.csproj.CoreCompileInputs.cache
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.csproj.CopyComplete
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.dll
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\refint\GameGuildRecruit.Web.Data.Models.dll
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\GameGuildRecruit.Web.Data.Models.pdb
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Data.Models\obj\Debug\net6.0\ref\GameGuildRecruit.Web.Data.Models.dll

@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GameGuildRecruitApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GameGuildRecruitApp.styles.css" asp-append-version="true" />
+    <style>
+
+
+        body {
+            background-image: url("/Img/Background/Arbiter.webp");
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="text-center">
+            <h1 class="display-16" style="color:darkcyan">A R B I T E R </h1>
+            <content class="" style="">
+                <div id="carouselExampleInterval" class="carousel slide align-content-md-center" data-bs-ride="carousel">
+                    <div class="carousel-inner" style="background-size:revert-layer">
+                        <div class="carousel-item active" data-bs-interval="2500">
+                            <a class="btn" href="/Pages/WoWPage">
+                                <img class="object-fit-cover border rounded" src="/img/wow/wowalexstrasza.webp" height="250" width="550">
+                                <h2 style="color:cadetblue">World of Warcraft</h2>
+                            </a>
+                            <div class="desc"></div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2500">
+                            <a class="btn" href="/Pages/StarCraftPage">
+                                <img class="object-fit-cover border rounded" src="/img/sc/1.jpg" height="250" width="550">
+                                <h2 style="color:cyan">StarCraft</h2>
+                            </a>
+                            <div class="desc"></div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2500">
+                            <a class="btn" href="/Pages/DiabloPage">
+                                <img class="object-fit-cover border rounded" src="/img/diablo/diablo.png" height="250" width="550">
+                                <h2 style="color:red">D I A B L O</h2>
+                            </a>
+                            <div class="desc"></div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2500">
+                            <a class="btn" href="/Pages/GooglePlayPage">
+                                <img class="object-fit-cover border rounded" src="/img/GooglePlay/GP6.jpg" height="250" width="550">
+                                <h2 style="color:forestgreen">Google Play</h2>
+                            </a>
+                            <div class="desc"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+            </content>
+        </div>
+    </header>
+</body>
+
+
+</html>

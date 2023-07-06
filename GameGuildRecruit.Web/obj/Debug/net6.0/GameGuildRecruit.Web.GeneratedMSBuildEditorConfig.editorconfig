@@ -1,0 +1,189 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GameGuildRecruit.Web
+build_property.RootNamespace = GameGuildRecruit.Web
+build_property.ProjectDir = D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Contact/AddContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxBZGRDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Contact/CreateContactFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDcmVhdGVDb250YWN0RmVlZGJhY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Contact/GetUserWithSameGameContactFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxHZXRVc2VyV2l0aFNhbWVHYW1lQ29udGFjdEZlZWRiYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Contact/UserContacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxVc2VyQ29udGFjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/GuildUser/ChooseAvatar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXENob29zZUF2YXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/GuildUser/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/GuildUser/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/GuildUser/EmptyGuildInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXEVtcHR5R3VpbGRJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/GuildUser/MyContacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXE15Q29udGFjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/GuildUser/ResetGuildInfoAcceptance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXFJlc2V0R3VpbGRJbmZvQWNjZXB0YW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/GuildUser/UsersWithTheSameGame.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXFVzZXJzV2l0aFRoZVNhbWVHYW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/DiabloContacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcRGlhYmxvQ29udGFjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/DiabloGetContactFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcRGlhYmxvR2V0Q29udGFjdEZlZWRiYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/DiabloPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcRGlhYmxvUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/GooglePlayContacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcR29vZ2xlUGxheUNvbnRhY3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/GooglePlayGetContactFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcR29vZ2xlUGxheUdldENvbnRhY3RGZWVkYmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/GooglePlayPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcR29vZ2xlUGxheVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/StarCraftContacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcU3RhckNyYWZ0Q29udGFjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/StarCraftGetContactFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcU3RhckNyYWZ0R2V0Q29udGFjdEZlZWRiYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/StarCraftPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcU3RhckNyYWZ0UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/WoWContacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcV29XQ29udGFjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/WoWGetContactFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcV29XR2V0Q29udGFjdEZlZWRiYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/WoWPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcV29XUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/_DiabloGuildUsersPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EaWFibG9HdWlsZFVzZXJzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/_GooglePlayGuildUsersPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Hb29nbGVQbGF5R3VpbGRVc2Vyc1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/_GuildUsersPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9HdWlsZFVzZXJzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/_StarCraftGuildUsersPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdGFyQ3JhZnRHdWlsZFVzZXJzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/_WoWGuildUsersPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Xb1dHdWlsZFVzZXJzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-g1w28h88ol

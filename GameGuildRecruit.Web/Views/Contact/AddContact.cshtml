@@ -1,0 +1,64 @@
+﻿@model ContactPlayerFormModel
+@using GameGuildRecruit.Web.ViewModels.ContactPlayer;
+@using Microsoft.AspNetCore.Identity
+@{
+    ViewBag.Title = "Make Contact To The Guild";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("/Img/Background/SindIn.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    
+        
+    </style>
+</head>
+
+
+<body>
+    <header>
+
+    </header>
+    <h2 class="display-16 text-center" style="color:darkcyan">@ViewBag.Title</h2>
+    <div class="row">
+        <div class="row">
+            <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+                <form asp-controller="Contact" asp-action="AddContact" method="post">
+                    <div class="mb-3">
+                        <label asp-for="@Model.NickName" class="form-label" style="color:darkcyan">NickName</label>
+                        <input asp-for="@Model.NickName" class="form-control" aria-required="true" />
+                        <span asp-validation-for="@Model.NickName" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.UrlLink" class="form-label" style="color:darkcyan">Url Link</label>
+                        <input asp-for="@Model.UrlLink" class="form-control" aria-required="true" />
+                        <span asp-validation-for="@Model.UrlLink" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.Description" class="form-label" style="color:darkcyan">Description</label>
+                        <textarea asp-for="@Model.Description" class="form-control" aria-required="true" rows="5"></textarea>
+                        <span asp-validation-for="@Model.Description" class="text-danger"></span>
+                    </div>
+                    <form class="input-group-sm" asp-controller="Contact" asp-action="AddContact" method="post" asp-route-id="@Model.Id">
+                        <input type="submit" value="Make Contact" class="fs-6 btn btn-warning mb-3 p-2" />
+                    </form>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameGuildRecruit.Web.Common\GameGuildRecruit.Web.Common.csproj" />
+    <ProjectReference Include="..\GameGuildRecruit.Web.Data.Models\GameGuildRecruit.Web.Data.Models.csproj" />
+    <ProjectReference Include="..\GameGuildRecruit.Web.Data\GameGuildRecruit.Web.Data.csproj" />
+    <ProjectReference Include="..\GameGuildRecruit.Web.ViewModels\GameGuildRecruit.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

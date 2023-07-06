@@ -1,0 +1,24 @@
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\bin\Debug\net6.0\GameGuildRecruit.Web.Common.deps.json
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\bin\Debug\net6.0\GameGuildRecruit.Web.Common.dll
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\bin\Debug\net6.0\GameGuildRecruit.Web.Common.pdb
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.csproj.AssemblyReference.cache
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.AssemblyInfoInputs.cache
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.AssemblyInfo.cs
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.csproj.CoreCompileInputs.cache
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.dll
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\obj\Debug\net6.0\refint\GameGuildRecruit.Web.Common.dll
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.pdb
+D:\Coding\My First Web Project v 6.0\GameGuildRecruit.Web\GameGuildRecruit.Web.Common\obj\Debug\net6.0\ref\GameGuildRecruit.Web.Common.dll
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\bin\Debug\net6.0\GameGuildRecruit.Web.Common.deps.json
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\bin\Debug\net6.0\GameGuildRecruit.Web.Common.dll
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\bin\Debug\net6.0\GameGuildRecruit.Web.Common.pdb
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.csproj.AssemblyReference.cache
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.AssemblyInfoInputs.cache
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.AssemblyInfo.cs
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.csproj.CoreCompileInputs.cache
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.dll
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\obj\Debug\net6.0\refint\GameGuildRecruit.Web.Common.dll
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\obj\Debug\net6.0\GameGuildRecruit.Web.Common.pdb
+D:\Coding\Game Guild Recruit Web Project\GameGuildRecruit.Web.Common\obj\Debug\net6.0\ref\GameGuildRecruit.Web.Common.dll

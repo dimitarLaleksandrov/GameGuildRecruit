@@ -1,0 +1,68 @@
+﻿@model ContactPlayerFormModel
+@using GameGuildRecruit.Web.ViewModels.ContactPlayer;
+@using Microsoft.AspNetCore.Identity
+@{
+    ViewBag.Title = "ContactFeedback";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("/Img/Background/Game4Life.jpg");
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-size: 50% 50%;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+    </header>
+    <h2 class="display-16 text-center" style="color:darkcyan">@Model.NickName</h2>
+    <hr />
+    <hr />
+    <div class="display-16 text-center">
+        <a class="link-info" href="@Model.UrlLink" style="height: 3rem;" target="_blank">Visit @Model.UrlLink Info Page</a>
+    </div>
+    <div class="display-16 text-center">
+        <div class="card-body text-primary">
+            <p class="fs-2" style="color:darkcyan">Contact Description</p>
+            <h3 class="card-title mt-1" style="color:darkcyan">@Model.Description</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="row">
+            <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+                <form asp-controller="Contact" asp-action="AddContactFeedback" method="post">
+                    <div class="mb-3">
+                        <label asp-for="@Model.Feedback" class="form-label" style="color:darkcyan">Feedback</label>
+                        <textarea asp-for="@Model.Feedback" class="form-control" aria-required="true" rows="5"></textarea>
+                        <span asp-validation-for="@Model.Feedback" class="text-danger"></span>
+                    </div>
+                    <form class="input-group-sm" asp-controller="Contact" asp-action="AddContactFeedback" asp-route-id="@Model.Id">
+                        <input type="submit" btn-warning" asp-controller="Contact" asp-action="AddContactFeedback" asp-route-id="@Model.Id" value="Feedback" class="fs-6 btn btn-warning mb-3 p-2" />
+                        <a class="btn btn-outline-info  position-relative top-0 start-50" asp-controller="GuildUser" asp-action="MyContacts">Go To MyContacts</a>
+                    </form>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+</body>
+</html>
+
+@* type="submit"*@
+

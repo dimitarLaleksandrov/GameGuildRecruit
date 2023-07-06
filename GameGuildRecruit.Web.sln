@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web", "GameGuildRecruit.Web\GameGuildRecruit.Web.csproj", "{5569752C-1BA6-4003-81F0-14DDE28541EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web.Data.Models", "GameGuildRecruit.Web.Data.Models\GameGuildRecruit.Web.Data.Models.csproj", "{7B5291A8-B4DA-44E8-84D8-901E390A24D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web.Common", "GameGuildRecruit.Web.Common\GameGuildRecruit.Web.Common.csproj", "{9EE1A0F9-246E-4AFF-9CF6-E29A10AF25B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web.Data", "GameGuildRecruit.Web.Data\GameGuildRecruit.Web.Data.csproj", "{A45B95D9-874E-4E8A-AB05-292DE32B477D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web.ViewModels", "GameGuildRecruit.Web.ViewModels\GameGuildRecruit.Web.ViewModels.csproj", "{5529D173-10EB-465F-AEF9-5EF79F7B56EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web.Services", "GameGuildRecruit.Web.Services\GameGuildRecruit.Web.Services.csproj", "{88B2E351-D94F-4231-B960-926618E02361}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5569752C-1BA6-4003-81F0-14DDE28541EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5569752C-1BA6-4003-81F0-14DDE28541EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5569752C-1BA6-4003-81F0-14DDE28541EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5569752C-1BA6-4003-81F0-14DDE28541EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5291A8-B4DA-44E8-84D8-901E390A24D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5291A8-B4DA-44E8-84D8-901E390A24D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5291A8-B4DA-44E8-84D8-901E390A24D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5291A8-B4DA-44E8-84D8-901E390A24D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EE1A0F9-246E-4AFF-9CF6-E29A10AF25B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE1A0F9-246E-4AFF-9CF6-E29A10AF25B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE1A0F9-246E-4AFF-9CF6-E29A10AF25B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE1A0F9-246E-4AFF-9CF6-E29A10AF25B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A45B95D9-874E-4E8A-AB05-292DE32B477D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A45B95D9-874E-4E8A-AB05-292DE32B477D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A45B95D9-874E-4E8A-AB05-292DE32B477D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A45B95D9-874E-4E8A-AB05-292DE32B477D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5529D173-10EB-465F-AEF9-5EF79F7B56EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5529D173-10EB-465F-AEF9-5EF79F7B56EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5529D173-10EB-465F-AEF9-5EF79F7B56EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5529D173-10EB-465F-AEF9-5EF79F7B56EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B2E351-D94F-4231-B960-926618E02361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B2E351-D94F-4231-B960-926618E02361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B2E351-D94F-4231-B960-926618E02361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B2E351-D94F-4231-B960-926618E02361}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E754D33-38E0-4FC8-A9BC-826E5DBFC7F2}
+	EndGlobalSection
+EndGlobal

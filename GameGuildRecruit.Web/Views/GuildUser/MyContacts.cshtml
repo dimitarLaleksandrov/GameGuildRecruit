@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ContactPlayerViewModel>
+@using Microsoft.AspNetCore.Identity
+@{
+    ViewBag.Title = "My Contact's";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("/Img/Background/Contact+Us.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .box {
+            width: 210px;
+            height: 90px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <h2 class="text-center" style="color:darkcyan">@ViewBag.Title</h2>
+    <div class="text-center row">
+        @foreach (var contact in Model)
+        {
+            <div class="card col-4" style="width: 14rem;" method="post">
+                <form class="input-group-sm" asp-controller="Contact" asp-action="CreateContactFeedback" asp-route-id="@contact.Id">
+                    <input type="submit" value="Feedback" class="fs-6 btn btn-outline-info mb-3 p-2" />
+                </form>
+                @* <a class="btn btn-info" asp-controller="Contact" asp-action="CreateContactFeedback"  asp-route-id="@contact.Id">Feedback</a>*@
+                <div class="card-header">@contact.NickName</div>
+                <a class="link-info" href="@contact.UrlLink" style="height: 1rem;" target="_blank">Visit @contact.NickName Info Page</a>
+                <hr />
+                <div class="box text-primary">@contact.Description</div>
+                @if (contact.IsAccepted == true)
+                {
+                    <button type="button" class="btn btn-success" disabled>Contact is Accept</button>
+                }
+                else if (contact.IsAccepted == null)
+                {
+                    <a class="btn btn-outline-success" asp-area="" asp-controller="GuildUser" asp-action="AcceptContact" asp-route-id="@contact.Id">Accept Contact</a>
+                    <hr/>
+                    <a class="btn  btn-outline-danger" asp-area="" asp-controller="GuildUser" asp-action="RejectedContact" asp-route-id="@contact.Id">Rejected Contact</a>
+                }
+                else
+                {
+                    <button type="button" class="btn btn-danger" disabled>Contact is Rejected</button>
+                }
+                <hr />
+                <a class="btn btn-warning" asp-area="" asp-controller="Contact" method="post" asp-action="DeleteContact" asp-route-id="@contact.Id">Remove Contact</a>
+            </div>
+
+        }
+    </div>
+
+</body>
+</html>
