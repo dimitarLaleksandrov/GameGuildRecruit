@@ -15,7 +15,7 @@
 		factory( jQuery );
 	}
 }(function( $ ) {
-
+	
 $.extend( $.fn, {
 
 	// https://jqueryvalidation.org/validate/

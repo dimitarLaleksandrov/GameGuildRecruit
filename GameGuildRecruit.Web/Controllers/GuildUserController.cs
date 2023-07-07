@@ -119,6 +119,7 @@ namespace GameGuildRecruit.Web.Controllers
 
 
         [Authorize]
+        [HttpGet]
         public async Task<IActionResult> EmptyGuildInfo()
         {         
             return View();
@@ -151,19 +152,24 @@ namespace GameGuildRecruit.Web.Controllers
 
 
         [Authorize]
+        [HttpGet]
         public async Task<IActionResult> SelectAvatar()
-        {
-            var routeData = RouteData.Values.Values.ToArray();
-            var pixId = routeData[2]!.ToString();
+        {          
+            try
+            {
+                var routeData = RouteData.Values.Values.ToArray();
+                var pixId = routeData[2]!.ToString();
 
-            var userName = this.User.Identity!.Name;
-            var userModel = await userService.GetUserByUserNameAsync(userName!);
+                var userName = this.User.Identity!.Name;
 
-            await userService.SetUserAvatarAsync(userModel!, pixId!);
-
-
-            return RedirectToAction("Index", "Home");
-
+                var userModel = await userService.GetUserByUserNameAsync(userName!);
+                await userService.SetUserAvatarAsync(userModel, pixId!);
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("EmptyGuildInfo", "GuildUser");
+            }                  
         }
 
         [Authorize]
@@ -180,7 +186,7 @@ namespace GameGuildRecruit.Web.Controllers
         }
 
         [Authorize]
-        [HttpDelete]
+        [HttpPost]
         public async Task<IActionResult> ResetGuildInfo()
         {
             var userName = this.User.Identity!.Name;
