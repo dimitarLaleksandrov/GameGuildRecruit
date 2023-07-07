@@ -17,7 +17,7 @@
         }
 
         body {
-            background-image: url("/Img/Background/BG2.jpg");
+            background-image: url("/Img/Background/BG8.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
@@ -32,7 +32,7 @@
 <body>
     <header>
     </header>
-    <h2 class="text-center" style="color:teal">@ViewBag.Title</h2>
+    <h2 class="text-center" style="color:darkcyan">@ViewBag.Title</h2>
 
 
     <div class="row">
@@ -46,12 +46,12 @@
                 }
                 <form class="input-group-sm" asp-controller="GuildUser" asp-action="Edit">
                     <div class="mb-3">
-                        <label asp-for="@Model.NickName" class="form-label" style="color:darkcyan">NickName</label>
+                        <label asp-for="@Model.NickName" class="form-label" style="color:greenyellow">NickName</label>
                         <input asp-for="@Model.NickName" class="form-control" aria-required="true" />
                         <span asp-validation-for="@Model.NickName" class="text-danger"></span>
                     </div>
                     <div class="mb-3">
-                        <label asp-for="@Model.GameName" class="form-label" style="color:darkcyan">Game Name</label>
+                        <label asp-for="@Model.GameName" class="form-label" style="color:greenyellow">Game Name</label>
                         <select asp-for="@Model.GameName" class="form-select" name="GameName" aria-required="true">
                             <option selected>Open this select menu</option>
                             <option value="WorldOfWarcraft">World Of Warcraft</option>
@@ -64,7 +64,7 @@
                     @if (Model.GameName == "GooglePlay")
                     {
                         <div class="mb-3">
-                            <label asp-for="@Model.ServerName" class="form-label" style="color:darkcyan">GooglePlay Game Name</label>
+                            <label asp-for="@Model.ServerName" class="form-label" style="color:greenyellow">GooglePlay Game Name</label>
                             <input asp-for="@Model.ServerName" class="form-control" aria-required="true" />
                             <span asp-validation-for="@Model.ServerName" class="text-danger"></span>
                         </div>
@@ -72,23 +72,23 @@
                     else
                     {
                         <div class="mb-3">
-                            <label asp-for="@Model.ServerName" class="form-label" style="color:darkcyan">Server Name</label>
+                            <label asp-for="@Model.ServerName" class="form-label" style="color:greenyellow">Server Name</label>
                             <input asp-for="@Model.ServerName" class="form-control" aria-required="true" />
                             <span asp-validation-for="@Model.ServerName" class="text-danger"></span>
                         </div>
                     }
                     <div class="mb-3">
-                        <label asp-for="@Model.GuildName" class="form-label" style="color:darkcyan">Guild Name</label>
+                        <label asp-for="@Model.GuildName" class="form-label" style="color:greenyellow">Guild Name</label>
                         <input asp-for="@Model.GuildName" class="form-control" aria-required="true" />
                         <span asp-validation-for="@Model.GuildName" class="text-danger"></span>
                     </div>
                     <div class="mb-3">
-                        <label asp-for="@Model.UrlLink" class="form-label" style="color:darkcyan">Url Link</label>
+                        <label asp-for="@Model.UrlLink" class="form-label" style="color:greenyellow">Url Link</label>
                         <input asp-for="@Model.UrlLink" class="form-control" aria-required="true" />
                         <span asp-validation-for="@Model.UrlLink" class="text-danger"></span>
                     </div>
                     <div class="mb-3">
-                        <label asp-for="@Model.Description" class="form-label" style="color:darkcyan">Description</label>
+                        <label asp-for="@Model.Description" class="form-label" style="color:greenyellow">Description</label>
                         <textarea asp-for="@Model.Description" class="form-control" aria-required="true" rows="5"></textarea>
                         <span asp-validation-for="@Model.Description" class="text-danger"></span>
                     </div>                   
