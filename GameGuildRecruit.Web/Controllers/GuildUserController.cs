@@ -34,7 +34,7 @@ namespace GameGuildRecruit.Web.Controllers
                 {
                     if (userGuildExist.UserName == userName)
                     {
-                        return RedirectToAction("Edit", "Errors");
+                        return RedirectToAction("Edit", "GuildUser");
                     }
                 }
 
@@ -141,7 +141,7 @@ namespace GameGuildRecruit.Web.Controllers
             catch (Exception)
             {
 
-                return RedirectToAction("GetContactErrors", "Errors");
+                return RedirectToAction("EmptyGuildInfo", "Errors");
             }
             
         }
