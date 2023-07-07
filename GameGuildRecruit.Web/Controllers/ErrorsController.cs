@@ -33,5 +33,12 @@ namespace GameGuildRecruit.Web.Controllers
         {
             return View();
         }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult SetAvatarError()
+        {
+            return View();
+        }
     }
 }

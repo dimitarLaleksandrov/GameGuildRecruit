@@ -211,13 +211,18 @@ namespace GameGuildRecruit.Web.Controllers
         public async Task<IActionResult> SetAvatar()
         {
             var userName = this.User.Identity!.Name;
-            var userModel = await userService.GetUserByUserNameAsync(userName!);
+            try
+            {
+                var userModel = await userService.GetUserByUserNameAsync(userName!);
 
-            var userAvatarPix = userModel!.UserAvatarPix;
+                var userAvatarPix = userModel!.UserAvatarPix;
 
-
-            return View(userAvatarPix);
-
+                return View(userAvatarPix);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("SetAvatarError", "Errors");
+            }          
         }
 
         [Authorize]
@@ -267,7 +272,7 @@ namespace GameGuildRecruit.Web.Controllers
                 return RedirectToAction("EmptyGuildInfo", "Errors");
             }
 
-            GuildUsersPageServiceModel usersWhitTheSameGame = await userService.GetUsersWithTheSameGameAsync(queryModel, user.GameName);
+            var usersWhitTheSameGame = await userService.GetUsersWithTheSameGameAsync(queryModel, user.GameName);
 
             queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
             queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
