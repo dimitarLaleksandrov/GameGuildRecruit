@@ -228,14 +228,22 @@ namespace GameGuildRecruit.Web.Controllers
 
             var userModel = await userService.GetUserByUserNameAsync(userName!);
 
-            if (userModel ==null)
+            if (userModel == null)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("EmptyGuildInfo", "Errors");
             }
 
-            await userService.RemoveGuildInfoAsync(userModel);
+            try
+            {
+                await userService.RemoveGuildInfoAsync(userModel);
 
-            return RedirectToAction("MyContacts", "GuildUser");
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("RemoveGuildInfoError", "Errors");
+            }         
         }
 
 

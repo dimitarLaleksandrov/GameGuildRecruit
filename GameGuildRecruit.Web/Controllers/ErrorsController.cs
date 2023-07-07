@@ -26,5 +26,12 @@ namespace GameGuildRecruit.Web.Controllers
         {
             return View();
         }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult RemoveGuildInfoError()
+        {
+            return View();
+        }
     }
 }
