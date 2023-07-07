@@ -10,14 +10,14 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpGet]
-        public async Task<IActionResult> EmptyGuildInfo()
+        public IActionResult EmptyGuildInfo()
         {
             return View();
         }
 
         [Authorize]
         [HttpGet]
-        public async Task<IActionResult> CreateAndEditError()
+        public IActionResult CreateAndEditError()
         {
             return View();
         }
