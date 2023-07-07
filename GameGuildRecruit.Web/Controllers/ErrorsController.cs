@@ -6,8 +6,6 @@ namespace GameGuildRecruit.Web.Controllers
     public class ErrorsController : BaseController
     {
 
-
-
         [Authorize]
         [HttpGet]
         public IActionResult EmptyGuildInfo()
@@ -18,6 +16,13 @@ namespace GameGuildRecruit.Web.Controllers
         [Authorize]
         [HttpGet]
         public IActionResult CreateAndEditError()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult GetContactErrors()
         {
             return View();
         }

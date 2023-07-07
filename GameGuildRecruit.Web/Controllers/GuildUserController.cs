@@ -120,7 +120,6 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpGet]
-
         public async Task<IActionResult> MyContacts()
         {
             var userName = this.User.Identity!.Name;
@@ -142,7 +141,7 @@ namespace GameGuildRecruit.Web.Controllers
             catch (Exception)
             {
 
-                return RedirectToAction("EmptyGuildInfo", "Errors");
+                return RedirectToAction("GetContactErrors", "Errors");
             }
             
         }
@@ -150,17 +149,31 @@ namespace GameGuildRecruit.Web.Controllers
         [Authorize]
         public async Task<IActionResult> AcceptContact(Guid id)
         {
-            await userService.GetContactForAcceptByIdAsync(id);
+            try
+            {
+                await userService.GetContactForAcceptByIdAsync(id);
 
-            return RedirectToAction("MyContacts", "GuildUser");
+                return RedirectToAction("MyContacts", "GuildUser");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactErrors", "Errors");
+            }         
         }
 
         [Authorize]
         public async Task<IActionResult> RejectedContact(Guid id)
         {
-            await userService.GetContactForRejectedByIdAsync(id);
+            try
+            {
+                await userService.GetContactForRejectedByIdAsync(id);
 
-            return RedirectToAction("MyContacts", "GuildUser");
+                return RedirectToAction("MyContacts", "GuildUser");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactErrors", "Errors");
+            }         
         }
 
 
