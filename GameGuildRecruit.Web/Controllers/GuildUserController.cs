@@ -54,13 +54,13 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Guid id, GuildRecruitUserFormModel userModel)
         {
-            try
+            if (!ModelState.IsValid)
             {
-                if (!ModelState.IsValid)
-                {
-                    return View(userModel);
-                }
+                return View(userModel);
+            }
 
+            try
+            {             
                 var userName = this.User.Identity!.Name;
 
                 await userService.AddUserAsync(userModel, userName!, id);
@@ -98,15 +98,15 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(GuildRecruitUserFormModel userModel)
         {
-            try
+            if (!ModelState.IsValid)
             {
-                if (!ModelState.IsValid)
-                {
-                    return View(userModel);
-                }
+                return View(userModel);
+            }
 
-                var userName = this.User.Identity!.Name;
+            var userName = this.User.Identity!.Name;
 
+            try
+            {               
                 await userService.EditUserAsync(userModel, userName!);
 
                 return RedirectToAction("Index", "Home");
@@ -116,7 +116,6 @@ namespace GameGuildRecruit.Web.Controllers
 
                 return RedirectToAction("CreateAndEditError", "Errors");
             }
-
         }
 
         [Authorize]
@@ -128,15 +127,24 @@ namespace GameGuildRecruit.Web.Controllers
 
             var user = await userService.GetUserByUserNameForIdAsync(userName!);
 
-            if(user == null)
+            if (user == null)
             {
                 return RedirectToAction("EmptyGuildInfo", "Errors");
             }
 
-            var contactsModels = await userService.GetMyContactsByIdAsync(user.Id);
+            try
+            {
+                
+                var contactsModels = await userService.GetMyContactsByIdAsync(user.Id);
 
-            return View(contactsModels);
+                return View(contactsModels);
+            }
+            catch (Exception)
+            {
 
+                return RedirectToAction("EmptyGuildInfo", "Errors");
+            }
+            
         }
 
         [Authorize]
