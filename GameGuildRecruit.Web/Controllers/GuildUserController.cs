@@ -279,6 +279,6 @@ namespace GameGuildRecruit.Web.Controllers
 
             return View(queryModel);
         }
-
     }
 }
+
