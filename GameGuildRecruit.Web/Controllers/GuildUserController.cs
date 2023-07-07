@@ -34,7 +34,7 @@ namespace GameGuildRecruit.Web.Controllers
                 {
                     if (userGuildExist.UserName == userName)
                     {
-                        return RedirectToAction("Edit", "GuildUser");
+                        return RedirectToAction("Edit", "Errors");
                     }
                 }
 
@@ -45,7 +45,7 @@ namespace GameGuildRecruit.Web.Controllers
             catch (Exception)
             {
 
-                return RedirectToAction("CreateAndEditError", "GuildUser");
+                return RedirectToAction("CreateAndEditError", "Errors");
             }
         }
 
@@ -70,7 +70,7 @@ namespace GameGuildRecruit.Web.Controllers
             catch (Exception)
             {
 
-                return RedirectToAction("CreateAndEditError", "GuildUser");
+                return RedirectToAction("CreateAndEditError", "Errors");
             }
         }
 
@@ -90,7 +90,7 @@ namespace GameGuildRecruit.Web.Controllers
             catch (Exception)
             {
 
-                return RedirectToAction("CreateAndEditError", "GuildUser");
+                return RedirectToAction("CreateAndEditError", "Errors");
             }
         }
 
@@ -114,7 +114,7 @@ namespace GameGuildRecruit.Web.Controllers
             catch (Exception)
             {
 
-                return RedirectToAction("CreateAndEditError", "GuildUser");
+                return RedirectToAction("CreateAndEditError", "Errors");
             }
 
         }
