@@ -130,7 +130,7 @@ namespace GameGuildRecruit.Web.Controllers
 
             if(user == null)
             {
-                return RedirectToAction("EmptyGuildInfo", "GuildUser");
+                return RedirectToAction("EmptyGuildInfo", "Errors");
             }
 
             var contactsModels = await userService.GetMyContactsByIdAsync(user.Id);
@@ -138,15 +138,6 @@ namespace GameGuildRecruit.Web.Controllers
             return View(contactsModels);
 
         }
-
-
-        [Authorize]
-        [HttpGet]
-        public async Task<IActionResult> EmptyGuildInfo()
-        {         
-            return View();
-        }
-
 
         [Authorize]
         public async Task<IActionResult> AcceptContact(Guid id)
@@ -190,7 +181,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("EmptyGuildInfo", "GuildUser");
+                return RedirectToAction("EmptyGuildInfo", "Errors");
             }                  
         }
 
@@ -243,7 +234,7 @@ namespace GameGuildRecruit.Web.Controllers
 
             if (user == null)
             {
-                return RedirectToAction("EmptyGuildInfo", "GuildUser");
+                return RedirectToAction("EmptyGuildInfo", "Errors");
             }
 
             GuildUsersPageServiceModel usersWhitTheSameGame = await userService.GetUsersWithTheSameGameAsync(queryModel, user.GameName);
@@ -252,14 +243,6 @@ namespace GameGuildRecruit.Web.Controllers
             queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
 
             return View(queryModel);
-        }
-
-
-        [Authorize]
-        [HttpGet]
-        public async Task<IActionResult> CreateAndEditError()
-        {
-            return View();
         }
 
     }
