@@ -24,22 +24,29 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-
-            var userName = this.User.Identity!.Name;
-
-            var userGuildExist = await userService.GetUserByUserNameAsync(userName!);
-
-            if (userGuildExist != null)
+            try
             {
-                if (userGuildExist.UserName == userName)
+                var userName = this.User.Identity!.Name;
+
+                var userGuildExist = await userService.GetUserByUserNameAsync(userName!);
+
+                if (userGuildExist != null)
                 {
-                    return RedirectToAction("Edit", "GuildUser");
+                    if (userGuildExist.UserName == userName)
+                    {
+                        return RedirectToAction("Edit", "GuildUser");
+                    }
                 }
+
+                var userModel = await userService.GetNewUserModelAsync();
+
+                return View(userModel);
             }
+            catch (Exception)
+            {
 
-            var userModel = await userService.GetNewUserModelAsync();
-
-            return View(userModel);
+                return RedirectToAction("CreateAndEditError", "GuildUser");
+            }
         }
 
 
@@ -47,21 +54,24 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Guid id, GuildRecruitUserFormModel userModel)
         {
-
-            if (!ModelState.IsValid)
+            try
             {
-                return View(userModel);
+                if (!ModelState.IsValid)
+                {
+                    return View(userModel);
+                }
+
+                var userName = this.User.Identity!.Name;
+
+                await userService.AddUserAsync(userModel, userName!, id);
+
+                return RedirectToAction("Index", "Home");
             }
+            catch (Exception)
+            {
 
-            var userName = this.User.Identity!.Name;
-
-
-
-
-            await userService.AddUserAsync(userModel, userName!, id);
-
-            return RedirectToAction("Index", "Home");
-
+                return RedirectToAction("CreateAndEditError", "GuildUser");
+            }
         }
 
 
@@ -69,37 +79,49 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit()
         {
+            try
+            {
+                var userName = this.User.Identity!.Name;
 
-            var userName = this.User.Identity!.Name;
+                var user = await userService.GetUserByUserNameAsync(userName!);
 
-            var user = await userService.GetUserByUserNameAsync(userName!);
+                return View(user);
+            }
+            catch (Exception)
+            {
 
-            return View(user);
+                return RedirectToAction("CreateAndEditError", "GuildUser");
+            }
         }
-
 
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> Edit(GuildRecruitUserFormModel userModel)
         {
-
-            if (!ModelState.IsValid)
+            try
             {
-                return View(userModel);
+                if (!ModelState.IsValid)
+                {
+                    return View(userModel);
+                }
+
+                var userName = this.User.Identity!.Name;
+
+                await userService.EditUserAsync(userModel, userName!);
+
+                return RedirectToAction("Index", "Home");
             }
+            catch (Exception)
+            {
 
-            var userName = this.User.Identity!.Name;
-
-            await userService.EditUserAsync(userModel, userName!);
-
-            return RedirectToAction("Index", "Home");
+                return RedirectToAction("CreateAndEditError", "GuildUser");
+            }
 
         }
 
-
-        
-
         [Authorize]
+        [HttpGet]
+
         public async Task<IActionResult> MyContacts()
         {
             var userName = this.User.Identity!.Name;
@@ -230,6 +252,14 @@ namespace GameGuildRecruit.Web.Controllers
             queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
 
             return View(queryModel);
+        }
+
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> CreateAndEditError()
+        {
+            return View();
         }
 
     }

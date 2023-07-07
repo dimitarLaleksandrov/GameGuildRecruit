@@ -68,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/GuildUser/CreateAndEditError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXENyZWF0ZUFuZEVkaXRFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/GuildUser/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
