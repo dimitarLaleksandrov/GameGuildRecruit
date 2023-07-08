@@ -258,6 +258,7 @@ namespace GameGuildRecruit.Web.Controllers
 
 
         [Authorize]
+        [HttpPost]
         public IActionResult ResetGuildInfoAcceptance()
         {
             return View();
