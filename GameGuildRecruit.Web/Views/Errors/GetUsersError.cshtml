@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+
+@{
+    ViewBag.Title = "User Error";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("/Img/Background/Smash.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .box {
+            width: 210px;
+            height: 90px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <h2 class="text-center" style="color:yellow">@ViewBag.Title</h2>
+    <hr />
+    <div class="text-center row">
+        <h1 style="color:yellow">Some Error Occurred While Geting The Guild Users</h1>
+        <hr />
+        <h1 style="color:yellow">Please Try To Refresh The Page</h1>
+        <hr />
+        <h1 style="color:yellow">If The Error Persists Please Contact Via The Privacy Page</h1>
+    </div>
+
+</body>
+</html>
+
+

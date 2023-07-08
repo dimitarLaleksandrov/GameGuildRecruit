@@ -271,13 +271,21 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 return RedirectToAction("EmptyGuildInfo", "Errors");
             }
+            try
+            {
+                var usersWhitTheSameGame = await userService.GetUsersWithTheSameGameAsync(queryModel, user.GameName);
 
-            var usersWhitTheSameGame = await userService.GetUsersWithTheSameGameAsync(queryModel, user.GameName);
+                queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
+                queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
 
-            queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
-            queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
+                return View(queryModel);
+            }
+            catch (Exception)
+            {
 
-            return View(queryModel);
+                return RedirectToAction("GetUsersError", "Errors");
+            }
+          
         }
     }
 }
