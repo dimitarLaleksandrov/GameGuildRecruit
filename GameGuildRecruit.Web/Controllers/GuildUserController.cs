@@ -198,6 +198,11 @@ namespace GameGuildRecruit.Web.Controllers
             try
             {
                 var userModel = await userService.GetUserByUserNameAsync(userName!);
+                if(userModel == null)
+                {
+                    return RedirectToAction("GetUsersError", "Errors");
+                }
+
                 await userService.SetUserAvatarAsync(userModel, pixId!);
                 return RedirectToAction("Index", "Home");
             }

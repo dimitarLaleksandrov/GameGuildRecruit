@@ -22,9 +22,18 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpGet]
         public IActionResult AddContact(Guid id)
         {
-            var contactModel = contactService.GetNewContactModelAsync();
+            try
+            {
+                var contactModel = contactService.GetNewContactModelAsync();
 
-            return View(contactModel);
+                return View(contactModel);
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("AddingContactError", "Errors");
+            }
+           
         }
 
 
@@ -35,20 +44,29 @@ namespace GameGuildRecruit.Web.Controllers
 
             if (user == null)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("GetUsersError", "Errors");
             }
 
-            contactModel.Id = Guid.NewGuid();
+            try
+            {
+                contactModel.Id = Guid.NewGuid();
 
-            await contactService.CreateContactAsync(contactModel, user);
+                await contactService.CreateContactAsync(contactModel, user);
 
-            var contactId = contactModel.Id;
+                var contactId = contactModel.Id;
 
-            var userId = user.Id;
+                var userId = user.Id;
 
-            await contactService.AddContactToUserAsync(userId, contactId);
+                await contactService.AddContactToUserAsync(userId, contactId);
 
-            return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("AddingContactError", "Errors");
+
+            }
         }
 
 
@@ -58,12 +76,20 @@ namespace GameGuildRecruit.Web.Controllers
 
             if (contact == null)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("GetContactErrors", "Errors");
             }
 
-            await contactService.RemoveContactAsync(contact);
+            try
+            {
+                await contactService.RemoveContactAsync(contact);
 
-            return RedirectToAction("MyContacts", "GuildUser");
+                return RedirectToAction("MyContacts", "GuildUser");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("RemoveContactErrors", "Errors");
+            }
+
         }
 
         [HttpPost]
