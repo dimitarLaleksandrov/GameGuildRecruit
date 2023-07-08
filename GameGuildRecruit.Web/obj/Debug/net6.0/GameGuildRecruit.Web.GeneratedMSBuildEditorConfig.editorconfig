@@ -72,8 +72,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXEVtcHR5R3VpbGRJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/GetContactErrors.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXEdldENvbnRhY3RFcnJvcnMuY3NodG1s
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/GetContactError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXEdldENvbnRhY3RFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/GetUsersError.cshtml]

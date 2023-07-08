@@ -95,28 +95,52 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> UserContacts(Guid id)
         {
+            try
+            {
+                var contactsModels = await contactService.GetUserContactsAsync(id);
 
-            var contactsModels = await contactService.GetUserContactsAsync(id);
+                return View(contactsModels);
+            }
+            catch (Exception)
+            {
 
-            return View(contactsModels);
+                return RedirectToAction("GetContactError", "Errors");
+            }
+           
         }
 
         [HttpPost]
         public async Task<IActionResult> GetUserWithSameGameContactFeedback(Guid id)
         {
+            try
+            {
+                var contactModel = await contactService.GetContactForFeedbackByIdAsync(id);
 
-            var contactModel = await contactService.GetContactForFeedbackByIdAsync(id);
-
-            return View(contactModel);
+                return View(contactModel);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
+            
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateContactFeedback(Guid id)
         {
-            var userModel = await contactService.GetContactForFeedbackByIdAsync(id);
+            try
+            {
+                var userModel = await contactService.GetContactForFeedbackByIdAsync(id);
 
-            return View(userModel);
+                return View(userModel);
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("GetContactError", "Errors");
+            }
         }
+           
 
         [HttpPost]
         public async Task<IActionResult> AddContactFeedback(Guid id, ContactPlayerFormModel contactModel)
@@ -125,7 +149,7 @@ namespace GameGuildRecruit.Web.Controllers
 
             if (contactModel == null)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("GetContactError", "Errors");
             }
 
             return RedirectToAction("MyContacts", "GuildUser");

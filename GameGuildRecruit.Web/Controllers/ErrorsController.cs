@@ -22,7 +22,7 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpGet]
-        public IActionResult GetContactErrors()
+        public IActionResult GetContactError()
         {
             return View();
         }
@@ -44,6 +44,12 @@ namespace GameGuildRecruit.Web.Controllers
         [Authorize]
         [HttpGet]
         public IActionResult GetUsersError()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult RemoveContactErrors()
         {
             return View();
         }

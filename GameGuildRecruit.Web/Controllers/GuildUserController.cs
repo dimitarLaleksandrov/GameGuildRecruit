@@ -157,7 +157,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("GetContactErrors", "Errors");
+                return RedirectToAction("GetContactError", "Errors");
             }         
         }
 
@@ -172,7 +172,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("GetContactErrors", "Errors");
+                return RedirectToAction("GetContactError", "Errors");
             }         
         }
 
