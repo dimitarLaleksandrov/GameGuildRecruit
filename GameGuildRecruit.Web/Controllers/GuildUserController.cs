@@ -179,7 +179,7 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpGet]
-        public IActionResult ChooseAvatar()
+        public async Task<IActionResult> ChooseAvatar()
         {
             return View();
         }
@@ -259,7 +259,7 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult ResetGuildInfoAcceptance()
+        public async Task<IActionResult> ResetGuildInfoAcceptance()
         {
             return View();
         }

@@ -5,7 +5,7 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 {
     public interface IContactService
     {
-        ContactPlayerFormModel GetNewContactModelAsync();
+        Task<ContactPlayerFormModel> GetNewContactModelAsync();
 
         Task<GuildRecruitUserFormModel?> GetUserByIdAsync(Guid id);
 

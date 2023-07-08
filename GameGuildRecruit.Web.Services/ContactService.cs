@@ -109,7 +109,7 @@ namespace GameGuildRecruit.Web.Services
                 .FirstOrDefaultAsync();
         }
 
-        public ContactPlayerFormModel GetNewContactModelAsync()
+        public async Task<ContactPlayerFormModel> GetNewContactModelAsync()
         {
 
             var contactModel = new ContactPlayerFormModel()

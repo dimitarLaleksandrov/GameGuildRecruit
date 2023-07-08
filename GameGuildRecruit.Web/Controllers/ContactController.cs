@@ -20,11 +20,11 @@ namespace GameGuildRecruit.Web.Controllers
 
 
         [HttpGet]
-        public IActionResult AddContact(Guid id)
+        public async Task<IActionResult> AddContact(Guid id)
         {
             try
             {
-                var contactModel = contactService.GetNewContactModelAsync();
+                var contactModel = await contactService.GetNewContactModelAsync();
 
                 return View(contactModel);
             }
