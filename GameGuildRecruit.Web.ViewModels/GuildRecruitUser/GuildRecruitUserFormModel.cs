@@ -32,7 +32,7 @@ namespace GameGuildRecruit.Web.ViewModels.GuildRecruitUser
         [Required]
         [StringLength(GameNameMaxLength)]
         [Display(Name = "GameName")]
-        public GameNames GameName { get; set; } 
+        public string GameName { get; set; } = null!;
 
         [StringLength(ServerNameMaxLength, MinimumLength = ServerNameMinLength)]
         [Display(Name = "ServerName")]

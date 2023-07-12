@@ -19,7 +19,7 @@ namespace GameGuildRecruit.Web.ViewModels.GuildRecruitUser
 
         public string GuildName { get; set; } = null!;
 
-        public GameNames GameName { get; set; }
+        public string GameName { get; set; } = null!;
 
         public string? UrlLink { get; set; }
 
