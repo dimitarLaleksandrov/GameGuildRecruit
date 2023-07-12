@@ -1,5 +1,7 @@
 ﻿
 
+using GameGuildRecruit.Web.Common.Enums;
+
 namespace GameGuildRecruit.Web.ViewModels.GuildRecruitUser
 {
     public class GuildRecruitUserViewModel
@@ -17,7 +19,7 @@ namespace GameGuildRecruit.Web.ViewModels.GuildRecruitUser
 
         public string GuildName { get; set; } = null!;
 
-        public string GameName { get; set; } = null!;
+        public GameNames GameName { get; set; }
 
         public string? UrlLink { get; set; }
 

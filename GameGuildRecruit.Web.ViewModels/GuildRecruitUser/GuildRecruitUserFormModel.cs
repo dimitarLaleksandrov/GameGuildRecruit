@@ -1,4 +1,5 @@
-﻿using GameGuildRecruit.Web.ViewModels.ContactPlayer;
+﻿using GameGuildRecruit.Web.Common.Enums;
+using GameGuildRecruit.Web.ViewModels.ContactPlayer;
 using System.ComponentModel.DataAnnotations;
 using static GameGuildRecruit.Web.Common.EntityValidations.GuildRecruitUser;
 
@@ -31,7 +32,7 @@ namespace GameGuildRecruit.Web.ViewModels.GuildRecruitUser
         [Required]
         [StringLength(GameNameMaxLength)]
         [Display(Name = "GameName")]
-        public string GameName { get; set; } = null!;
+        public GameNames GameName { get; set; } 
 
         [StringLength(ServerNameMaxLength, MinimumLength = ServerNameMinLength)]
         [Display(Name = "ServerName")]
