@@ -1,5 +1,4 @@
 ﻿using GameGuildRecruit.Web.Services.Interfaces;
-using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

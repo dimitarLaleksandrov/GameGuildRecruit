@@ -1,5 +1,5 @@
 ﻿using GameGuildRecruit.Web.Services.Interfaces;
-using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
+using GameGuildRecruit.Web.ViewModels.Game;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,20 +24,8 @@ namespace GameGuildRecruit.Web.Controllers
         public async Task<IActionResult> Create()
         {
             try
-            {
-                var userName = this.User.Identity!.Name;
-
-                var userGuildExist = await userService.GetUserByUserNameAsync(userName!);
-
-                if (userGuildExist != null)
-                {
-                    if (userGuildExist.UserName == userName)
-                    {
-                        return RedirectToAction("Edit", "GuildUser");
-                    }
-                }
-
-                var userModel = await userService.GetNewUserModelAsync();
+            {          
+                var userModel = await gameService.GetNewGameModelAsync();
 
                 return View(userModel);
             }
@@ -50,18 +38,18 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Create(Guid id, GuildRecruitUserFormModel userModel)
+        public async Task<IActionResult> Create(Guid id, GameFormModel gameModel)
         {
             if (!ModelState.IsValid)
             {
-                return View(userModel);
+                return View(gameModel);
             }
 
             try
             {
-                var userName = this.User.Identity!.Name;
+               
 
-                await userService.AddUserAsync(userModel, userName!, id);
+                await gameService.AddGameAsync(gameModel, id);
 
                 return RedirectToAction("Index", "Home");
             }
