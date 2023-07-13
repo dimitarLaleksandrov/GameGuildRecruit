@@ -25,7 +25,13 @@
             height: 115px;
             overflow: scroll;
         }
-      
+
+        .outBox {
+            margin: 30px;
+            /*border: 1px solid #ccc;*/
+            /*float: left;*/
+            width: 180px;
+        }
 
     </style>
 </head>
@@ -96,118 +102,141 @@
                 }
             }
             userCount++;
-            <partial name="_WoWGuildUsersPartial" model="@user" />
+            <div class="outBox">
+                <partial name="_WoWGuildUsersPartial" model="@user" />
+            </div>      
         }
         <div class="text-center  position-absolute top-0 end-0">
             @if (userCount == 0)
             {
-                <div class="card col-4" style="width: 12rem; background-color:darkgrey;">
-                    <img src="/Img/WoW/WoW26.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">WoW</h5>
-                        <p class="card-text" style="color:yellow">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="https://worldofwarcraft.blizzard.com/en-us/" class="btn btn-primary" target="_blank">WoW Page</a>
+                <div class="outBox">
+                    <div class="card col-4" style="width: 12rem; background-color:darkgrey;">
+                        <img src="/Img/WoW/WoW26.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">WoW</h5>
+                            <p class="card-text" style="color:yellow">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="https://worldofwarcraft.blizzard.com/en-us/" class="btn btn-primary" target="_blank">WoW Page</a>
+                        </div>
                     </div>
                 </div>
+               
             }
             @if (userCount > 0)
             {
-                <div class="card col-4" style="width: 12rem; background-color:darkgrey;">
-                    <img src="/Img/WoW/WoW26.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">WoW</h5>
-                        <p class="card-text" style="color:yellow">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="https://worldofwarcraft.blizzard.com/en-us/" class="btn btn-primary" target="_blank">WoW Page</a>
+                <div class="outBox">
+                    <div class="card col-4" style="width: 12rem; background-color:darkgrey;">
+                        <img src="/Img/WoW/WoW26.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">WoW</h5>
+                            <p class="card-text" style="color:yellow">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="https://worldofwarcraft.blizzard.com/en-us/" class="btn btn-primary" target="_blank">WoW Page</a>
+                        </div>
                     </div>
-                </div>
+                </div>            
             }
             @if (userCount > 1)
             {
-                <div class="card col-4" style="width: 12rem;">
-                    <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="outBox">
+                    <div class="card col-4" style="width: 12rem;">
+                        <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
-                </div>
+                </div>     
             }
             @if (userCount > 2)
             {
-                <div class="card col-4" style="width: 12rem;">
-                    <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="outBox">
+                    <div class="card col-4" style="width: 12rem;">
+                        <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
-                </div>
+                </div>         
             }
             @if (userCount > 3)
             {
-                <div class="card col-4" style="width: 12rem;">
-                    <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="outBox">
+                    <div class="card col-4" style="width: 12rem;">
+                        <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
-                </div>
+                </div>        
             }
             @if (userCount > 4)
             {
-                <div class="card col-4" style="width: 12rem;">
-                    <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="outBox">
+                    <div class="card col-4" style="width: 12rem;">
+                        <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
-                </div>
+                </div>      
             }
             @if (userCount > 5)
             {
-                <div class="card col-4" style="width: 12rem;">
-                    <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="outBox">
+                    <div class="card col-4" style="width: 12rem;">
+                        <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
-                </div>
+                </div>           
             }
             @if (userCount > 6)
             {
-                <div class="card col-4" style="width: 12rem;">
-                    <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="outBox">
+                    <div class="card col-4" style="width: 12rem;">
+                        <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
                 </div>
             }
             @if (userCount > 7)
             {
-                <div class="card col-4" style="width: 12rem;">
-                    <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="outBox">
+                    <div class="card col-4" style="width: 12rem;">
+                        <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
-                </div>
+                </div>              
             }
             @if (userCount > 8)
             {
-                <div class="card col-4" style="width: 12rem;">
-                    <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="outBox">
+                    <div class="card col-4" style="width: 12rem;">
+                        <img src="/Img/WoW/WoW23.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
-                </div>
+                </div>  
             }
 
         </div>
