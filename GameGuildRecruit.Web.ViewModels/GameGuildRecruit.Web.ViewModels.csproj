@@ -11,4 +11,8 @@
     <ProjectReference Include="..\GameGuildRecruit.Web.Data.Models\GameGuildRecruit.Web.Data.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Banner\" />
+  </ItemGroup>
+
 </Project>
