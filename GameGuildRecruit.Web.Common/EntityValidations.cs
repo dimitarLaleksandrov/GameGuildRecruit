@@ -38,6 +38,15 @@ namespace GameGuildRecruit.Web.Common
             public const int GameNameMinLength = 2;
             public const int GameNameMaxLength = 50;
         }
+
+        public static class Banner
+        {
+            public const int BannerTitleMinLength = 2;
+            public const int BannerTitleMaxLength = 30;
+
+            public const int DescriptionMinLength = 5;
+            public const int DescriptionMaxLength = 1000;
+        }
     }
 }
 

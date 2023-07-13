@@ -48,7 +48,6 @@ namespace GameGuildRecruit.Web.Data.Models
         public string? UserAvatarPix { get; set; }
 
 
-
         public virtual ICollection<IdentityUserContact> Contacts { get; set; }
 
     }

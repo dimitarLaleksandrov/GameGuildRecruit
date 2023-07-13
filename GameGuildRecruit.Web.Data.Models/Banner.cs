@@ -1,0 +1,30 @@
+﻿
+using System.ComponentModel.DataAnnotations;
+using static GameGuildRecruit.Web.Common.EntityValidations.Banner;
+
+namespace GameGuildRecruit.Web.Data.Models
+{
+    public class Banner
+    {
+        public Banner()
+        {
+            this.Id = Guid.NewGuid();   
+        }
+
+
+        [Key]
+        public Guid Id { get; set; }
+
+        public string BannerImageURL { get; set; } = null!;
+
+        [Required]
+        [MaxLength(BannerTitleMaxLength)]
+        public string BannerTitle { get; set; } = null!;
+     
+
+        [MaxLength(DescriptionMaxLength)]
+        public string Description { get; set; } = null!;
+
+        public string BannerURL { get; set; } = null!;
+    }
+}

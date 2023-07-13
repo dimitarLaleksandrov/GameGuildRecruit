@@ -23,7 +23,5 @@ namespace GameGuildRecruit.Web.Data.Models
 
         public string GameShortcutImageURL { get; set; } = null!;
 
-
-
     }
 }
