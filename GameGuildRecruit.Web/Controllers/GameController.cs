@@ -21,13 +21,31 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpGet]
+        public async Task<IActionResult> ShowGames()
+        {
+            try
+            {
+                //var contactsModels = await gameService.GetGamesAsync();
+
+                return View();
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("EmptyGuildInfo", "Errors");
+            }
+
+        }
+
+        [Authorize]
+        [HttpGet]
         public async Task<IActionResult> Create()
         {
             try
             {          
-                var userModel = await gameService.GetNewGameModelAsync();
+                var gameModel = await gameService.GetNewGameModelAsync();
 
-                return View(userModel);
+                return View(gameModel);
             }
             catch (Exception)
             {
@@ -46,9 +64,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
 
             try
-            {
-               
-
+            {     
                 await gameService.AddGameAsync(gameModel, id);
 
                 return RedirectToAction("Index", "Home");
