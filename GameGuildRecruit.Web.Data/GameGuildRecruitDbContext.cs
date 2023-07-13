@@ -16,10 +16,13 @@ namespace GameGuildRecruit.Web.Data
 
         public DbSet<GuildRecruitUser> GuildRecruitUsers { get; set; } = null!;
 
+        public DbSet<Game> Games { get; set; } = null!;
+
+        public DbSet<Banner> Banners { get; set; } = null!;
+
         public DbSet<ContactPlayer> ContactPlayers { get; set; } = null!;
 
         public DbSet<IdentityUserContact> IdentityUserContacts { get; set; } = null!;
-
 
 
 

@@ -23,7 +23,7 @@ namespace GameGuildRecruit.Web.Data.Models
         public string GameSlideImageURL { get; set; } = null!;
 
         [Required]
-        public string GameShortcutImageURL { get; set; } = null!;
+        public string GameLogoImageURL { get; set; } = null!;
 
     }
 }
