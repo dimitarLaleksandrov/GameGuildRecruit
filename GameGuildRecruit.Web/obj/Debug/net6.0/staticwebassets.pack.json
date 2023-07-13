@@ -525,6 +525,38 @@
       "PackagePath": "staticwebassets\\Img\\Diablo\\D9.jpg"
     },
     {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo Logo\\Logo1.png",
+      "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo Logo\\Logo1.png"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo Logo\\Logo2.webp",
+      "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo Logo\\Logo2.webp"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo Logo\\Logo3.jpg",
+      "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo Logo\\Logo3.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo Logo\\Logo4.jpg",
+      "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo Logo\\Logo4.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo Logo\\Logo5.webp",
+      "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo Logo\\Logo5.webp"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo Logo\\Logo6.jpg",
+      "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo Logo\\Logo6.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo Logo\\Logo7.jpg",
+      "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo Logo\\Logo7.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo Logo\\Logo8.jpg",
+      "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo Logo\\Logo8.jpg"
+    },
+    {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo-IV-2.jpg",
       "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo-IV-2.jpg"
     },
@@ -585,12 +617,24 @@
       "PackagePath": "staticwebassets\\Img\\GooglePlay\\GP9.png"
     },
     {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\GooglePlay\\Google Logo\\Logo1.png",
+      "PackagePath": "staticwebassets\\Img\\GooglePlay\\Google Logo\\Logo1.png"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\GooglePlay\\Google Logo\\Logo2.png",
+      "PackagePath": "staticwebassets\\Img\\GooglePlay\\Google Logo\\Logo2.png"
+    },
+    {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SC\\1.jpg",
       "PackagePath": "staticwebassets\\Img\\SC\\1.jpg"
     },
     {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SC\\Ed9MHoqXgAEHaJU.jpg",
       "PackagePath": "staticwebassets\\Img\\SC\\Ed9MHoqXgAEHaJU.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SC\\SC Logo\\Logo1.jpg",
+      "PackagePath": "staticwebassets\\Img\\SC\\SC Logo\\Logo1.jpg"
     },
     {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SC\\SC.jpg",
@@ -687,6 +731,50 @@
     {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\Lich Fall.webp",
       "PackagePath": "staticwebassets\\Img\\WoW\\Lich Fall.webp"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW Logo\\Logo1.png",
+      "PackagePath": "staticwebassets\\Img\\WoW\\WoW Logo\\Logo1.png"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW Logo\\Logo10.png",
+      "PackagePath": "staticwebassets\\Img\\WoW\\WoW Logo\\Logo10.png"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW Logo\\Logo11.png",
+      "PackagePath": "staticwebassets\\Img\\WoW\\WoW Logo\\Logo11.png"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW Logo\\Logo2.png",
+      "PackagePath": "staticwebassets\\Img\\WoW\\WoW Logo\\Logo2.png"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW Logo\\Logo3.png",
+      "PackagePath": "staticwebassets\\Img\\WoW\\WoW Logo\\Logo3.png"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW Logo\\Logo4.jpg",
+      "PackagePath": "staticwebassets\\Img\\WoW\\WoW Logo\\Logo4.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW Logo\\Logo5.png",
+      "PackagePath": "staticwebassets\\Img\\WoW\\WoW Logo\\Logo5.png"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW Logo\\Logo6.png",
+      "PackagePath": "staticwebassets\\Img\\WoW\\WoW Logo\\Logo6.png"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW Logo\\Logo7.jpg",
+      "PackagePath": "staticwebassets\\Img\\WoW\\WoW Logo\\Logo7.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW Logo\\Logo8.jpg",
+      "PackagePath": "staticwebassets\\Img\\WoW\\WoW Logo\\Logo8.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW Logo\\Logo9.jpg",
+      "PackagePath": "staticwebassets\\Img\\WoW\\WoW Logo\\Logo9.jpg"
     },
     {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\WoW\\WoW-Classic-Arthas.jpg",
