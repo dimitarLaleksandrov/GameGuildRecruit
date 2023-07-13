@@ -13,6 +13,7 @@
         }
 
        
+       
     </style>
 </head>
 
@@ -24,6 +25,9 @@
             <div class="navbar-nav">
                 <div class="btn-group" role="group" aria-label="Dropdown">
                     <div class="btn-group" role="group">
+                        <div>
+                            <a type="button" class="btn btn-outline-success" asp-area="" asp-controller="Admin" asp-action="AdminView">Admin</a>
+                       </div>                           
                         <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             Welcome @User.Identity?.Name
                         </button>

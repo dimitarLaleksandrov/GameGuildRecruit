@@ -20,6 +20,7 @@ namespace GameGuildRecruit.Web.Services
             var game = new Game()
             {
                 Id = id,
+
                 GameName = gameModel.GameName,
                 GameSlideImageURL = gameModel.GameSlideImageURL,
                 GameLogoImageURL = gameModel.GameLogoImageURL

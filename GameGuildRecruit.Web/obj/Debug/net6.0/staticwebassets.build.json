@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AKJHyY6SaNHKYANqPPmEOMe9WdvTCANy5fAwH9b1xcQ=",
+  "Hash": "R/3VYyHp+xvUTCAQcuPKT7X4+3kod1oG50k7rxpow7E=",
   "Source": "GameGuildRecruit.Web",
   "BasePath": "_content/GameGuildRecruit.Web",
   "Mode": "Default",
@@ -3451,6 +3451,23 @@
       "OriginalItemSpec": "wwwroot\\Img\\Diablo\\Diablo Logo\\Logo8.jpg"
     },
     {
+      "Identity": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo Logo\\Logo9.png",
+      "SourceId": "GameGuildRecruit.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\",
+      "BasePath": "_content/GameGuildRecruit.Web",
+      "RelativePath": "Img/Diablo/Diablo Logo/Logo9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Diablo\\Diablo Logo\\Logo9.png"
+    },
+    {
       "Identity": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo.png",
       "SourceId": "GameGuildRecruit.Web",
       "SourceType": "Discovered",
@@ -3789,6 +3806,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Img\\SC\\SC Logo\\Logo1.jpg"
+    },
+    {
+      "Identity": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SC\\SC Logo\\Logo2.png",
+      "SourceId": "GameGuildRecruit.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\",
+      "BasePath": "_content/GameGuildRecruit.Web",
+      "RelativePath": "Img/SC/SC Logo/Logo2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\SC\\SC Logo\\Logo2.png"
     },
     {
       "Identity": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SC\\SC.jpg",

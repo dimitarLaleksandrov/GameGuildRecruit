@@ -557,6 +557,10 @@
       "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo Logo\\Logo8.jpg"
     },
     {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo Logo\\Logo9.png",
+      "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo Logo\\Logo9.png"
+    },
+    {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Diablo\\Diablo-IV-2.jpg",
       "PackagePath": "staticwebassets\\Img\\Diablo\\Diablo-IV-2.jpg"
     },
@@ -635,6 +639,10 @@
     {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SC\\SC Logo\\Logo1.jpg",
       "PackagePath": "staticwebassets\\Img\\SC\\SC Logo\\Logo1.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SC\\SC Logo\\Logo2.png",
+      "PackagePath": "staticwebassets\\Img\\SC\\SC Logo\\Logo2.png"
     },
     {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SC\\SC.jpg",

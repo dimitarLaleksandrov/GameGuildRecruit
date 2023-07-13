@@ -22,21 +22,7 @@ namespace GameGuildRecruit.Web.Controllers
         {
             try
             {
-                var userName = this.User.Identity!.Name;
-
-                var userGuildExist = await userService.GetUserByUserNameAsync(userName!);
-
-                if (userGuildExist != null)
-                {
-                    if (userGuildExist.UserName == userName)
-                    {
-                        return RedirectToAction("Edit", "GuildUser");
-                    }
-                }
-
-                var userModel = await userService.GetNewUserModelAsync();
-
-                return View(userModel);
+                return View();
             }
             catch (Exception)
             {
@@ -47,7 +33,7 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Create(Guid id, GuildRecruitUserFormModel userModel)
+        public async Task<IActionResult> Create(Guid id, string userModel)
         {
             if (!ModelState.IsValid)
             {
@@ -56,9 +42,7 @@ namespace GameGuildRecruit.Web.Controllers
 
             try
             {
-                var userName = this.User.Identity!.Name;
-
-                await userService.AddUserAsync(userModel, userName!, id);
+               
 
                 return RedirectToAction("Index", "Home");
             }
