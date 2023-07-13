@@ -19,8 +19,10 @@ namespace GameGuildRecruit.Web.Data.Models
         [MaxLength(GameNameMaxLength)]
         public string GameName { get; set; } = null!;
 
+        [Required]
         public string GameSlideImageURL { get; set; } = null!;
 
+        [Required]
         public string GameShortcutImageURL { get; set; } = null!;
 
     }
