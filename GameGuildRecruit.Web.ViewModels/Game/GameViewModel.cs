@@ -1,11 +1,11 @@
 ﻿
-
 using System.ComponentModel.DataAnnotations;
 
 namespace GameGuildRecruit.Web.ViewModels.Game
 {
     public class GameViewModel
     {
+
         public GameViewModel()
         {
             this.Id = Guid.NewGuid();
