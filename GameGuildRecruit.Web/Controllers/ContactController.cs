@@ -1,5 +1,4 @@
-﻿using GameGuildRecruit.Web.Services;
-using GameGuildRecruit.Web.Services.Interfaces;
+﻿using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.ContactPlayer;
 using Microsoft.AspNetCore.Mvc;
 

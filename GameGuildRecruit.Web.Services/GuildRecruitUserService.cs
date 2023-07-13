@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GameGuildRecruit.Web.Services
 {
-    public class GuildRecruitUserService : IGuildRecruitUser
+    public class GuildRecruitUserService : IGuildRecruitUserService
     {
 
         private readonly GameGuildRecruitDbContext dbContext;

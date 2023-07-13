@@ -4,7 +4,7 @@ using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 
 namespace GameGuildRecruit.Web.Services.Interfaces
 {
-    public interface IGuildRecruitUser
+    public interface IGuildRecruitUserService
     {
         Task<GuildRecruitUserFormModel?> GetUserByUserNameAsync(string userName);
 

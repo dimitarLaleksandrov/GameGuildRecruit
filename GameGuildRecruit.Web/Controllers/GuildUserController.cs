@@ -1,18 +1,17 @@
-﻿using GameGuildRecruit.Web.Services;
-using GameGuildRecruit.Web.Services.Interfaces;
+﻿using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+
 
 namespace GameGuildRecruit.Web.Controllers
 {
     public class GuildUserController : BaseController
     {
-        private readonly IGuildRecruitUser userService;
+        private readonly IGuildRecruitUserService userService;
 
 
-        public GuildUserController(IGuildRecruitUser userService)
+        public GuildUserController(IGuildRecruitUserService userService)
         {
             this.userService = userService;
 

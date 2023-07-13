@@ -38,9 +38,14 @@ namespace GameGuildRecruit.Web
 
             builder.Services.AddScoped<IContactService, ContactService>();
 
-            builder.Services.AddScoped<IGuildRecruitUser, GuildRecruitUserService>();
+            builder.Services.AddScoped<IGuildRecruitUserService, GuildRecruitUserService>();
 
             builder.Services.AddScoped<IPageService, PageService>();
+
+            builder.Services.AddScoped<IGameService, GameService>();
+
+            builder.Services.AddScoped<IBannerService, BannerService>();
+
 
 
             //builder.Services.AddScoped<ITaskService, TaskService>();
