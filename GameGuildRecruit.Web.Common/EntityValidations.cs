@@ -32,6 +32,12 @@ namespace GameGuildRecruit.Web.Common
             public const int DescriptionMaxLength = 1000;
 
         }
+
+        public static class Game
+        {
+            public const int GameNameMinLength = 2;
+            public const int GameNameMaxLength = 50;
+        }
     }
 }
 
