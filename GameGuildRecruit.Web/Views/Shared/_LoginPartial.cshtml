@@ -11,39 +11,45 @@
             background-attachment: fixed;
             background-size: 100% 100%;
         }
-
-       
        
     </style>
 </head>
 
 
 <body>
-    <header>
+    <header> 
         @if (SignInManager.IsSignedIn(User))
         {
             <div class="navbar-nav">
-                <div class="btn-group" role="group" aria-label="Dropdown">
-                    <div class="btn-group" role="group">
-                        <div>
-                            <a type="button" class="btn btn-outline-success" asp-area="" asp-controller="Admin" asp-action="AdminView">Admin</a>
-                       </div>                           
-                        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Welcome @User.Identity?.Name
+                <div class="navbar-nav">
+                    <div class="btn-group" role="group" aria-label="Dropdown">
+                        <button type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Welcome Admin
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="/GuildUser/Create">Guild Info</a></li>
-                            <li><a class="dropdown-item" href="/GuildUser/MyContacts">My Contact's</a></li>
-                            <li><a class="dropdown-item" href="/GuildUser/ChooseAvatar">Select Avatar</a></li>
+                            <li><a class="dropdown-item" href="/GuildUser/Create">Game Pages</a></li>
+                            <li><a class="dropdown-item" href="/GuildUser/MyContacts">Banners</a></li>
+                            <li><a class="dropdown-item" href="/GuildUser/ChooseAvatar">Guild Users</a></li>
+                            <li><a class="dropdown-item" href="/GuildUser/ChooseAvatar">Contacts</a></li>
                         </ul>
                     </div>
+                </div>
+                <div class="btn-group" role="group" aria-label="Dropdown">
+                    <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Welcome @User.Identity?.Name
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="/GuildUser/Create">Guild Info</a></li>
+                        <li><a class="dropdown-item" href="/GuildUser/MyContacts">My Contact's</a></li>
+                        <li><a class="dropdown-item" href="/GuildUser/ChooseAvatar">Select Avatar</a></li>
+                    </ul>
                 </div>
                 <div class="nav-item">
                     <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                         <button type="submit" class="btn btn-danger">Logout</button>
                     </form>
                 </div>
-            </div>
+            </div>              
         }
         else
         {

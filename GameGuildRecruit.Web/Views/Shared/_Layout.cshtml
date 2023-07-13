@@ -38,9 +38,11 @@
                         </li>
                         @if (SignInManager.IsSignedIn(User))
                         {
+                            
                             <li class="nav-item">
                                 <a type="button" class="btn btn-info" asp-area="" asp-controller="GuildUser" asp-action="UsersWithTheSameGame">UsersWithTheSameGame</a>
                             </li>
+                           
                         }                      
                     </ul>
                     <h2 class="text position-relative start-0" style="color:Highlight">Welcome to Game Guild Recruit</h2>
