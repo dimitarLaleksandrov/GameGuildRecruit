@@ -56,7 +56,7 @@ namespace GameGuildRecruit.Web.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> WoW([FromQuery] GuildUsersQueryModel queryModel)
+        public async Task<IActionResult> WorldOfWarcraft([FromQuery] GuildUsersQueryModel queryModel)
         {
             var usersGameName = "WorldOfWarcraft";
 
