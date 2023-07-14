@@ -136,6 +136,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/Diablo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcRGlhYmxvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/DiabloContacts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcRGlhYmxvQ29udGFjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -144,8 +148,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcRGlhYmxvR2V0Q29udGFjdEZlZWRiYWNrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/DiabloPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcRGlhYmxvUGFnZS5jc2h0bWw=
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/GooglePlay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcR29vZ2xlUGxheS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/GooglePlayContacts.cshtml]
@@ -156,8 +160,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcR29vZ2xlUGxheUdldENvbnRhY3RGZWVkYmFjay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/GooglePlayPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcR29vZ2xlUGxheVBhZ2UuY3NodG1s
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/StarCraft.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcU3RhckNyYWZ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/StarCraftContacts.cshtml]
@@ -168,8 +172,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcU3RhckNyYWZ0R2V0Q29udGFjdEZlZWRiYWNrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/StarCraftPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcU3RhckNyYWZ0UGFnZS5jc2h0bWw=
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/WoW.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcV29XLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/WoWContacts.cshtml]
@@ -178,10 +182,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/WoWGetContactFeedback.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcV29XR2V0Q29udGFjdEZlZWRiYWNrLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Pages/WoWPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcV29XUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/Error.cshtml]

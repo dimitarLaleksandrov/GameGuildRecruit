@@ -19,7 +19,7 @@ namespace GameGuildRecruit.Web.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> StarCraftPage([FromQuery] GuildUsersQueryModel queryModel)
+        public async Task<IActionResult> StarCraft([FromQuery] GuildUsersQueryModel queryModel)
         {
             var usersGameName = "StarCraft";
 
@@ -56,7 +56,7 @@ namespace GameGuildRecruit.Web.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> WoWPage([FromQuery] GuildUsersQueryModel queryModel)
+        public async Task<IActionResult> WoW([FromQuery] GuildUsersQueryModel queryModel)
         {
             var usersGameName = "WorldOfWarcraft";
 
@@ -92,7 +92,7 @@ namespace GameGuildRecruit.Web.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> DiabloPage([FromQuery] GuildUsersQueryModel queryModel)
+        public async Task<IActionResult> Diablo([FromQuery] GuildUsersQueryModel queryModel)
         {
             var usersGameName = "Diablo";
 
@@ -129,7 +129,7 @@ namespace GameGuildRecruit.Web.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GooglePlayPage([FromQuery] GuildUsersQueryModel queryModel)
+        public async Task<IActionResult> GooglePlay([FromQuery] GuildUsersQueryModel queryModel)
         {
             var usersGameName = "GooglePlay";
 

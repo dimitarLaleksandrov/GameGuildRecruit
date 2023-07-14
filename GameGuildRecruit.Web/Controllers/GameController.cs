@@ -81,7 +81,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 await gameService.GetGameIfViewIsCreateByIdAsync(id);
 
-                return RedirectToAction("MyContacts", "GuildUser");
+                return RedirectToAction("ShowGames", "Game");
             }
             catch (Exception)
             {
