@@ -1,4 +1,5 @@
-﻿using GameGuildRecruit.Web.Services.Interfaces;
+﻿using GameGuildRecruit.Web.Services;
+using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.Game;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -87,6 +88,31 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 return RedirectToAction("GetContactError", "Errors");
             }
+        }
+
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> DeleteGame(Guid id)
+        {
+            var game = await gameService.GetGameByIdAsync(id);
+
+            if (game == null)
+            {
+                return RedirectToAction("GetContactErrors", "Errors");
+            }
+
+            try
+            {
+                await gameService.RemoveGameAsync(game);
+
+                return RedirectToAction("MyContacts", "GuildUser");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("RemoveContactErrors", "Errors");
+            }
+
         }
     }
 }
