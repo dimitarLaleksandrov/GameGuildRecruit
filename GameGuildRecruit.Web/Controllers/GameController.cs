@@ -25,16 +25,14 @@ namespace GameGuildRecruit.Web.Controllers
         {
             try
             {
-                //var contactsModels = await gameService.GetGamesAsync();
+                var gamesModels = await gameService.GetGamesAsync();
 
-                return View();
+                return View(gamesModels);
             }
             catch (Exception)
             {
-
                 return RedirectToAction("EmptyGuildInfo", "Errors");
             }
-
         }
 
         [Authorize]
@@ -67,7 +65,7 @@ namespace GameGuildRecruit.Web.Controllers
             {     
                 await gameService.AddGameAsync(gameModel, id);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("ShowGames", "Game");
             }
             catch (Exception)
             {

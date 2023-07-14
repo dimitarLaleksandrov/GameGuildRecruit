@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<GameViewModel>
+
+@{
     ViewBag.Title = "Games";
 }
 
@@ -8,7 +10,7 @@
 <head>
     <style>
         body {
-            background-image: url("/Img/Background/SindIn.jpg");
+            background-image: url("/Img/Background/BG18.png");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
@@ -19,6 +21,18 @@
 
 <body>
     <header>
+        @foreach (var game in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src="@game.GameLogoImageURL" class="card-img-top" >
+                <div class="card-body">
+                    <h5 class="card-title">@game.GameName</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        } 
+        
+
     </header>  
 
 </body>

@@ -20,7 +20,6 @@ namespace GameGuildRecruit.Web.Services
 
 
 
-
         public async Task AddBannerAsync(BannerFormModel bannerModel, Guid id)
         {
             var banner = new Banner()

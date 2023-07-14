@@ -2,6 +2,8 @@
 using GameGuildRecruit.Web.Data.Models;
 using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.Game;
+using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
+using Microsoft.EntityFrameworkCore;
 
 namespace GameGuildRecruit.Web.Services
 {
@@ -16,6 +18,15 @@ namespace GameGuildRecruit.Web.Services
         }
 
 
+        public async Task<GameFormModel> GetNewGameModelAsync()
+        {
+            var gameModel = new GameFormModel
+            {
+
+            };
+
+            return gameModel;
+        }
 
         public async Task AddGameAsync(GameFormModel gameModel, Guid id)
         {
@@ -33,17 +44,20 @@ namespace GameGuildRecruit.Web.Services
             await this.dbContext.SaveChangesAsync();
         }
 
-        public async Task<GameFormModel> GetNewGameModelAsync()
+        public async Task <IEnumerable<GameViewModel?>> GetGamesAsync()
         {
-            var gameModel = new GameFormModel
-            {
-                
-            };
-
-            return gameModel;
+            return await dbContext.Games
+                 .Select(b => new GameViewModel
+                 {
+                     Id = b.Id,
+                     GameName = b.GameName,
+                     GameSlideImageURL= b.GameSlideImageURL,
+                     GameLogoImageURL= b.GameLogoImageURL
+                 })
+                 .ToArrayAsync();
         }
 
-
+      
 
 
     }

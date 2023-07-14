@@ -10,5 +10,7 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
         Task AddGameAsync(GameFormModel gameModel, Guid id);
 
+        Task <IEnumerable<GameViewModel?>> GetGamesAsync();
+
     }
 }

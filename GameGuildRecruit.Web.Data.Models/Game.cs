@@ -25,5 +25,7 @@ namespace GameGuildRecruit.Web.Data.Models
         [Required]
         public string GameLogoImageURL { get; set; } = null!;
 
+        public bool IsGameHasView { get; set; } = false;
+
     }
 }
