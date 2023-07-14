@@ -41,7 +41,7 @@ namespace GameGuildRecruit.Web.Controllers
         public async Task<IActionResult> Create()
         {
             try
-            {          
+            {
                 var gameModel = await gameService.GetNewGameModelAsync();
 
                 return View(gameModel);
@@ -63,7 +63,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
 
             try
-            {     
+            {
                 await gameService.AddGameAsync(gameModel, id);
 
                 return RedirectToAction("ShowGames", "Game");
@@ -92,7 +92,6 @@ namespace GameGuildRecruit.Web.Controllers
 
 
         [Authorize]
-        [HttpPost]
         public async Task<IActionResult> DeleteGame(Guid id)
         {
             var game = await gameService.GetGameByIdAsync(id);
@@ -106,13 +105,37 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 await gameService.RemoveGameAsync(game);
 
-                return RedirectToAction("MyContacts", "GuildUser");
+                return RedirectToAction("ShowGames", "Game");
             }
             catch (Exception)
             {
                 return RedirectToAction("RemoveContactErrors", "Errors");
             }
 
+        }
+
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> GoToGame(Guid id)
+        {
+            var game = await gameService.GetGameByIdAsync(id);
+
+            if (game == null)
+            {
+                return RedirectToAction("GetContactErrors", "Errors");
+            }
+
+            try
+            {
+                var gameName = game.GameName;
+                return RedirectToAction(gameName, "Pages");
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("CreateAndEditError", "Errors");
+            }
         }
     }
 }
