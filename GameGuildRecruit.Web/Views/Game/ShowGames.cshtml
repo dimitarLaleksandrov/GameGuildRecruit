@@ -15,6 +15,13 @@
             background-attachment: fixed;
             background-size: 100% 100%;
         }
+
+        .outBox {
+            margin: 30px;
+            /*border: 1px solid #ccc;*/
+            float: left;
+            width: 180px;
+        }
     </style>
 </head>
 
@@ -23,13 +30,23 @@
     <header>
         @foreach (var game in Model)
         {
-            <div class="card" style="width: 18rem;">
-                <img src="@game.GameLogoImageURL" class="card-img-top" >
-                <div class="card-body">
-                    <h5 class="card-title">@game.GameName</h5>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="outBox">
+                <div class="card col-4" style="width: 16rem;" method="post">
+                    <img src="@game.GameLogoImageURL" class="card-img-top">
+                    <div class="card-body">
+                        <a class="btn btn-outline-info" asp-area="" asp-controller="Game" asp-action="" asp-route-id="@game.GameName">@game.GameName Page</a>
+                        @if (game.IsGameHasView == true)
+                        {
+                            <a class="btn  btn-success" asp-area="" asp-controller="" asp-action="" asp-route-id="">Game View Is Created</a>
+                        }
+                        else
+                        {
+                            <a class="btn  btn-outline-success" asp-area="" asp-controller="" asp-action="" asp-route-id="">Create Game View</a>
+                        }
+                    </div>
                 </div>
             </div>
+
         } 
         
 

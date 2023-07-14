@@ -20,5 +20,7 @@ namespace GameGuildRecruit.Web.ViewModels.Game
         public string GameSlideImageURL { get; set; } = null!;
 
         public string GameLogoImageURL { get; set; } = null!;
+
+        public bool IsGameHasView { get; set; } = false;
     }
 }

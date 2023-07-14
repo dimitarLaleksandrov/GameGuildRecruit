@@ -12,5 +12,7 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
         Task <IEnumerable<GameViewModel?>> GetGamesAsync();
 
+        Task GetGameIfViewIsCreateByIdAsync(Guid id);
+
     }
 }

@@ -36,7 +36,8 @@ namespace GameGuildRecruit.Web.Services
 
                 GameName = gameModel.GameName,
                 GameSlideImageURL = gameModel.GameSlideImageURL,
-                GameLogoImageURL = gameModel.GameLogoImageURL
+                GameLogoImageURL = gameModel.GameLogoImageURL,
+                IsGameHasView = gameModel.IsGameHasView
 
             };
 
@@ -52,12 +53,23 @@ namespace GameGuildRecruit.Web.Services
                      Id = b.Id,
                      GameName = b.GameName,
                      GameSlideImageURL= b.GameSlideImageURL,
-                     GameLogoImageURL= b.GameLogoImageURL
+                     GameLogoImageURL= b.GameLogoImageURL,
+                     IsGameHasView = b.IsGameHasView
                  })
                  .ToArrayAsync();
         }
 
-      
+        public async Task GetGameIfViewIsCreateByIdAsync(Guid id)
+        {
+            var game = await dbContext.Games.FindAsync(id);
+
+            if (game != null)
+            {
+                game.IsGameHasView = true;
+
+                await dbContext.SaveChangesAsync();
+            }
+        }
 
 
     }

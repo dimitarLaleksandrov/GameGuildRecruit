@@ -73,5 +73,20 @@ namespace GameGuildRecruit.Web.Controllers
                 return RedirectToAction("CreateAndEditError", "Errors");
             }
         }
+
+        [Authorize]
+        public async Task<IActionResult> GameViewMade(Guid id)
+        {
+            try
+            {
+                await gameService.GetGameIfViewIsCreateByIdAsync(id);
+
+                return RedirectToAction("MyContacts", "GuildUser");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
+        }
     }
 }
