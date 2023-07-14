@@ -15,6 +15,8 @@ namespace GameGuildRecruit.Web.Services
             this.dbContext = dbContext;
         }
 
+
+
         public async Task AddGameAsync(GameFormModel gameModel, Guid id)
         {
             var game = new Game()
@@ -33,7 +35,6 @@ namespace GameGuildRecruit.Web.Services
 
         public async Task<GameFormModel> GetNewGameModelAsync()
         {
-
             var gameModel = new GameFormModel
             {
                 

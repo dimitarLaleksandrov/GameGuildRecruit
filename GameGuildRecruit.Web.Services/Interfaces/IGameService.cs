@@ -8,7 +8,7 @@ namespace GameGuildRecruit.Web.Services.Interfaces
     {
         Task<GameFormModel> GetNewGameModelAsync();
 
-        Task AddGameAsync(GameFormModel userModel, Guid id);
+        Task AddGameAsync(GameFormModel gameModel, Guid id);
 
     }
 }

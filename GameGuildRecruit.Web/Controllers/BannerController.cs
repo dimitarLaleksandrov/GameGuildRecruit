@@ -1,6 +1,10 @@
-﻿using GameGuildRecruit.Web.Services.Interfaces;
+﻿using GameGuildRecruit.Web.Services;
+using GameGuildRecruit.Web.Services.Interfaces;
+using GameGuildRecruit.Web.ViewModels.Banner;
+using GameGuildRecruit.Web.ViewModels.Game;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace GameGuildRecruit.Web.Controllers
 {
@@ -16,13 +20,19 @@ namespace GameGuildRecruit.Web.Controllers
 
         }
 
+
+
+
+
         [Authorize]
         [HttpGet]
         public async Task<IActionResult> Create()
         {
             try
             {
-                return View();
+                var gameModel = await bannerService.GetNewBannerModelAsync();
+
+                return View(gameModel);
             }
             catch (Exception)
             {
@@ -33,16 +43,16 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Create(Guid id, string userModel)
+        public async Task<IActionResult> Create(Guid id, BannerFormModel bannerModel)
         {
             if (!ModelState.IsValid)
             {
-                return View(userModel);
+                return View(bannerModel);
             }
 
             try
             {
-               
+                await bannerService.AddBannerAsync(bannerModel, id);
 
                 return RedirectToAction("Index", "Home");
             }
@@ -51,6 +61,26 @@ namespace GameGuildRecruit.Web.Controllers
 
                 return RedirectToAction("CreateAndEditError", "Errors");
             }
+
+        }
+
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> ShowBanners()
+        {
+            try
+            {
+                //var contactsModels = await gameService.GetGamesAsync();
+
+                return View();
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("EmptyGuildInfo", "Errors");
+            }
+
         }
     }
 }
