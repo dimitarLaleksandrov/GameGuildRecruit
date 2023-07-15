@@ -52,38 +52,34 @@
             <content class="" style="">
                 <div id="carouselExampleInterval" class="carousel slide align-content-md-center" data-bs-ride="carousel">
                     <div class="carousel-inner" style="background-size:revert-layer">
-                        @foreach (var game in Model)
-                        {
-                            <div class="carousel-item active" data-bs-interval="2500">
-                                <a class="btn" href="/Pages/@game.GameName">
-                                    <img class="object-fit-cover border rounded" src="@game.GameSlideImageURL" height="250" width="550">
-                                    <h2 style="color:LightGreen">@game.GameName</h2>
-                                </a>
-                                <div class="desc"></div>
-                            </div>
-                        }
-                      
-                       @* <div class="carousel-item" data-bs-interval="2500">
+                        <div class="carousel-item active" data-bs-interval="2500">
+                            <a class="btn" href="/Pages/WorldOfWarcraft">
+                                <img class="object-fit-cover border rounded" src="/img/wow/wowalexstrasza.webp" height="250" width="550">
+                                <h2 style="color:cadetblue">World of Warcraft</h2>
+                            </a>
+                            <div class="desc"></div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2500">
                             <a class="btn" href="/Pages/StarCraft">
                                 <img class="object-fit-cover border rounded" src="/img/sc/1.jpg" height="250" width="550">
-                                <h2 style="color:black">StarCraft</h2>
+                                <h2 style="color:cyan">StarCraft</h2>
                             </a>
                             <div class="desc"></div>
                         </div>
                         <div class="carousel-item" data-bs-interval="2500">
                             <a class="btn" href="/Pages/Diablo">
                                 <img class="object-fit-cover border rounded" src="/img/diablo/diablo.png" height="250" width="550">
-                                <h2 style="color:black">D I A B L O</h2>
+                                <h2 style="color:red">D I A B L O</h2>
                             </a>
                             <div class="desc"></div>
                         </div>
                         <div class="carousel-item" data-bs-interval="2500">
                             <a class="btn" href="/Pages/GooglePlay">
                                 <img class="object-fit-cover border rounded" src="/img/GooglePlay/GP6.jpg" height="250" width="550">
-                                <h2 style="color:black">Google Play</h2>
+                                <h2 style="color:forestgreen">Google Play</h2>
                             </a>
                             <div class="desc"></div>
-                        </div>*@
+                        </div>
                     </div>
                     <div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -99,9 +95,7 @@
                     </div>
 
                 </div>
-            </content>
-        </div>
-        <div>
+            </content>      
             @foreach (var game in Model)
             {
                 <div class="outBox">
@@ -115,38 +109,7 @@
                     </div>
                 </div>
             }
-           
-            @*<div class="outBox">
-                <div>
-                    <a href="/Pages/StarCraft">
-                        <div class="pix">
-                            <img src="/Img/SC/SC Logo/Logo1.jpg">
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="outBox">
-                <div>
-                    <a href="/Pages/Diablo">
-                        <div class="pix">
-                            <img src="/Img/Diablo/Diablo Logo/Logo2.webp">
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="outBox">
-                <div>
-                    <a href="/Pages/GooglePlay">
-                        <div class="pix">
-                            <img src="/Img/GooglePlay/Google Logo/Logo2.png">
-                        </div>
-                    </a>
-                </div>
-            </div>*@
         </div>
-          
-
-
     </header>
    
 </body>
