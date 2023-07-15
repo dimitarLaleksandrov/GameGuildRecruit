@@ -46,6 +46,9 @@ namespace GameGuildRecruit.Web
 
             builder.Services.AddScoped<IBannerService, BannerService>();
 
+            builder.Services.AddScoped<IHomeService, HomeService>();
+
+
 
 
             //builder.Services.AddScoped<ITaskService, TaskService>();

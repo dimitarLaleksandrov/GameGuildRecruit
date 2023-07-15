@@ -107,7 +107,13 @@
             </div>      
         }
         <div class="text-center  position-absolute top-0 end-0">
-            @if (userCount == 0)
+            @for (int i = 1; i <= userCount; i++)
+            {
+                <partial name="_BannerPartial" />
+            }
+           
+
+           @* @if (userCount == 0)
             {
                 <div class="outBox">
                     <div class="card col-4" style="width: 12rem; background-color:darkgrey;">
@@ -238,7 +244,7 @@
                 </div>  
             }
 
-        </div>
+        </div>*@
     </div>
 
 </body>

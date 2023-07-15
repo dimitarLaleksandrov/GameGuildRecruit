@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<GameViewModel>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 <!DOCTYPE html>
@@ -50,14 +52,18 @@
             <content class="" style="">
                 <div id="carouselExampleInterval" class="carousel slide align-content-md-center" data-bs-ride="carousel">
                     <div class="carousel-inner" style="background-size:revert-layer">
-                        <div class="carousel-item active" data-bs-interval="2500">
-                            <a class="btn" href="/Pages/WorldOfWarcraft">
-                                <img class="object-fit-cover border rounded" src="/img/wow/wowalexstrasza.webp" height="250" width="550">
-                                <h2 style="color:LightGreen">WorldOfWarcraft</h2>
-                            </a>
-                            <div class="desc"></div>
-                        </div>
-                        <div class="carousel-item" data-bs-interval="2500">
+                        @foreach (var game in Model)
+                        {
+                            <div class="carousel-item active" data-bs-interval="2500">
+                                <a class="btn" href="/Pages/@game.GameName">
+                                    <img class="object-fit-cover border rounded" src="@game.GameSlideImageURL" height="250" width="550">
+                                    <h2 style="color:LightGreen">@game.GameName</h2>
+                                </a>
+                                <div class="desc"></div>
+                            </div>
+                        }
+                      
+                       @* <div class="carousel-item" data-bs-interval="2500">
                             <a class="btn" href="/Pages/StarCraft">
                                 <img class="object-fit-cover border rounded" src="/img/sc/1.jpg" height="250" width="550">
                                 <h2 style="color:black">StarCraft</h2>
@@ -77,7 +83,7 @@
                                 <h2 style="color:black">Google Play</h2>
                             </a>
                             <div class="desc"></div>
-                        </div>
+                        </div>*@
                     </div>
                     <div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -96,17 +102,21 @@
             </content>
         </div>
         <div>
-            <div class="outBox">
-                <div>
-                    <a href="/Pages/WorldOfWarcraft">
-                        <div class="pix">
-                            <img src="/Img/WoW/WoW Logo/Logo5.png">
-                           @* <div class="wordBox" style="color:darkturquoise">Word Of Warcraft</div>*@
-                        </div>
-                    </a>              
+            @foreach (var game in Model)
+            {
+                <div class="outBox">
+                    <div>
+                        <a href="/Pages/@game.GameName">
+                            <div class="pix">
+                                <img src="@game.GameLogoImageURL">
+                                @* <div class="wordBox" style="color:darkturquoise">Word Of Warcraft</div>*@
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="outBox">
+            }
+           
+            @*<div class="outBox">
                 <div>
                     <a href="/Pages/StarCraft">
                         <div class="pix">
@@ -132,7 +142,7 @@
                         </div>
                     </a>
                 </div>
-            </div>
+            </div>*@
         </div>
           
 

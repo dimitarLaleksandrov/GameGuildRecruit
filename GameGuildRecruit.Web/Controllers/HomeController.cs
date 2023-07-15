@@ -1,21 +1,40 @@
 ﻿using GameGuildRecruit.Web.Models;
+using GameGuildRecruit.Web.Services;
+using GameGuildRecruit.Web.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace GameGuildRecruit.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+
+        private readonly IHomeService homeService;
+
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(IHomeService homeService, ILogger<HomeController> logger)
         {
+            this.homeService = homeService;
             _logger = logger;
+
         }
+
+
 
         public async Task<IActionResult> Index()
         {
-            return View();
+            try
+            {
+                var gamesModels = await homeService.GetGamesAsync();
+
+                return View(gamesModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("EmptyGuildInfo", "Errors");
+            }
         }
 
         public async Task<IActionResult> Privacy()
