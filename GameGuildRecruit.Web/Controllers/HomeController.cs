@@ -33,7 +33,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("EmptyGuildInfo", "Errors");
+                return RedirectToAction("ShowGamesError", "Errors");
             }
         }
 

@@ -23,31 +23,54 @@ namespace GameGuildRecruit.Web.Controllers
         {
             var usersGameName = "StarCraft";
 
-            GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, usersGameName);
+            try
+            {
+                GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, usersGameName);
 
-            queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
-            queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
-            queryModel.Banners = usersWhitTheSameGame.Banners;
-            queryModel.BannerCount = usersWhitTheSameGame.BannerCount;
+                queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
+                queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
+                queryModel.Banners = usersWhitTheSameGame.Banners;
+                queryModel.BannerCount = usersWhitTheSameGame.BannerCount;
 
-            return View(queryModel);
+                return View(queryModel);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
 
         }
 
         [HttpPost]
         public async Task<IActionResult> StarCraftContacts(Guid id)
         {
-            var contactsModels = await pageService.GetUserContactsByIdAsync(id);
+            try
+            {
+                var contactsModels = await pageService.GetUserContactsByIdAsync(id);
 
-            return View(contactsModels);
+                return View(contactsModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
+           
         }
 
         [HttpPost]
         public async Task<IActionResult> StarCraftGetContactFeedback(Guid id)
         {
-            var userModel = await pageService.GetContactForFeedbackByIdAsync(id);
+            try
+            {
+                var contactModel = await pageService.GetContactForFeedbackByIdAsync(id);
 
-            return View(userModel);
+                return View(contactModel);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
+          
         }
 
         public async Task<IActionResult> StarCraftPreviousPage()
@@ -62,30 +85,52 @@ namespace GameGuildRecruit.Web.Controllers
         {
             var usersGameName = "WorldOfWarcraft";
 
-            GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, usersGameName);
+            try
+            {
+                GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, usersGameName);
 
-            queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
-            queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
-            queryModel.Banners = usersWhitTheSameGame.Banners;
-            queryModel.BannerCount = usersWhitTheSameGame.BannerCount;
+                queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
+                queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
+                queryModel.Banners = usersWhitTheSameGame.Banners;
+                queryModel.BannerCount = usersWhitTheSameGame.BannerCount;
 
-            return View(queryModel);
+                return View(queryModel);
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("PageError", "Errors");
+            }       
         }
 
         [HttpPost]
         public async Task<IActionResult> WoWContacts(Guid id)
         {
-            var contactsModels = await pageService.GetUserContactsByIdAsync(id);
+            try
+            {
+                var contactsModels = await pageService.GetUserContactsByIdAsync(id);
 
-            return View(contactsModels);
+                return View(contactsModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> WoWGetContactFeedback(Guid id)
         {
-            var userModel = await pageService.GetContactForFeedbackByIdAsync(id);
+            try
+            {
+                var contactsModels = await pageService.GetContactForFeedbackByIdAsync(id);
 
-            return View(userModel);
+                return View(contactsModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
         }
 
         public async Task<IActionResult> WoWPreviousPage()
@@ -99,32 +144,51 @@ namespace GameGuildRecruit.Web.Controllers
         public async Task<IActionResult> Diablo([FromQuery] GuildUsersQueryModel queryModel)
         {
             var usersGameName = "Diablo";
+            try
+            {
+                GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, usersGameName);
 
-            GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, usersGameName);
+                queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
+                queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
+                queryModel.Banners = usersWhitTheSameGame.Banners;
+                queryModel.BannerCount = usersWhitTheSameGame.BannerCount;
 
-            queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
-            queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
-            queryModel.Banners = usersWhitTheSameGame.Banners;
-            queryModel.BannerCount = usersWhitTheSameGame.BannerCount;
-
-            return View(queryModel);
+                return View(queryModel);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> DiabloContacts(Guid id)
         {
+            try
+            {
+                var contactsModels = await pageService.GetUserContactsByIdAsync(id);
 
-            var contactsModels = await pageService.GetUserContactsByIdAsync(id);
-
-            return View(contactsModels);
+                return View(contactsModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> DiabloGetContactFeedback(Guid id)
         {
-            var userModel = await pageService.GetContactForFeedbackByIdAsync(id);
+            try
+            {
+                var contactsModels = await pageService.GetContactForFeedbackByIdAsync(id);
 
-            return View(userModel);
+                return View(contactsModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
         }
 
         public async Task<IActionResult> DiabloPreviousPage()
@@ -138,32 +202,51 @@ namespace GameGuildRecruit.Web.Controllers
         public async Task<IActionResult> GooglePlay([FromQuery] GuildUsersQueryModel queryModel)
         {
             var usersGameName = "GooglePlay";
+            try
+            {
+                GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, usersGameName);
 
-            GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, usersGameName);
+                queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
+                queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
+                queryModel.Banners = usersWhitTheSameGame.Banners;
+                queryModel.BannerCount = usersWhitTheSameGame.BannerCount;
 
-            queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
-            queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
-            queryModel.Banners = usersWhitTheSameGame.Banners;
-            queryModel.BannerCount = usersWhitTheSameGame.BannerCount;
-
-            return View(queryModel);
+                return View(queryModel);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> GooglePlayContacts(Guid id)
         {
+            try
+            {
+                var contactsModels = await pageService.GetUserContactsByIdAsync(id);
 
-            var contactsModels = await pageService.GetUserContactsByIdAsync(id);
-
-            return View(contactsModels);
+                return View(contactsModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> GooglePlayGetContactFeedback(Guid id)
         {
-            var userModel = await pageService.GetContactForFeedbackByIdAsync(id);
+            try
+            {
+                var contactsModels = await pageService.GetContactForFeedbackByIdAsync(id);
 
-            return View(userModel);
+                return View(contactsModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
         }
 
         public async Task<IActionResult> GooglePlayPreviousPage()

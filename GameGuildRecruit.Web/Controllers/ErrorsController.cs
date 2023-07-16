@@ -90,5 +90,12 @@ namespace GameGuildRecruit.Web.Controllers
         {
             return View();
         }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult PageError()
+        {
+            return View();
+        }
     }
 }
