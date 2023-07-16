@@ -102,22 +102,21 @@ namespace GameGuildRecruit.Web.Controllers
             }
         }
 
-        //[Authorize]
-        //[HttpPost]
-        //public async Task<IActionResult> RemoveBanner(Guid id)
-        //{
-        //    try
-        //    {
-        //        await bannerService.RemoveBannerAsync(id);
+        [Authorize]
+        public async Task<IActionResult> RemoveBanner(Guid id)
+        {
+            try
+            {
+                await bannerService.RemoveBannerAsync(id);
 
-        //        return RedirectToAction("Index", "Home");
-        //    }
-        //    catch (Exception)
-        //    {
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception)
+            {
 
-        //        return RedirectToAction("RemoveGuildInfoError", "Errors");
-        //    }
-        //}
+                return RedirectToAction("RemoveGuildInfoError", "Errors");
+            }
+        }
 
     }
 }

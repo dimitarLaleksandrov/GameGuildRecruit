@@ -4,6 +4,7 @@ using GameGuildRecruit.Web.ViewModels.Game;
 using GameGuildRecruit.Web.Data.Models;
 using GameGuildRecruit.Web.Data;
 using Microsoft.EntityFrameworkCore;
+using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 
 namespace GameGuildRecruit.Web.Services
 {
@@ -78,6 +79,31 @@ namespace GameGuildRecruit.Web.Services
             };
 
             return bannerModel;
+        }
+
+        public async Task RemoveBannerAsync(Guid id)
+        {
+
+            var bannerModelToDelete = await dbContext.Banners
+                                        .Where(b => b.Id == id)
+                                          .Select(u => new Banner
+                                          {
+                                              Id = u.Id,
+                                              GameName = u.GameName,
+                                              BannerImageURL = u.BannerImageURL,
+                                              BannerTitle = u.BannerTitle,
+                                              Description = u.Description,
+                                              BannerURL = u.BannerURL
+
+                                          })
+                                          .FirstOrDefaultAsync();
+
+            if (bannerModelToDelete != null)
+            {
+                dbContext.Banners.Remove(bannerModelToDelete);
+
+                await dbContext.SaveChangesAsync();
+            }
         }
     }
 }

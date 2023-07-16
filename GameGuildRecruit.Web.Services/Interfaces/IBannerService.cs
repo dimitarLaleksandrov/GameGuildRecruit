@@ -17,6 +17,9 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
         Task EditBannerAsync(BannerFormModel userModel);
 
+        Task RemoveBannerAsync(Guid id);
+
+
 
     }
 }

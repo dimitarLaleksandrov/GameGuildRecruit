@@ -16,7 +16,7 @@
         {
             <a class="btn btn-outline-light btn-sm" asp-controller="Banner" asp-action="Edit" asp-route-id="@Model.Id">Edite Banner</a>
             <hr />
-            <a class="btn btn-outline-danger btn-sm" asp-area="" method="post" asp-controller="Banner" asp-action="RemoveBanner" asp-route-id="@Model.Id">Remove Banner</a>
+            <a class="btn btn-outline-danger btn-sm" asp-area="" asp-controller="Banner" asp-action="RemoveBanner" asp-route-id="@Model.Id">Remove Banner</a>
         }
     </div>
 </div>
