@@ -53,7 +53,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 await bannerService.AddBannerAsync(bannerModel, id);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction(bannerModel.GameName, "Pages");
             }
             catch (Exception)
             {
@@ -93,7 +93,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 await bannerService.EditBannerAsync(bannerModel);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction(bannerModel.GameName, "Pages");
             }
             catch (Exception)
             {
@@ -101,6 +101,23 @@ namespace GameGuildRecruit.Web.Controllers
                 return RedirectToAction("CreateAndEditError", "Errors");
             }
         }
+
+        //[Authorize]
+        //[HttpPost]
+        //public async Task<IActionResult> RemoveBanner(Guid id)
+        //{
+        //    try
+        //    {
+        //        await bannerService.RemoveBannerAsync(id);
+
+        //        return RedirectToAction("Index", "Home");
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        return RedirectToAction("RemoveGuildInfoError", "Errors");
+        //    }
+        //}
 
     }
 }
