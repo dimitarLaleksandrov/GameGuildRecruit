@@ -26,5 +26,7 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
 
 
+
+
     }
 }

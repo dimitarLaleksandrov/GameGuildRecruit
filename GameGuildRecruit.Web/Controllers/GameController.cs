@@ -12,11 +12,15 @@ namespace GameGuildRecruit.Web.Controllers
 
         private readonly IGameService gameService;
 
+        private readonly IPageService pageService;
 
-        public GameController(IGameService gameService)
+
+
+
+        public GameController(IGameService gameService, IPageService pageService)
         {
             this.gameService = gameService;
-
+            this.pageService = pageService;
         }
 
 

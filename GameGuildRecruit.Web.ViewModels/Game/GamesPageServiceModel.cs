@@ -1,12 +1,11 @@
 ﻿
 
-using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 
 namespace GameGuildRecruit.Web.ViewModels.Game
 {
-    public class GameQueryModel
+    public class GamesPageServiceModel
     {
-        public GameQueryModel()
+        public GamesPageServiceModel()
         {
             this.Games = new HashSet<GameFormModel>();
         }
