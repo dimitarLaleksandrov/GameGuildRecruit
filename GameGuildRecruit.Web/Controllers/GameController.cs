@@ -180,6 +180,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
         }
 
+
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> RemoveGuild(Guid id)
@@ -195,7 +196,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 await userService.RemoveGuildInfoAsync(userModel);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("ShowGames", "Game");
             }
             catch (Exception)
             {
