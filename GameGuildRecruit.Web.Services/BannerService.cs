@@ -83,7 +83,6 @@ namespace GameGuildRecruit.Web.Services
 
         public async Task RemoveBannerAsync(Guid id)
         {
-
             var bannerModelToDelete = await dbContext.Banners
                                         .Where(b => b.Id == id)
                                           .Select(u => new Banner
