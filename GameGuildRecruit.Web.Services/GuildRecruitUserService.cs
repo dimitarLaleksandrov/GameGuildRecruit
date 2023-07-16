@@ -157,7 +157,7 @@ namespace GameGuildRecruit.Web.Services
                {
                    Id = b.Id,
                    GameName = b.GameName,
-                   BannerImageURL = b.BannerURL,
+                   BannerImageURL = b.BannerImageURL,
                    BannerTitle = b.BannerTitle,
                    BannerURL = b.BannerURL,
                    Description = b.Description

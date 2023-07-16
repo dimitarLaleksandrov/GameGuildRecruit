@@ -89,26 +89,44 @@
     </div>
 
     <div class="position-relative">
+        @{
+            var counter = 0;
+            var userName = "";
+        }
+
         @foreach (var user in Model.GuildUsers)
-        {
+        { 
             @if (SignInManager.IsSignedIn(User))
             {
                 if (user.UserName == User.Identity!.Name)
                 {
+                    userName = user.UserName;
                     continue;
                 }
             }
-
+            counter++;
             <div class="outBox">
                 <partial name="_WoWGuildUsersPartial" model="@user" />
             </div>      
         }
         <div class="text-center  position-absolute top-0 end-0">
             @foreach (var banner in Model.Banners)
-            {
+            {            
+                @if (counter == 0)
+                {
+                    <div class="outBox">
+                        <partial name="_BannerPartial" model="@banner" />
+                    </div>
+                    break;
+                }
+                @if (userName == User.Identity!.Name)
+                {
+                    userName = "";
+                    continue;
+                }
                 <div class="outBox">
                     <partial name="_BannerPartial" model="@banner" />
-                </div>
+                </div>             
             }
         </div>
     </div>
