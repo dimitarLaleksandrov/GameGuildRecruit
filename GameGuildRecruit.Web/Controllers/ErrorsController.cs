@@ -75,5 +75,20 @@ namespace GameGuildRecruit.Web.Controllers
         {
             return View();
         }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult ShowGamesError()
+        {
+            return View();
+        }
+
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult RemoveGameError()
+        {
+            return View();
+        }
     }
 }
