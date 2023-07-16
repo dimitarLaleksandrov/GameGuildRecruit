@@ -1,4 +1,7 @@
 ﻿@model GuildRecruitUserFormModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 
 <div class="text-center position-relative top-0 start-0 ">
@@ -27,7 +30,7 @@
             </div>
             @if (Model.UrlLink != null)
             {
-                <a class="link-info" href="@Model.UrlLink"  target="_blank">Visit @Model.NickName Info Page</a>
+                <a class="link-info" href="@Model.UrlLink" target="_blank">Visit @Model.NickName Info Page</a>
             }
             @if (Model.ServerName != null)
             {
@@ -42,8 +45,14 @@
             {
                 <button class="btn btn-info btn-sm" asp-area="" method="post" asp-controller="Pages" asp-action="WoWContacts" asp-route-id="@Model.Id">See All Contacts</button>
             }
+            @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+            {
+                <button class="btn btn-outline-danger btn-sm" asp-area="" method="post" asp-controller="" asp-action="" asp-route-id="@Model.Id">Remove Guild</button>
+
+            }
         </div>
     </form>
 </div>
+
 
 

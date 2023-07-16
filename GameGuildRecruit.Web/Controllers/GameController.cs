@@ -12,15 +12,9 @@ namespace GameGuildRecruit.Web.Controllers
 
         private readonly IGameService gameService;
 
-        private readonly IPageService pageService;
-
-
-
-
-        public GameController(IGameService gameService, IPageService pageService)
+        public GameController(IGameService gameService)
         {
             this.gameService = gameService;
-            this.pageService = pageService;
         }
 
 
@@ -180,19 +174,6 @@ namespace GameGuildRecruit.Web.Controllers
         }
 
 
-        [Authorize]
-        [HttpGet]
-        public async Task<IActionResult> StarCraft([FromQuery] GuildUsersQueryModel queryModel)
-        {
-            var usersGameName = "StarCraft";
-
-            GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, usersGameName);
-
-            queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
-            queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
-
-            return View(queryModel);
-
-        }
+       
     }
 }

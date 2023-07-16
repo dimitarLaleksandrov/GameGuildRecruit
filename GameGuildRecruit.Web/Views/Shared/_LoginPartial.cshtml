@@ -21,17 +21,20 @@
         @if (SignInManager.IsSignedIn(User))
         {
             <div class="navbar-nav">
-                <div class="navbar-nav">
-                    <div class="btn-group" role="group" aria-label="Dropdown">
-                        <button type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Welcome Admin
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="/Game/ShowGames">Games</a></li>
-                            <li><a class="dropdown-item" href="/Game/Create">Add Games</a></li>
-                        </ul>
+                @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+                {
+                    <div class="navbar-nav">
+                        <div class="btn-group" role="group" aria-label="Dropdown">
+                            <button type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Welcome Admin
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="/Game/ShowGames">Games</a></li>
+                                <li><a class="dropdown-item" href="/Game/Create">Add Games</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                }             
                 <div class="btn-group" role="group" aria-label="Dropdown">
                     <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         Welcome @User.Identity?.Name
