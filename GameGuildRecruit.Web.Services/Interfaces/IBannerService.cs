@@ -2,6 +2,7 @@
 
 using GameGuildRecruit.Web.ViewModels.Banner;
 using GameGuildRecruit.Web.ViewModels.Game;
+using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 
 namespace GameGuildRecruit.Web.Services.Interfaces
 {
@@ -11,6 +12,11 @@ namespace GameGuildRecruit.Web.Services.Interfaces
         Task<BannerFormModel> GetNewBannerModelAsync();
 
         Task AddBannerAsync(BannerFormModel bannerModel, Guid id);
+
+        Task<BannerFormModel?> GetBannerByIdAsync(Guid id);
+
+        Task EditBannerAsync(BannerFormModel userModel);
+
 
     }
 }

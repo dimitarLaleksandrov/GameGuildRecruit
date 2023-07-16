@@ -14,7 +14,9 @@
         </div>
         @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
         {
-            <button class="btn btn-outline-danger btn-sm" asp-area="" method="post" asp-controller="" asp-action="" asp-route-id="@Model.Id">Remove Banner</button>
+            <a class="btn btn-outline-light btn-sm" asp-controller="Banner" asp-action="Edit" asp-route-id="@Model.Id">Edite Banner</a>
+            <hr />
+            <a class="btn btn-outline-danger btn-sm" asp-area="" method="post" asp-controller="" asp-action="" asp-route-id="@Model.Id">Remove Banner</a>
         }
     </div>
 </div>

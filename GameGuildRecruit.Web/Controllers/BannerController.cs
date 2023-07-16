@@ -2,6 +2,7 @@
 using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.Banner;
 using GameGuildRecruit.Web.ViewModels.Game;
+using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -64,21 +65,42 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpGet]
-        public async Task<IActionResult> ShowBanners()
+        public async Task<IActionResult> Edit(Guid id)
         {
             try
             {
-                //var bannersModels = await bannerService.GetBannersAsync();
+                var banner = await bannerService.GetBannerByIdAsync(id);
 
-                return View();
+                return View(banner);
             }
             catch (Exception)
             {
 
-                return RedirectToAction("EmptyGuildInfo", "Errors");
+                return RedirectToAction("CreateAndEditError", "Errors");
+            }
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> EditBanner(BannerFormModel bannerModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(bannerModel);
             }
 
+            try
+            {
+                await bannerService.EditBannerAsync(bannerModel);
+
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("CreateAndEditError", "Errors");
+            }
         }
- 
+
     }
 }
