@@ -68,7 +68,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
         }
 
-        [HttpPost]
+        
         public async Task<IActionResult> DeleteContact(Guid id)
         {
             var contact = await contactService.GetContactByIdAsync(id);
