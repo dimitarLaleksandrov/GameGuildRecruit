@@ -72,8 +72,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXEFkZGluZ0NvbnRhY3RFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/CreateAndEditBannerError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXENyZWF0ZUFuZEVkaXRCYW5uZXJFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/CreateAndEditError.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXENyZWF0ZUFuZEVkaXRFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/CreateAndEditGameError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXENyZWF0ZUFuZEVkaXRHYW1lRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/EmptyGuildInfo.cshtml]
@@ -88,8 +96,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXEdldFVzZXJzRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/RemoveContactErrors.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXFJlbW92ZUNvbnRhY3RFcnJvcnMuY3NodG1s
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/RemoveBannerError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXFJlbW92ZUJhbm5lckVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/RemoveContactError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXFJlbW92ZUNvbnRhY3RFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/RemoveGuildInfoError.cshtml]
@@ -98,6 +110,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/SetAvatarError.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXFNldEF2YXRhckVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Errors/ShowGamesError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXFNob3dHYW1lc0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Game/Create.cshtml]

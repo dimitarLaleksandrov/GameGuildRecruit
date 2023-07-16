@@ -55,7 +55,7 @@ namespace GameGuildRecruit.Web.Controllers
             catch (Exception)
             {
 
-                return RedirectToAction("CreateAndEditError", "Errors");
+                return RedirectToAction("CreateAndEditGameError", "Errors");
             }
         }
 
@@ -77,7 +77,7 @@ namespace GameGuildRecruit.Web.Controllers
             catch (Exception)
             {
 
-                return RedirectToAction("CreateAndEditError", "Errors");
+                return RedirectToAction("CreateAndEditGameError", "Errors");
             }
         }
 
@@ -94,7 +94,7 @@ namespace GameGuildRecruit.Web.Controllers
             catch (Exception)
             {
 
-                return RedirectToAction("CreateAndEditError", "Errors");
+                return RedirectToAction("CreateAndEditGameError", "Errors");
             }
         }
 
@@ -112,7 +112,7 @@ namespace GameGuildRecruit.Web.Controllers
             catch (Exception)
             {
 
-                return RedirectToAction("CreateAndEditError", "Errors");
+                return RedirectToAction("CreateAndEditGameError", "Errors");
             }
         }
 
@@ -128,7 +128,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("GetContactError", "Errors");
+                return RedirectToAction("CreateAndEditGameError", "Errors");
             }
         }
 

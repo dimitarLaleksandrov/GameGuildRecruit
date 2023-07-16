@@ -49,7 +49,29 @@ namespace GameGuildRecruit.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult RemoveContactErrors()
+        public IActionResult RemoveContactError()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult CreateAndEditBannerError()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult RemoveBannerError()
+        {
+            return View();
+        }
+
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult CreateAndEditGameError()
         {
             return View();
         }

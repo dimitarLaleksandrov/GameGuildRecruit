@@ -86,7 +86,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("RemoveContactErrors", "Errors");
+                return RedirectToAction("RemoveContactError", "Errors");
             }
 
         }
