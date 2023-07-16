@@ -1,4 +1,10 @@
 ﻿@model IEnumerable<ContactPlayerViewModel>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,6 +67,11 @@
                     else
                     {
                         <button type="button" class="btn btn-danger" disabled>Contact is Rejected</button>
+                    }
+                    @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+                    {
+                        <hr />
+                        <a class="btn btn-outline-danger btn-sm" asp-area="" asp-controller="Game" asp-action="RemoveContact" asp-route-id="@contact.Id">Remove Contact</a>
                     }
                 </div>
             </div>         

@@ -205,6 +205,28 @@ namespace GameGuildRecruit.Web.Controllers
             }
         }
 
+        [Authorize]
+        public async Task<IActionResult> RemoveContact(Guid id)
+        {
+            var contactModel = await contactService.GetContactByIdAsync(id);
+
+            if (contactModel == null)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
+
+            try
+            {
+                await contactService.RemoveContactAsync(contactModel);
+
+                return RedirectToAction("ShowGames", "Game");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("RemoveGuildInfoError", "Errors");
+            }
+        }
+
 
     }
 }
