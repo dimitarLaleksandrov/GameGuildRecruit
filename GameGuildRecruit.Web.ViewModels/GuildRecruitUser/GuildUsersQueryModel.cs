@@ -1,16 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using GameGuildRecruit.Web.ViewModels.Banner;
+using System.ComponentModel.DataAnnotations;
 using static GameGuildRecruit.Web.Common.PageConstants;
 
 namespace GameGuildRecruit.Web.ViewModels.GuildRecruitUser
 {
     public class GuildUsersQueryModel
     {
+
         public GuildUsersQueryModel()
         {
             this.CurrentPage = DefaultPage;
             this.UserPerPage = EntitiesPerPage;
 
             this.GuildUsers = new HashSet<GuildRecruitUserFormModel>();
+            this.Banners = new HashSet<BannerFormModel>();
+
         }
 
         public string? GuildName { get; set; }
@@ -25,5 +29,9 @@ namespace GameGuildRecruit.Web.ViewModels.GuildRecruitUser
         public int GuildUsersCount { get; set; }
 
         public IEnumerable<GuildRecruitUserFormModel> GuildUsers { get; set; }
+
+        public int BannerCount { get; set; }
+
+        public IEnumerable<BannerFormModel> Banners { get; set; }
     }
 }

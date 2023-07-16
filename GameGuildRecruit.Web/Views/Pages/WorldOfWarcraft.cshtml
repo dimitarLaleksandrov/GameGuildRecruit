@@ -89,9 +89,6 @@
     </div>
 
     <div class="position-relative">
-        @{
-            var userCount = 0;
-        }
         @foreach (var user in Model.GuildUsers)
         {
             @if (SignInManager.IsSignedIn(User))
@@ -101,16 +98,25 @@
                     continue;
                 }
             }
-            userCount++;
+
             <div class="outBox">
                 <partial name="_WoWGuildUsersPartial" model="@user" />
             </div>      
         }
         <div class="text-center  position-absolute top-0 end-0">
-
-            @for (int i = 1; i <= userCount; i++)
+            @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
             {
-                <partial name="_BannerPartial" />
+                <button class="btn btn-success btn-sm" asp-area="" method="post" asp-controller="" asp-action="" asp-route-id="">Add Banner</button>
+            }
+            @foreach (var banner in Model.Banners)
+            {
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    continue;
+                }
+                <div class="outBox">
+                    <partial name="_BannerPartial" model="@banner" />
+                </div>
             }
            
 

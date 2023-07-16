@@ -282,6 +282,8 @@ namespace GameGuildRecruit.Web.Controllers
 
                 queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
                 queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
+                queryModel.Banners = usersWhitTheSameGame.Banners;
+                queryModel.BannerCount = usersWhitTheSameGame.BannerCount;
 
                 return View(queryModel);
             }

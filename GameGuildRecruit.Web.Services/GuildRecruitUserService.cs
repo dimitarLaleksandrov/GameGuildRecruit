@@ -6,6 +6,7 @@ using GameGuildRecruit.Web.Data.Models;
 
 
 using Microsoft.EntityFrameworkCore;
+using GameGuildRecruit.Web.ViewModels.Banner;
 
 namespace GameGuildRecruit.Web.Services
 {
@@ -111,6 +112,10 @@ namespace GameGuildRecruit.Web.Services
                 .GuildRecruitUsers
                 .Where(u => u.GameName == gameName)
                 .AsQueryable();
+            IQueryable<Banner> bannerQuery = this.dbContext
+               .Banners
+               .Where(b => b.GameName == gameName)
+               .AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(queryModel.GuildName))
             {
@@ -144,12 +149,31 @@ namespace GameGuildRecruit.Web.Services
                     UserContactNum = g.Contacts.Count()
                 })
                 .ToArrayAsync();
+
+            IEnumerable<BannerFormModel> allBanners = await bannerQuery
+               .Skip((queryModel.CurrentPage - 1) * queryModel.UserPerPage)
+               .Take(queryModel.UserPerPage)
+               .Select(b => new BannerFormModel
+               {
+                   Id = b.Id,
+                   GameName = b.GameName,
+                   BannerImageURL = b.BannerURL,
+                   BannerTitle = b.BannerTitle,
+                   BannerURL = b.BannerURL,
+                   Description = b.Description
+               })
+               .ToArrayAsync();
             int guildUsersCount = guildUsersQuery.Count();
+
+            int bannerCount = bannerQuery.Count();
+
 
             return new GuildUsersPageServiceModel()
             {
                 GuildUsersCount = guildUsersCount,
-                GuildUsers = allGuildUsers
+                GuildUsers = allGuildUsers,
+                BannerCount = bannerCount,
+                Banners = allBanners
             };
             
         }
