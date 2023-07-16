@@ -64,7 +64,7 @@
             <div class="col-md-6 d-grid gap-2 d-md-flex justify-content-md-start">
                 <a class="btn btn-primary @(Model.CurrentPage == 1 ? "disabled" : string.Empty)"
                    asp-controller="Pages"
-                   asp-action="GooglePlayPage"
+                   asp-action="GooglePlay"
                    asp-route-currentPage="@previousPage"
                    asp-route-searchTerm="@Model.SearchString"><<</a>
             </div>
@@ -78,7 +78,7 @@
                 <a class="btn btn-primary
            @(shouldNextPageBeDisabled ? "disabled" : string.Empty)"
                    asp-controller="Pages"
-                   asp-action="GooglePlayPage"
+                   asp-action="GooglePlay"
                    asp-route-currentPage="@(Model.CurrentPage + 1)"
                    asp-route-searchTerm="@Model.SearchString">>></a>
 

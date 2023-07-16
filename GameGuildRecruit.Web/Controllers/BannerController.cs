@@ -79,23 +79,6 @@ namespace GameGuildRecruit.Web.Controllers
             }
 
         }
-
-        [Authorize]
-        [HttpGet]
-        public async Task<IActionResult> ShowGames()
-        {
-            try
-            {
-                //var bannersModels = await bannerService.GetBannersAsync();
-
-                return View();
-            }
-            catch (Exception)
-            {
-
-                return RedirectToAction("EmptyGuildInfo", "Errors");
-            }
-
-        }
+ 
     }
 }
