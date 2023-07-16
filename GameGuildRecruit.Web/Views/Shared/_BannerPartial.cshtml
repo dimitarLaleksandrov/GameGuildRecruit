@@ -1,4 +1,7 @@
 ﻿@model BannerFormModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 
 <div class="outBox">
@@ -9,6 +12,10 @@
             <p class="card-text" style="color:yellow">@Model.Description</p>
             <a href="@Model.BannerURL" class="btn btn-primary" target="_blank">Banner Page</a>
         </div>
+        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+        {
+            <button class="btn btn-outline-danger btn-sm" asp-area="" method="post" asp-controller="" asp-action="" asp-route-id="@Model.Id">Remove Banner</button>
+        }
     </div>
 </div>
 

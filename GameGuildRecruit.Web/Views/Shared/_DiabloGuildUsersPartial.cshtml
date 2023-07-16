@@ -46,6 +46,7 @@
             }
             @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
             {
+                <hr />
                 <button class="btn btn-outline-danger btn-sm" asp-area="" method="post" asp-controller="Game" asp-action="RemoveGuild" asp-route-id="@Model.Id">Remove Guild</button>
             }
         </div>
