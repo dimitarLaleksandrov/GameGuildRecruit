@@ -17,7 +17,13 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
         Task<GameViewModel?> GetGameByIdAsync(Guid id);
 
+        Task<GameFormModel?> GetGameForEditByIdAsync(Guid id);
+
+        Task EditGameAsync(GameFormModel gameModel);
+
+
         Task RemoveGameAsync(GameViewModel game);
+
 
 
     }

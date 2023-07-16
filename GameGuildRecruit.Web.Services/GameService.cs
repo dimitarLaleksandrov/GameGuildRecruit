@@ -110,5 +110,36 @@ namespace GameGuildRecruit.Web.Services
             }
 
         }
+
+        public async Task<GameFormModel?> GetGameForEditByIdAsync(Guid id)
+        {
+            return await dbContext.Games
+              .Where(g => g.Id == id)
+              .Select(gm => new GameFormModel
+              {
+                  Id = gm.Id,
+                  GameName = gm.GameName,
+                  GameLogoImageURL = gm.GameLogoImageURL,
+                  GameSlideImageURL = gm.GameSlideImageURL,
+                  IsGameHasView = gm.IsGameHasView
+
+              })
+              .FirstOrDefaultAsync();
+        }
+
+        public async Task EditGameAsync(GameFormModel gameModel)
+        {
+            var findGameByGameName = await dbContext.Games.Where(g => g.GameName == gameModel.GameName).FirstOrDefaultAsync();
+
+            if (findGameByGameName != null)
+            {
+                findGameByGameName.Id = gameModel.Id;
+                findGameByGameName.GameSlideImageURL = gameModel.GameSlideImageURL;
+                findGameByGameName.GameLogoImageURL = gameModel.GameLogoImageURL;
+                findGameByGameName.IsGameHasView = gameModel.IsGameHasView;
+
+                await dbContext.SaveChangesAsync();
+            }
+        }
     }
 }

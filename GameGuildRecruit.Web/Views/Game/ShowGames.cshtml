@@ -37,6 +37,7 @@
                         @if (game.IsGameHasView == true)
                         {
                             <a class="btn btn-outline-info" asp-area="" asp-controller="Game" asp-action="GoToGame" asp-route-id="@game.Id">@game.GameName Page</a>
+                            <a class="btn btn-outline-success" asp-area="" asp-controller="Game" asp-action="Edit" asp-route-id="@game.Id">Edite @game.GameName</a>
                             <button type="button" class="btn btn-success" disabled>Game View Is Created</button>
                             <a class="btn btn-outline-danger" asp-area="" asp-controller="Game" asp-action="DeleteGame" asp-route-id="@game.Id">Delete Game</a>
 
@@ -48,10 +49,7 @@
                     </div>
                 </div>
             </div>
-
-        } 
-        
-
+        }   
     </header>  
 
 </body>

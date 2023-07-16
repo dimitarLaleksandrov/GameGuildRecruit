@@ -1,0 +1,67 @@
+﻿@model GameFormModel
+@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewBag.Title = "Edite Game";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("/Img/Background/BG11.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <h2 class="text-center" style="color:orangered">@ViewBag.Title</h2>
+
+
+
+    <div class="row">
+        <div class="row">
+            <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+                <form class="input-group-sm" asp-controller="Game" asp-action="Edit">
+                    <div class="mb-3">
+                        <label asp-for="@Model.GameName" class="form-label" style="color:orangered">GameName</label>
+                        <input asp-for="@Model.GameName" class="form-control" aria-required="true" />
+                        <span asp-validation-for="@Model.GameName" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.GameSlideImageURL" class="form-label" style="color:orangered">Game Slide Image "/Img/..."</label>
+                        <input asp-for="@Model.GameSlideImageURL" class="form-control" aria-required="true" />
+                        <span asp-validation-for="@Model.GameSlideImageURL" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.GameLogoImageURL" class="form-label" style="color:orangered">Game Logo Image "/Img/..."</label>
+                        <input asp-for="@Model.GameLogoImageURL" class="form-control" aria-required="true" />
+                        <span asp-validation-for="@Model.GameLogoImageURL" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <input class="btn btn-primary" type="submit" value="@ViewBag.Title" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+
+</body>
+</html>
+
+

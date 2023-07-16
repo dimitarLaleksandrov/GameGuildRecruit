@@ -95,7 +95,7 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Edit(GuildRecruitUserFormModel userModel)
+        public async Task<IActionResult> EditGame(GuildRecruitUserFormModel userModel)
         {
             if (!ModelState.IsValid)
             {

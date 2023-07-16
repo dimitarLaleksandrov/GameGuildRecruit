@@ -1,6 +1,7 @@
 ﻿using GameGuildRecruit.Web.Services;
 using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.Game;
+using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -76,6 +77,42 @@ namespace GameGuildRecruit.Web.Controllers
         }
 
         [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            try
+            {
+                var gameModel = await gameService.GetGameForEditByIdAsync(id!);
+
+                return View(gameModel);
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("CreateAndEditError", "Errors");
+            }
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Edit(GameFormModel gameModel)
+        {
+           
+            try
+            {
+                await gameService.EditGameAsync(gameModel);
+
+                return RedirectToAction("ShowGames", "Game");
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("CreateAndEditError", "Errors");
+            }
+        }
+
+
+        [Authorize]
         public async Task<IActionResult> GameViewMade(Guid id)
         {
             try
@@ -136,6 +173,22 @@ namespace GameGuildRecruit.Web.Controllers
 
                 return RedirectToAction("CreateAndEditError", "Errors");
             }
+        }
+
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> StarCraft([FromQuery] GuildUsersQueryModel queryModel)
+        {
+            var usersGameName = "StarCraft";
+
+            GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, usersGameName);
+
+            queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
+            queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
+
+            return View(queryModel);
+
         }
     }
 }
