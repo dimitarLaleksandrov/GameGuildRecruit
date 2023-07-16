@@ -12,9 +12,16 @@ namespace GameGuildRecruit.Web.Controllers
 
         private readonly IGameService gameService;
 
-        public GameController(IGameService gameService)
+        private readonly IGuildRecruitUserService userService;
+
+        private readonly IContactService contactService;
+
+
+        public GameController(IGameService gameService, IGuildRecruitUserService userService, IContactService contactService)
         {
             this.gameService = gameService;
+            this.userService = userService;
+            this.contactService = contactService;
         }
 
 
@@ -173,7 +180,30 @@ namespace GameGuildRecruit.Web.Controllers
             }
         }
 
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> RemoveGuild(Guid id)
+        {
+            var userModel = await contactService.GetUserByIdAsync(id);
 
-       
+            if (userModel == null)
+            {
+                return RedirectToAction("EmptyGuildInfo", "Errors");
+            }
+
+            try
+            {
+                await userService.RemoveGuildInfoAsync(userModel);
+
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("RemoveGuildInfoError", "Errors");
+            }
+        }
+
+
     }
 }

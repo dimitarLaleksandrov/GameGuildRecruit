@@ -21,7 +21,7 @@
         @if (SignInManager.IsSignedIn(User))
         {
             <div class="navbar-nav">
-                @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+                @if (User.Identity?.Name == "KirilToshev")
                 {
                     <div class="navbar-nav">
                         <div class="btn-group" role="group" aria-label="Dropdown">
