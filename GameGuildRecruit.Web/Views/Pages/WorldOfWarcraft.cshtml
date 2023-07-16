@@ -106,14 +106,12 @@
         <div class="text-center  position-absolute top-0 end-0">
             @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
             {
-                <button class="btn btn-success btn-sm" asp-area="" method="post" asp-controller="" asp-action="" asp-route-id="">Add Banner</button>
+                <a class="mb-3" href="/Banner/Create">
+                    <input class="btn btn-success" type="submit" value="Add New Banner" />
+                </a>
             }
             @foreach (var banner in Model.Banners)
             {
-                @if (SignInManager.IsSignedIn(User))
-                {
-                    continue;
-                }
                 <div class="outBox">
                     <partial name="_BannerPartial" model="@banner" />
                 </div>
