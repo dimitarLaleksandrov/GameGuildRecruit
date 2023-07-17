@@ -6,42 +6,38 @@ namespace GameGuildRecruit.Web.Controllers
     public class ErrorsController : BaseController
     {
 
-        [Authorize]
+
+
         [HttpGet]
         public IActionResult EmptyGuildInfo()
         {
             return View();
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult CreateAndEditError()
         {
             return View();
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult GetContactError()
         {
             return View();
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult RemoveGuildInfoError()
         {
             return View();
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult SetAvatarError()
         {
             return View();
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult GetUsersError()
         {
@@ -54,46 +50,44 @@ namespace GameGuildRecruit.Web.Controllers
             return View();
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult CreateAndEditBannerError()
         {
             return View();
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult RemoveBannerError()
         {
             return View();
         }
 
-
-        [Authorize]
         [HttpGet]
         public IActionResult CreateAndEditGameError()
         {
             return View();
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult ShowGamesError()
         {
             return View();
         }
 
-
-        [Authorize]
         [HttpGet]
         public IActionResult RemoveGameError()
         {
             return View();
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult PageError()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult BannerError()
         {
             return View();
         }
