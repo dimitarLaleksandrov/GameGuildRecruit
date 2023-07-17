@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BannerFormModel>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewBag.Title = "Diablo Banners";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("/Img/Background/BG11.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+
+        .outBox {
+            margin: 30px;
+            /*border: 1px solid #ccc;*/
+            float: left;
+            width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <h1 class="text-center" style="color:red">
+        @ViewBag.Title
+    </h1>
+    <div class="text-center row">
+        @foreach (var banner in Model)
+        {
+            <div class="outBox">
+                <partial name="_BannerPartial" model="@banner" />
+            </div>
+        }
+    </div>
+
+</body>
+</html>

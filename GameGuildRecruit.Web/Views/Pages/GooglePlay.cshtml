@@ -121,26 +121,28 @@
             }
         </div>
         <div class="text-center  position-absolute top-0 end-0">
-            <div class="text-center  position-absolute top-0 end-0">
-                @foreach (var banner in Model.Banners)
+            @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+            {
+                <a class="btn btn-outline-info btn-sm" asp-area="" asp-controller="Banner" asp-action="GooglePlayBanners" asp-route-id="">See All Banners</a>
+            }
+            @foreach (var banner in Model.Banners)
+            {
+                @if (counter == 0)
                 {
-                    @if (counter == 0)
-                    {
-                        <div class="outBox">
-                            <partial name="_BannerPartial" model="@banner" />
-                        </div>
-                        break;
-                    }
-                    @if (userName == User.Identity!.Name)
-                    {
-                        userName = "";
-                        continue;
-                    }
                     <div class="outBox">
                         <partial name="_BannerPartial" model="@banner" />
                     </div>
+                    break;
                 }
-            </div>           
+                @if (userName == User.Identity!.Name)
+                {
+                    userName = "";
+                    continue;
+                }
+                <div class="outBox">
+                    <partial name="_BannerPartial" model="@banner" />
+                </div>
+            }                                 
         </div>
     </div>
 
