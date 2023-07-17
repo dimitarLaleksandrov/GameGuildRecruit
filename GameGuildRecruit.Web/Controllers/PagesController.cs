@@ -62,7 +62,7 @@ namespace GameGuildRecruit.Web.Controllers
         {
             try
             {
-                var contactModel = await pageService.GetContactForFeedbackByIdAsync(id);
+                var contactModel = await pageService.GetBannersAsync(id);
 
                 return View(contactModel);
             }
@@ -123,9 +123,9 @@ namespace GameGuildRecruit.Web.Controllers
         {
             try
             {
-                var contactsModels = await pageService.GetContactForFeedbackByIdAsync(id);
+                var contactsModels = await pageService.GetBannersAsync(id);
 
-                return View(contactsModels);
+                return View(contactsModels); 
             }
             catch (Exception)
             {
@@ -181,7 +181,7 @@ namespace GameGuildRecruit.Web.Controllers
         {
             try
             {
-                var contactsModels = await pageService.GetContactForFeedbackByIdAsync(id);
+                var contactsModels = await pageService.GetBannersAsync(id);
 
                 return View(contactsModels);
             }
@@ -239,7 +239,7 @@ namespace GameGuildRecruit.Web.Controllers
         {
             try
             {
-                var contactsModels = await pageService.GetContactForFeedbackByIdAsync(id);
+                var contactsModels = await pageService.GetBannersAsync(id);
 
                 return View(contactsModels);
             }

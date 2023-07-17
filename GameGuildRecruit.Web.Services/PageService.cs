@@ -94,7 +94,7 @@ namespace GameGuildRecruit.Web.Services
   
         }
 
-        public async Task<ContactPlayerFormModel?> GetContactForFeedbackByIdAsync(Guid id)
+        public async Task<ContactPlayerFormModel?> GetBannersAsync(Guid id)
         {
             return await dbContext.ContactPlayers
                .Where(c => c.Id == id)

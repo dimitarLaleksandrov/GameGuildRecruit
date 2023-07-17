@@ -1,4 +1,5 @@
-﻿using GameGuildRecruit.Web.ViewModels.ContactPlayer;
+﻿using GameGuildRecruit.Web.ViewModels.Banner;
+using GameGuildRecruit.Web.ViewModels.ContactPlayer;
 using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 
 
@@ -10,7 +11,8 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
         Task<IEnumerable<ContactPlayerViewModel>> GetUserContactsByIdAsync(Guid userId);
 
-        Task<ContactPlayerFormModel?> GetContactForFeedbackByIdAsync(Guid id);
+        Task<ContactPlayerFormModel?> GetBannersAsync(Guid id);
+        
 
     }
 }

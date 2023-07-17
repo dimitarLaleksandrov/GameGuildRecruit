@@ -1,10 +1,9 @@
 ﻿using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.Banner;
-using GameGuildRecruit.Web.ViewModels.Game;
 using GameGuildRecruit.Web.Data.Models;
 using GameGuildRecruit.Web.Data;
 using Microsoft.EntityFrameworkCore;
-using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
+
 
 namespace GameGuildRecruit.Web.Services
 {
@@ -103,6 +102,23 @@ namespace GameGuildRecruit.Web.Services
 
                 await dbContext.SaveChangesAsync();
             }
+        }
+
+        public async Task<IEnumerable<BannerFormModel>> GetBannersAsync(string gameName)
+        {
+            return await dbContext.Banners
+              .Where(b => b.GameName == gameName)
+              .Select(c => new BannerFormModel
+              {
+                  Id = c.Id,
+                  GameName = c.GameName,
+                  BannerImageURL = c.BannerImageURL,
+                  BannerTitle = c.BannerTitle,
+                  Description = c.Description,
+                  BannerURL = c.BannerURL
+
+              })
+              .ToArrayAsync();
         }
     }
 }

@@ -118,5 +118,43 @@ namespace GameGuildRecruit.Web.Controllers
             }
         }
 
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> WoWBanners()
+        {
+            try
+            {
+                var gameName = "WorldOfWarcraft";
+
+                var bannersModels = await bannerService.GetBannersAsync(gameName);
+
+                return View(bannersModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
+
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> StarCraftBanners()
+        {
+            try
+            {
+                var gameName = "StarCraft";
+
+                var bannersModels = await bannerService.GetBannersAsync(gameName);
+
+                return View(bannersModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
+
+        }
+
     }
 }

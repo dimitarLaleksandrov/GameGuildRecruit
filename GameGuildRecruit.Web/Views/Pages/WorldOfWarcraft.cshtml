@@ -125,8 +125,7 @@
         <div class="text-center  position-absolute top-0 end-0">
             @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
             {
-                <a class="btn btn-outline-info btn-sm" asp-area="" asp-controller="" asp-action="" asp-route-id="">See All Banners</a>
-
+                <a class="btn btn-outline-info btn-sm" asp-area="" asp-controller="Banner" asp-action="WoWBanners" asp-route-id="">See All Banners</a>
             }
             @foreach (var banner in Model.Banners)
             {            
