@@ -156,5 +156,43 @@ namespace GameGuildRecruit.Web.Controllers
 
         }
 
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> DiabloBanners()
+        {
+            try
+            {
+                var gameName = "Diablo";
+
+                var bannersModels = await bannerService.GetBannersAsync(gameName);
+
+                return View(bannersModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
+
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> GooglePlayBanners()
+        {
+            try
+            {
+                var gameName = "GooglePlay";
+
+                var bannersModels = await bannerService.GetBannersAsync(gameName);
+
+                return View(bannersModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("GetContactError", "Errors");
+            }
+
+        }
+
     }
 }
