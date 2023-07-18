@@ -48,6 +48,8 @@ namespace GameGuildRecruit.Web
 
             builder.Services.AddScoped<IHomeService, HomeService>();
 
+            builder.Services.AddScoped<IAvatarService, AvatarService>();
+
 
 
 
