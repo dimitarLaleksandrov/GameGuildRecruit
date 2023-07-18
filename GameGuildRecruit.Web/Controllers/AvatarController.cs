@@ -43,7 +43,7 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Create(Guid id, AvatarFormModel avatarModel)
+        public async Task<IActionResult> CreateAvatar(Guid id, AvatarFormModel avatarModel)
         {
             if (!ModelState.IsValid)
             {
@@ -54,7 +54,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 await avatarService.AddAvatarAsync(avatarModel, id);
 
-                return RedirectToAction("ChooseAvatar", "Avatar");
+                return RedirectToAction("EditAvatars", "Avatar");
             }
             catch (Exception)
             {
@@ -94,7 +94,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 await avatarService.EditAvatarAsync(avatarModel);
 
-                return RedirectToAction("EditOrDelete", "Avatar");
+                return RedirectToAction("EditAvatars", "Avatar");
             }
             catch (Exception)
             {
@@ -111,7 +111,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 await avatarService.RemoveAvatarAsync(id);
 
-                return RedirectToAction("EditOrDelete", "Avatar");
+                return RedirectToAction("EditAvatars", "Avatar");
             }
             catch (Exception)
             {

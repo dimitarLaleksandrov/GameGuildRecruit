@@ -119,7 +119,7 @@ namespace GameGuildRecruit.Web.Services
                   AvatarPixURL = a.AvatarPixURL
 
               })
-              .OrderBy(x => x.AvatarPixURL)
+              .OrderBy(x => x.Name)
               .ToArrayAsync();
         }
     }
