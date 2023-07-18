@@ -173,10 +173,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 return RedirectToAction("GetContactError", "Errors");
             }         
-        }
-
-
-        
+        }    
 
         [Authorize]
         public async Task<IActionResult> SetAvatar()
