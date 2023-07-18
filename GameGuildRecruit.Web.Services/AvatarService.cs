@@ -120,6 +120,7 @@ namespace GameGuildRecruit.Web.Services
 
               })
               .OrderBy(x => x.Name)
+              .ThenBy(x => x.AvatarPixURL)
               .ToArrayAsync();
         }
     }
