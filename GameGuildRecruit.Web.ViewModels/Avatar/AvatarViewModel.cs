@@ -1,13 +1,11 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
-using static GameGuildRecruit.Web.Common.EntityValidations.Avatar;
 
-
-namespace GameGuildRecruit.Web.Data.Models
+namespace GameGuildRecruit.Web.ViewModels.Avatar
 {
-    public class Avatar
+    public class AvatarViewModel
     {
-        public Avatar()
+        public AvatarViewModel()
         {
             this.Id = Guid.NewGuid();
         }
@@ -15,12 +13,9 @@ namespace GameGuildRecruit.Web.Data.Models
 
         [Key]
         public Guid Id { get; set; }
-
-        [Required]
-        [MaxLength(AvatarNameMaxLength)]
+   
         public string Name { get; set; } = null!;
-
-        [Required]
+  
         public string AvatarPixURL { get; set; } = null!;
     }
 }

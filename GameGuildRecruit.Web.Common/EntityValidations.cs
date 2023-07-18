@@ -50,8 +50,8 @@ namespace GameGuildRecruit.Web.Common
 
         public static class Avatar
         {
-            public const int AvatarTitleMinLength = 2;
-            public const int AvatarTitleMaxLength = 20;
+            public const int AvatarNameMinLength = 2;
+            public const int AvatarNameMaxLength = 20;
  
         }
     }
