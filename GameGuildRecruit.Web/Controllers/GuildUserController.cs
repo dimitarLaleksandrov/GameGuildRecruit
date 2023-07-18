@@ -176,40 +176,7 @@ namespace GameGuildRecruit.Web.Controllers
         }
 
 
-        [Authorize]
-        [HttpGet]
-        public async Task<IActionResult> ChooseAvatar()
-        {
-            return View();
-        }
-
-
-        [Authorize]
-        [HttpGet]
-        public async Task<IActionResult> SelectAvatar()
-        {
-
-            var routeData = RouteData.Values.Values.ToArray();
-            var pixId = routeData[2]!.ToString();
-
-            var userName = this.User.Identity!.Name;
-
-            try
-            {
-                var userModel = await userService.GetUserByUserNameAsync(userName!);
-                if(userModel == null)
-                {
-                    return RedirectToAction("GetUsersError", "Errors");
-                }
-
-                await userService.SetUserAvatarAsync(userModel, pixId!);
-                return RedirectToAction("Index", "Home");
-            }
-            catch (Exception)
-            {
-                return RedirectToAction("EmptyGuildInfo", "Errors");
-            }                  
-        }
+        
 
         [Authorize]
         public async Task<IActionResult> SetAvatar()

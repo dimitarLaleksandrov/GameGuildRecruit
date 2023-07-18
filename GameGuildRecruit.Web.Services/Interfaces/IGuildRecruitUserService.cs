@@ -24,8 +24,6 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
         Task GetContactForRejectedByIdAsync(Guid id);
 
-        Task SetUserAvatarAsync(GuildRecruitUserFormModel userModel, string pixId);
-
         Task RemoveGuildInfoAsync(GuildRecruitUserFormModel userModel);
 
     }

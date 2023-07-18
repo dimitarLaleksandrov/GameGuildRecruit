@@ -44,6 +44,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Avatar/ChooseAvatar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhdGFyXENob29zZUF2YXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Avatar/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhdGFyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Banner/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFubmVyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -156,10 +164,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxTaG93R2FtZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/GuildUser/ChooseAvatar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXENob29zZUF2YXRhci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/GuildUser/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpbGRVc2VyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -238,6 +242,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/_AvatarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdmF0YXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Shared/_BannerPartial.cshtml]

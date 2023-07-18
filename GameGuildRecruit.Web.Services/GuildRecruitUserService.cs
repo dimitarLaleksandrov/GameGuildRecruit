@@ -227,18 +227,6 @@ namespace GameGuildRecruit.Web.Services
                  .FirstOrDefaultAsync();
         }
 
-        public async Task SetUserAvatarAsync(GuildRecruitUserFormModel userModel, string pixId)
-        {
-            var user = await dbContext.GuildRecruitUsers.FindAsync(userModel.Id);
-
-            if (user != null)
-            {
-                user.UserAvatarPix = pixId;
-
-                await this.dbContext.SaveChangesAsync();
-            }
-        }
-
         public async Task RemoveGuildInfoAsync(GuildRecruitUserFormModel userModel)
         {  
 

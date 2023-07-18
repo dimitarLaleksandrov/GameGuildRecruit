@@ -1,0 +1,17 @@
+﻿@model BannerFormModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+<div class="outBox">
+    <form>
+        <input type="image" height="120" width=" 120" src="/img/avatarpix/1.jpg" asp-controller="Avatar" asp-action="SelectAvatar" asp-route-id="1.jpg">
+        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+        {
+            <a class="btn btn-outline-light btn-sm" asp-controller="" asp-action="Edit" asp-route-id="@Model.Id">Edite Avatar</a>
+            <hr />
+            <a class="btn btn-outline-danger btn-sm" asp-area="" asp-controller="" asp-action="RemoveAvatar" asp-route-id="@Model.Id">Remove Avatar</a>
+        }
+    </form>
+</div>
