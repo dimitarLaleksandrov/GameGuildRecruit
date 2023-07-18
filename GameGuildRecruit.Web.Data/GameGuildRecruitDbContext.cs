@@ -12,6 +12,7 @@ namespace GameGuildRecruit.Web.Data
         public GameGuildRecruitDbContext(DbContextOptions<GameGuildRecruitDbContext> options)
         : base(options)
         {
+
         }
 
         public DbSet<GuildRecruitUser> GuildRecruitUsers { get; set; } = null!;
@@ -23,6 +24,9 @@ namespace GameGuildRecruit.Web.Data
         public DbSet<ContactPlayer> ContactPlayers { get; set; } = null!;
 
         public DbSet<IdentityUserContact> IdentityUserContacts { get; set; } = null!;
+
+        public DbSet<Avatar> Avatars { get; set; } = null!;
+
 
 
 

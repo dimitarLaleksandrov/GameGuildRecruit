@@ -92,7 +92,18 @@
             var counter = 0;
             var userName = "";
         }
+        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+        {
+            @if (Model.GuildUsersCount <= 1)
+            {
+                <h4 class="position-relative" style="color:aqua" disabled>"@Model.GuildUsersCount GameUser Are Found"</h4>
 
+            }
+            else
+            {
+                <h4 class="position-relative" style="color:aqua" disabled>"@Model.GuildUsersCount GameUsers Are Found"</h4>
+            }
+        }
         @foreach (var user in Model.GuildUsers)
         { 
            @if (SignInManager.IsSignedIn(User))
@@ -108,20 +119,6 @@
                 <partial name="_WoWGuildUsersPartial" model="@user" />
             </div>      
         }
-        <div class=" position-absolute top-0 start-50 translate-middle">
-            @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
-            {
-                @if (Model.GuildUsersCount <= 1)
-                {
-                    <h1 class="position-relative" style="color:aqua">"The Game Has @Model.GuildUsersCount GameUser"</h1>
-
-                }
-                else
-                {
-                    <h1 class="position-relative" style="color:aqua">"The Game Has @Model.GuildUsersCount GameUsers"</h1>
-                }
-            }                 
-        </div>
         <div class="text-center  position-absolute top-0 end-0">
             @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
             {
