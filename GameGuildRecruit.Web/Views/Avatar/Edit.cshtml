@@ -1,0 +1,54 @@
+﻿@model AvatarFormModel
+
+@{
+    ViewBag.Title = "Edit Avatar";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("/Img/Background/BG17.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <h2 class="text-center" style="color:aqua">@ViewBag.Title</h2>
+        <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6  position-relative">
+            <form asp-action="EditAvatar" method="post" asp-route-id="@Model.Id">
+                <div class="mb-3">
+                    <label asp-for="@Model.Name" class="form-label" style="color:aqua">Avatar Name</label>
+                    <input asp-for="@Model.Name" class="form-control" aria-required="true" />
+                    <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="@Model.AvatarPixURL" class="form-label" style="color:aqua">Avatar Image "/Img/..."</label>
+                    <input asp-for="@Model.AvatarPixURL" class="form-control" aria-required="true" />
+                    <span asp-validation-for="@Model.AvatarPixURL" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <input class="btn btn-primary" type="submit" value="@ViewBag.Title" />
+                </div>
+            </form>
+            <form class="mb-3 position-relative bottom-0 start-100" asp-controller="Avatar" asp-action="RemoveAvatar" asp-route-id="@Model.Id">
+                <input class="btn btn-outline-danger" type="submit" value="Remove Avatar" />
+            </form>
+        </div>
+
+ 
+        @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+        }
+
+    </header>
+
+</body>
+</html>
+

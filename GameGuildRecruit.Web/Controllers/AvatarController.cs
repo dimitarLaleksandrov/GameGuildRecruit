@@ -64,6 +64,61 @@ namespace GameGuildRecruit.Web.Controllers
 
         }
 
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            try
+            {
+                var avatar = await avatarService.GetAvatarByIdAsync(id);
+
+                return View(avatar);
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("CreateAndEditBannerError", "Errors");
+            }
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> EditAvatar(AvatarFormModel avatarModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(avatarModel);
+            }
+
+            try
+            {
+                await avatarService.EditAvatarAsync(avatarModel);
+
+                return RedirectToAction("EditOrDelete", "Avatar");
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("CreateAndEditBannerError", "Errors");
+            }
+        }
+
+
+        [Authorize]
+        public async Task<IActionResult> RemoveAvatar(Guid id)
+        {
+            try
+            {
+                await avatarService.RemoveAvatarAsync(id);
+
+                return RedirectToAction("EditOrDelete", "Avatar");
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("RemoveBannerError", "Errors");
+            }
+        }
 
         [Authorize]
         [HttpGet]

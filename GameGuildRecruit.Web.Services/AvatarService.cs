@@ -75,6 +75,39 @@ namespace GameGuildRecruit.Web.Services
             }
         }
 
+        public async Task EditAvatarAsync(AvatarFormModel avatarModel)
+        {
+            var findAvatarById = await dbContext.Avatars.Where(x => x.Id == avatarModel.Id).FirstOrDefaultAsync();
+
+            if (findAvatarById != null)
+            {
+                findAvatarById.Id = avatarModel.Id;
+                findAvatarById.Name = avatarModel.Name;
+                findAvatarById.AvatarPixURL = avatarModel.AvatarPixURL;
+
+                await dbContext.SaveChangesAsync();
+            }
+        }
+
+        public async Task RemoveAvatarAsync(Guid id)
+        {
+            var avatarModelToDelete = await dbContext.Avatars
+                                        .Where(a => a.Id == id)
+                                          .Select(u => new Avatar
+                                          {
+                                              Id = u.Id,
+                                              Name = u.Name,
+                                              AvatarPixURL = u.AvatarPixURL
+                                          })
+                                          .FirstOrDefaultAsync();
+
+            if (avatarModelToDelete != null)
+            {
+                dbContext.Avatars.Remove(avatarModelToDelete);
+
+                await dbContext.SaveChangesAsync();
+            }
+        }
 
         public async Task<IEnumerable<AvatarFormModel>> GetAvatarsAsync()
         {

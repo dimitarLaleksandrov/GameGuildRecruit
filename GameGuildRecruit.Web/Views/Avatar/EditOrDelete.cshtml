@@ -5,7 +5,7 @@
 
 
 @{
-    ViewBag.Title = "Get Avatar";
+    ViewBag.Title = "Edit Or Delete Avatar";
 
 }
 
@@ -48,10 +48,7 @@
                 @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
                 {
                     <hr />
-                    <a class="btn btn-outline-light btn-sm" asp-controller="" asp-action="Edit" asp-route-id="@avatar.Id">Edite Avatar</a>
-                    <hr />
-                    <a class="btn btn-outline-danger btn-sm" asp-area="" asp-controller="" asp-action="RemoveAvatar" asp-route-id="@avatar.Id">Remove Avatar</a>
-
+                    <a class="btn btn-outline-light btn-sm" asp-controller="Avatar" asp-action="Edit" asp-route-id="@avatar.Id">Edite Avatar</a>
                 }
             </form>
 
