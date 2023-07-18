@@ -21,12 +21,7 @@
             border-radius: 50%;
         }
 
-        .outBox {
-            margin: 10px;
-            /*border: 1px solid #ccc;*/
-            float: left;
-            width: 120px;
-        }
+       
     </style>
 </head>
 
@@ -36,10 +31,13 @@
     <h1 class="text-center" style="color:aqua">
         @ViewBag.Title
     </h1>
-    @foreach (var avatar in Model)
-    {
-        <partial name="_AvatarPartial" model="@avatar" />
-    }   
+    <form>
+        @foreach (var avatar in Model)
+        {
+            <partial name="_AvatarPartial" model="@avatar" />
+        }
+    </form>
+    
 </body>
 </html>
 

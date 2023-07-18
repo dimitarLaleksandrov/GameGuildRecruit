@@ -26,10 +26,11 @@
         }
 
         .outBox {
-            margin: 10px;
+            margin: 20px;
             /*border: 1px solid #ccc;*/
             float: left;
-            width: 120px;
+            width: 100px;
+            height:180px;
         }
     </style>
 </head>
@@ -42,20 +43,17 @@
     </h1>
     @foreach (var avatar in Model)
     {
-        <div class="outBox">
-            <form>
-                <img type="image" height="120" width=" 120" src="@avatar.AvatarPixURL">
+        <form>
+            <div class="outBox">
+            <img type="image" height="120" width=" 120" src="@avatar.AvatarPixURL">
                 @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
                 {
-                    <hr />
-                    <a class="btn btn-outline-light btn-sm" asp-controller="Avatar" asp-action="Edit" asp-route-id="@avatar.Id">Edite Avatar</a>
-                }
-            </form>
+ 
+                        <a class="btn btn-outline-light btn-sm" asp-controller="Avatar" asp-action="Edit" asp-route-id="@avatar.Id">Edite Avatar</a>
 
+                }
         </div>
+        </form>
     }
 </body>
 </html>
-
-
-@*model=""*@
