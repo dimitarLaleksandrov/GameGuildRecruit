@@ -91,14 +91,17 @@
             var counter = 0;
             var userName = "";
         }
-        @if (Model.GuildUsersCount <= 1)
+        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
         {
-            <h4 class="position-relative" style="color:orange" disabled>"@Model.GuildUsersCount GameUser Are Found"</h4>
+            @if (Model.GuildUsersCount <= 1)
+            {
+                <h4 class="position-relative" style="color:aqua" disabled>"@Model.GuildUsersCount GameUser Are Found"</h4>
 
-        }
-        else
-        {
-            <h4 class="position-relative" style="color:orange" disabled>"@Model.GuildUsersCount GameUsers Are Found"</h4>
+            }
+            else
+            {
+                <h4 class="position-relative" style="color:aqua" disabled>"@Model.GuildUsersCount GameUsers Are Found"</h4>
+            }
         }
         @foreach (var user in Model.GuildUsers)
         {
