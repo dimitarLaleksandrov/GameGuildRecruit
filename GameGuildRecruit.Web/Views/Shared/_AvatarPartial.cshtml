@@ -7,14 +7,5 @@
 <div class="outBox">
     <form>
         <input type="image" height="120" width=" 120" src="@Model.AvatarPixURL" asp-controller="Avatar" asp-action="SelectAvatar" asp-route-id="@Model.Id">
-        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
-        {
-            <hr />
-            <a class="btn btn-outline-light btn-sm" asp-controller="" asp-action="Edit" asp-route-id="@Model.Id">Edite Avatar</a>
-            <hr />
-            <a class="btn btn-outline-danger btn-sm" asp-area="" asp-controller="" asp-action="RemoveAvatar" asp-route-id="@Model.Id">Remove Avatar</a>
-
-        }
-    </form>
-    
+    </form>   
 </div>

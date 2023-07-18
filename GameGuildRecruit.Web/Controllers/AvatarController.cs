@@ -140,7 +140,7 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpGet]
-        public async Task<IActionResult> EditOrDelete()
+        public async Task<IActionResult> EditAvatars()
         {
             try
             {
