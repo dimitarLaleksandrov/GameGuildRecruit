@@ -85,6 +85,24 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpGet]
+        public async Task<IActionResult> EditOrDelete()
+        {
+            try
+            {
+                var avatarsModels = await avatarService.GetAvatarsAsync();
+
+                return View(avatarsModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("BannerError", "Errors");
+            }
+
+        }
+
+
+        [Authorize]
+        [HttpGet]
         public async Task<IActionResult> SelectAvatar(Guid id)
         {
 
