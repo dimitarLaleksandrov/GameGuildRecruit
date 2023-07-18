@@ -31,7 +31,7 @@
                 @if (Model.UserAvatarPix != null)
                 {
                     <div>
-                        <img height="100" width=" 100" src="/Img/AvatarPix/@Model.UserAvatarPix">
+                        <img height="100" width=" 100" src="@Model.UserAvatarPix">
                     </div>
                 }
                 <form asp-action="Create" method="post" asp-route-id="@Model.Id">

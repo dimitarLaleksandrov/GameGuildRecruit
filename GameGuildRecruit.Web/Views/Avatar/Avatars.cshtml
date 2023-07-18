@@ -1,5 +1,4 @@
-﻿@model AvatarFormModel
-
+﻿@model IEnumerable<AvatarFormModel>
 
 @{
     ViewBag.Title = "Get Avatar";
@@ -21,14 +20,26 @@
         input {
             border-radius: 50%;
         }
+
+        .outBox {
+            margin: 10px;
+            /*border: 1px solid #ccc;*/
+            float: left;
+            width: 120px;
+        }
     </style>
 </head>
 
 <body>
     <header>
     </header>
-    <partial name="_WoWGuildUsersPartial" />
-       
+    <h1 class="text-center" style="color:aqua">
+        @ViewBag.Title
+    </h1>
+    @foreach (var avatar in Model)
+    {
+        <partial name="_AvatarPartial" model="@avatar" />
+    }   
 </body>
 </html>
 

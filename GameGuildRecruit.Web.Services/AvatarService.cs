@@ -3,6 +3,8 @@ using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.Avatar;
 using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 using GameGuildRecruit.Web.Data.Models;
+using Microsoft.EntityFrameworkCore;
+using GameGuildRecruit.Web.ViewModels.Banner;
 
 namespace GameGuildRecruit.Web.Services
 
@@ -47,17 +49,45 @@ namespace GameGuildRecruit.Web.Services
         }
 
 
-        public async Task SetUserAvatarAsync(GuildRecruitUserFormModel userModel, string pixId)
+        public async Task<AvatarFormModel?> GetAvatarByIdAsync(Guid id)
+        {
+            return await dbContext.Avatars
+                .Where(x => x.Id == id)
+                .Select(a => new AvatarFormModel
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    AvatarPixURL = a.AvatarPixURL
+
+                })
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task SetUserAvatarAsync(GuildRecruitUserFormModel userModel, string avatarPixURL)
         {
             var user = await dbContext.GuildRecruitUsers.FindAsync(userModel.Id);
 
             if (user != null)
             {
-                user.UserAvatarPix = pixId;
+                user.UserAvatarPix = avatarPixURL;
 
                 await this.dbContext.SaveChangesAsync();
             }
         }
 
+
+        public async Task<IEnumerable<AvatarFormModel>> GetAvatarsAsync()
+        {
+            return await dbContext.Avatars
+              .Select(a => new AvatarFormModel
+              {
+                  Id = a.Id,
+                  Name = a.Name,
+                  AvatarPixURL = a.AvatarPixURL
+
+              })
+              .OrderBy(x => x.AvatarPixURL)
+              .ToArrayAsync();
+        }
     }
 }

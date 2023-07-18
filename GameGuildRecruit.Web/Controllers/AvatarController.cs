@@ -67,20 +67,31 @@ namespace GameGuildRecruit.Web.Controllers
 
         [Authorize]
         [HttpGet]
-        public async Task<IActionResult> ChooseAvatar()
+        public async Task<IActionResult> Avatars()
         {
-            return View();
+            try
+            {
+                var avatarsModels = await avatarService.GetAvatarsAsync();
+
+                return View(avatarsModels);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("BannerError", "Errors");
+            }
+
         }
 
 
         [Authorize]
         [HttpGet]
-        public async Task<IActionResult> SelectAvatar()
+        public async Task<IActionResult> SelectAvatar(Guid id)
         {
 
-            var routeData = RouteData.Values.Values.ToArray();
-            var pixId = routeData[2]!.ToString();
+            //var routeData = RouteData.Values.Values.ToArray();
+            //var pixId = routeData[2]!.ToString();
 
+            var avatarId = id;
             var userName = this.User.Identity!.Name;
 
             try
@@ -91,7 +102,13 @@ namespace GameGuildRecruit.Web.Controllers
                     return RedirectToAction("GetUsersError", "Errors");
                 }
 
-                await avatarService.SetUserAvatarAsync(userModel, pixId!);
+                var avatarModel = await avatarService.GetAvatarByIdAsync(avatarId!);
+                if (avatarModel == null)
+                {
+                    return RedirectToAction("GetUsersError", "Errors");
+                }
+
+                await avatarService.SetUserAvatarAsync(userModel, avatarModel.AvatarPixURL);
                 return RedirectToAction("Edit", "GuildUser");
             }
             catch (Exception)

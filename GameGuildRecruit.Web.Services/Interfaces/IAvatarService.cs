@@ -12,9 +12,12 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
         Task AddAvatarAsync(AvatarFormModel avatarModel, Guid id);
 
+        Task<IEnumerable<AvatarFormModel>> GetAvatarsAsync();
+
+        Task<AvatarFormModel?> GetAvatarByIdAsync(Guid id);
 
 
-        Task SetUserAvatarAsync(GuildRecruitUserFormModel userModel, string pixId);
+        Task SetUserAvatarAsync(GuildRecruitUserFormModel userModel, string avatarPixURL);
 
        
 

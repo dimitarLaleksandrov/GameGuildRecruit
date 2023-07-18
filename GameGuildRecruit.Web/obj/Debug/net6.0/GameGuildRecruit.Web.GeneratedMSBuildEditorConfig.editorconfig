@@ -44,8 +44,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Avatar/ChooseAvatar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhdGFyXENob29zZUF2YXRhci5jc2h0bWw=
+[D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Avatar/Avatars.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhdGFyXEF2YXRhcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/Game Guild Recruit Web Project/GameGuildRecruit.Web/Views/Avatar/Create.cshtml]
