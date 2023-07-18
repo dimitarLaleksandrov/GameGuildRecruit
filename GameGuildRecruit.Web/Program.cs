@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using GameGuildRecruit.Web.Services;
 using GameGuildRecruit.Web.Services.Interfaces;
-
+using Microsoft.AspNetCore.Mvc;
 
 namespace GameGuildRecruit.Web
 {
@@ -55,7 +55,11 @@ namespace GameGuildRecruit.Web
 
             //builder.Services.AddScoped<ITaskService, TaskService>();
 
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews()
+                .AddMvcOptions(opt =>
+                {
+                    opt.Filters.Add<AutoValidateAntiforgeryTokenAttribute>();
+                });
 
             var app = builder.Build();
 

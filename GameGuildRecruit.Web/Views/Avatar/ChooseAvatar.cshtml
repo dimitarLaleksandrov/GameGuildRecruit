@@ -1,4 +1,7 @@
-﻿@{
+﻿@model AvatarFormModel
+
+
+@{
     ViewBag.Title = "Get Avatar";
 
 }
@@ -24,11 +27,10 @@
 <body>
     <header>
     </header>
-    <form>
-
-        <input type="image" height="120" width=" 120" src="/img/avatarpix/1.jpg" asp-controller="Avatar" asp-action="SelectAvatar" asp-route-id="1.jpg"> 
-        
-    </form>
+    <partial name="_WoWGuildUsersPartial" />
        
 </body>
 </html>
+
+
+@*model=""*@

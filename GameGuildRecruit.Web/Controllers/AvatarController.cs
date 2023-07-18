@@ -1,6 +1,8 @@
 ﻿using GameGuildRecruit.Web.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using GameGuildRecruit.Web.ViewModels.Avatar;
+
 
 
 namespace GameGuildRecruit.Web.Controllers
@@ -20,6 +22,47 @@ namespace GameGuildRecruit.Web.Controllers
             this.userService = userService;
         }
 
+
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            try
+            {
+                var bannerModel = await avatarService.GetNewAvatarModelAsync();
+
+                return View(bannerModel);
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("CreateAndEditBannerError", "Errors");
+            }
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Create(Guid id, AvatarFormModel avatarModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(avatarModel);
+            }
+
+            try
+            {
+                await avatarService.AddAvatarAsync(avatarModel, id);
+
+                return RedirectToAction("ChooseAvatar", "Avatar");
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("CreateAndEditBannerError", "Errors");
+            }
+
+        }
 
 
         [Authorize]

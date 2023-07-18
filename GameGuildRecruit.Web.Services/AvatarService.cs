@@ -1,6 +1,8 @@
 ﻿using GameGuildRecruit.Web.Data;
 using GameGuildRecruit.Web.Services.Interfaces;
+using GameGuildRecruit.Web.ViewModels.Avatar;
 using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
+using GameGuildRecruit.Web.Data.Models;
 
 namespace GameGuildRecruit.Web.Services
 
@@ -15,6 +17,33 @@ namespace GameGuildRecruit.Web.Services
         public AvatarService(GameGuildRecruitDbContext dbContext)
         {
             this.dbContext = dbContext;
+        }
+
+
+
+        public async Task<AvatarFormModel> GetNewAvatarModelAsync()
+        {
+
+            var avatarModel =  new AvatarFormModel
+            {
+
+            };
+
+            return avatarModel;
+        }
+
+        public async Task AddAvatarAsync(AvatarFormModel avatarModel, Guid id)
+        {
+            var avatar =  new Avatar()
+            {
+                Id = id,
+                Name = avatarModel.Name,
+                AvatarPixURL = avatarModel.AvatarPixURL
+              
+            };
+
+            await dbContext.Avatars.AddAsync(avatar);
+            await this.dbContext.SaveChangesAsync();
         }
 
 
