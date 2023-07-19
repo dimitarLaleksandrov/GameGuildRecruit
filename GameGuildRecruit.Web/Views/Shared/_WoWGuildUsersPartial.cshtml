@@ -4,11 +4,12 @@
 @inject UserManager<IdentityUser> UserManager
 
 
-<div class="text-center position-relative top-0 start-0 ">
+
+<div class="BgPix text-center position-relative top-0 start-0">
     <form class="input-group-sm" asp-action="AddContact" method="post">
-        <div class="card col-4 border-info" style="width: 15rem;">
-            <div class="card-header bg-primary-subtle ">Guild "@Model.GuildName"</div>
-            <div>
+        <div class="card col-4 border-primary" style="width: 15rem;">
+            <div class="card-header bg-primary-subtle" style="background-color:lightblue">Guild "@Model.GuildName"</div>
+            <div style="background-image:url(/Img/DivBackgound/DB2.webp)">
                 @if (Model.UserAvatarPix != null)
                 {
                     <img height="70" width=" 70" src="@Model.UserAvatarPix">
@@ -25,7 +26,7 @@
                     }
                 }
             </div>
-            <div class="card-body text-primary">
+            <div class="BgPix card-body text-primary">
                 <h6 class="card-title mt-1">"@Model.NickName"</h6>
             </div>
             @if (Model.UrlLink != null)
@@ -39,7 +40,7 @@
                 </div>
             }
             <hr /> 
-            <div class="box text-primary">@Model.Description</div>
+            <div class="BgPix box text-primary">@Model.Description</div>
             <a class="btn btn-success btn-sm" asp-area="" method="post" asp-controller="Contact" asp-action="AddContact" asp-route-id="@Model.Id">Contact The Guild</a>
             @if (Model.UserContactNum >= 1)
             {
