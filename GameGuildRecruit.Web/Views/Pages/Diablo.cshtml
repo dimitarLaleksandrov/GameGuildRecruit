@@ -89,7 +89,6 @@
     <div class="position-relative">
         @{
             var counter = 0;
-            var userName = "";
         }
         @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
         {
@@ -109,7 +108,9 @@
             {
                 if (user.UserName == User.Identity!.Name)
                 {
-                    userName = user.UserName;
+                    <div class="outBox">
+                        <partial name="_LogerGuildUsersPartial" model="@user" />
+                    </div>
                     continue;
                 }
             }
@@ -131,11 +132,6 @@
                         <partial name="_BannerPartial" model="@banner" />
                     </div>
                     break;
-                }
-                @if (userName == User.Identity!.Name)
-                {
-                    userName = "";
-                    continue;
                 }
                 <div class="outBox">
                     <partial name="_BannerPartial" model="@banner" />
