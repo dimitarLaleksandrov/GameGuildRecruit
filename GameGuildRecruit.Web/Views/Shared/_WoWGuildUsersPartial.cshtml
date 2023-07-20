@@ -3,13 +3,13 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-
+   
 
 <div class="BgPix text-center position-relative top-0 start-0">
     <form class="input-group-sm" asp-action="AddContact" method="post">
-        <div class="card col-4 border-primary" style="width: 15rem;">
-            <div class="card-header bg-primary-subtle" style="background-color:lightblue">Guild "@Model.GuildName"</div>
-            <div style="background-image:url(/Img/DivBackgound/DB2.webp)">
+        <div class="card col-4 border-primary" style="width: 15rem; background-size: 100% 100%; background-image:url( /Img/DivBackgound/DB16.jpg)">
+            <div class="card-header bg-primary-subtle" style="background-color:cadetblue">Guild "@Model.GuildName"</div>
+            <div>
                 @if (Model.UserAvatarPix != null)
                 {
                     <img height="70" width=" 70" src="@Model.UserAvatarPix">
@@ -26,21 +26,23 @@
                     }
                 }
             </div>
-            <div class="BgPix card-body text-primary">
-                <h6 class="card-title mt-1">"@Model.NickName"</h6>
-            </div>
-            @if (Model.UrlLink != null)
-            {
-                <a class="link-info" href="@Model.UrlLink" target="_blank">Visit @Model.NickName Info Page</a>
-            }
-            @if (Model.ServerName != null)
-            {
-                <div class="card-body text-primary" style="height: 3rem;">
-                    <h6 class="card-title mt-1">In "@Model.ServerName" Server</h6>
+            <div>
+                <div class="BgPix card-body text-primary" >
+                    <h6 class="card-title mt-1">"@Model.NickName"</h6>
                 </div>
-            }
-            <hr /> 
-            <div class="BgPix box text-primary">@Model.Description</div>
+                @if (Model.UrlLink != null)
+                {
+                    <a class="link-info" href="@Model.UrlLink" target="_blank">Visit @Model.NickName Info Page</a>
+                }
+                @if (Model.ServerName != null)
+                {
+                    <div class="card-body text-primary" style="height: 3rem;">
+                        <h6 class="card-title mt-1">In "@Model.ServerName" Server</h6>
+                    </div>
+                }
+                <hr />
+            </div>
+            <div class="box text-white" style=" background-size: 100% 100%; background-image:url( /Img/DivBackgound/DB21.jpg)">@Model.Description</div>
             <a class="btn btn-success btn-sm" asp-area="" method="post" asp-controller="Contact" asp-action="AddContact" asp-route-id="@Model.Id">Contact The Guild</a>
             @if (Model.UserContactNum >= 1)
             {

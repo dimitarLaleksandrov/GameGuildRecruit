@@ -5,12 +5,12 @@
 
 
 <div class="outBox">
-    <div class="card col-4" style="width: 12rem; background-color:darkgrey;">
+    <div class="card col-4" style="width: 12rem; background-size: 100% 100%; background-image:url( /Img/DivBackgound/DB55.jpg)">
         <img src="@Model.BannerImageURL" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title text-white">@Model.BannerTitle</h5>
             <p class="card-text" style="color:yellow">@Model.Description</p> 
-            <a href="@Model.BannerURL" class="btn btn-primary" target="_blank">@Model.BannerTitle</a>
+            <a href="@Model.BannerURL" class="btn btn-outline-info" target="_blank">@Model.BannerTitle</a>
         </div>
         @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
         {
