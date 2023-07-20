@@ -90,7 +90,6 @@
     <div class="position-relative">
         @{
             var counter = 0;
-            var userName = "";
         }
         @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
         {
@@ -110,7 +109,9 @@
             {
                 if (user.UserName == User.Identity?.Name)
                 {
-                    userName = user.UserName;
+                    <div class="outBox">
+                        <partial name="_LogerGuildUsersPartial" model="@user" />
+                    </div>
                     continue;
                 }
             }
@@ -120,6 +121,10 @@
             </div>          
         }
         <div class="text-center  position-absolute top-0 end-0">
+            @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+            {
+                <a class="btn btn-outline-info btn-sm" asp-area="" asp-controller="Banner" asp-action="WoWBanners" asp-route-id="">See All Banners</a>
+            }
             @foreach (var banner in Model.Banners)
             {
                 @if (counter == 0)
@@ -128,11 +133,6 @@
                         <partial name="_BannerPartial" model="@banner" />
                     </div>
                     break;
-                }
-                @if (userName == User.Identity!.Name)
-                {
-                    userName = "";
-                    continue;
                 }
                 <div class="outBox">
                     <partial name="_BannerPartial" model="@banner" />

@@ -124,6 +124,15 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Avatars()
         {
+            var userName = this.User.Identity!.Name;
+
+            var userModel = await userService.GetUserByUserNameAsync(userName!);
+
+            if (userModel == null)
+            {
+                return RedirectToAction("EmptyGuildInfo", "Errors");
+            }
+
             try
             {
                 var avatarsModels = await avatarService.GetAvatarsAsync();
@@ -166,15 +175,16 @@ namespace GameGuildRecruit.Web.Controllers
 
             var avatarId = id;
             var userName = this.User.Identity!.Name;
+            var userModel = await userService.GetUserByUserNameAsync(userName!);
+
+            if (userModel == null)
+            {
+                return RedirectToAction("EmptyGuildInfo", "Errors");
+            }
 
             try
             {
-                var userModel = await userService.GetUserByUserNameAsync(userName!);
-                if (userModel == null)
-                {
-                    return RedirectToAction("GetUsersError", "Errors");
-                }
-
+                
                 var avatarModel = await avatarService.GetAvatarForSelectByIdAsync(avatarId!);
                 if (avatarModel == null)
                 {
