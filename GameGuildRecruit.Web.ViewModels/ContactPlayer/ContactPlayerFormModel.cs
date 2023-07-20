@@ -8,7 +8,7 @@ namespace GameGuildRecruit.Web.ViewModels.ContactPlayer
         public ContactPlayerFormModel()
         {
             this.Id = Guid.NewGuid();
-            this.UserId = Guid.NewGuid();
+            this.GuildUserId = Guid.NewGuid();
 
         }
 
@@ -28,8 +28,8 @@ namespace GameGuildRecruit.Web.ViewModels.ContactPlayer
         [Display(Name = "UrlLink")]
         public string? UrlLink { get; set; }
 
-        [Display(Name = "UserId")]
-        public Guid? UserId { get; set; }
+        [Display(Name = "GuildUserId")]
+        public Guid? GuildUserId { get; set; }
 
         [Display(Name = "UserNickName")]
         public string? UserNickName { get; set; }

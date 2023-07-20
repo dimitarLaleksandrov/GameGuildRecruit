@@ -16,6 +16,7 @@ namespace GameGuildRecruit.Web.Data.Models
         public Guid GuildUserId { get; set; }
 
 
+
         [ForeignKey(nameof(GuildUserId))]
         public GuildRecruitUser GuildUser { get; set; } = null!;
 

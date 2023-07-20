@@ -120,7 +120,7 @@ namespace GameGuildRecruit.Web.Services
                    UrlLink = c.UrlLink,
                    Description = c.Description,
                    GuildName = c.GuildName,
-                   UserId = c.GuildUserId,
+                   GuildUserId = c.GuildUserId,
                    GameName = c.GameName,
                    ServerName = c.ServerName,
                    UserNickName = c.UserNickName,

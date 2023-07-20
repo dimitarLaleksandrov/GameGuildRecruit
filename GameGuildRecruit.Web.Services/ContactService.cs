@@ -82,7 +82,7 @@ namespace GameGuildRecruit.Web.Services
                      NickName = p.NickName,
                      Description = p.Description,
                      UrlLink = p.UrlLink,
-                     UserId = p.GuildUserId,
+                     GuildUserId = p.GuildUserId,
                      UserNickName = p.NickName,
                      GuildName = p.GuildName,
                      ServerName = p.ServerName,
@@ -150,7 +150,7 @@ namespace GameGuildRecruit.Web.Services
                    UrlLink = c.UrlLink,
                    Description = c.Description,
                    GuildName = c.GuildName,
-                   UserId = c.GuildUserId,
+                   GuildUserId = c.GuildUserId,
                    GameName = c.GameName,
                    ServerName = c.ServerName,
                    UserNickName = c.UserNickName,
@@ -163,7 +163,7 @@ namespace GameGuildRecruit.Web.Services
 
         public async Task RemoveContactAsync(ContactPlayerFormModel contact)
         {
-            var userContact = await dbContext.IdentityUserContacts.FirstOrDefaultAsync(x => x.ContactId == contact.Id && x.GuildUserId == contact.UserId);
+            var userContact = await dbContext.IdentityUserContacts.FirstOrDefaultAsync(x => x.ContactId == contact.Id && x.GuildUserId == contact.GuildUserId);
 
             var contactToDelete = await dbContext.ContactPlayers.Where(c => c.Id == contact.Id)
                                                                 .Select(x => new ContactPlayer
