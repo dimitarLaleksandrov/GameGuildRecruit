@@ -16,6 +16,7 @@
         }
 
         .box {
+            background-color:transparent;
             width: 220px;
             height: 100px;
             overflow: scroll;
@@ -41,21 +42,20 @@
                 <div class="card col-4" style="width: 14rem;">
                     @if (contact.Feedback != null)
                     {
-                        <form class="input-group-sm" asp-controller="Pages" asp-action="WoWGetContactFeedback" asp-route-id="@contact.Id">
+                        <form class="input-group-sm" style="background-size: 100% 100%; background-image:url( /Img/DivBackgound/DB16.jpg)" asp-controller="Pages" asp-action="WoWGetContactFeedback" asp-route-id="@contact.Id">
                             <input type="submit" value="See Feedback" class="fs-6 btn btn-outline-info mb-3 p-2" />
                         </form>
                     }
                     else
                     {
-                        <button type="button" class="btn btn-secondary" disabled>Stil No Feedback</button>
+                        <button type="button" class="btn btn-secondary" style="background-size: 100% 100%; background-image:url( /Img/DivBackgound/DB16.jpg)" disabled>Stil No Feedback</button>
                     }
-                    <div class="card-header">@contact.NickName</div>
-                    <a class="link-info" href="@contact.UrlLink" style="height: 1rem;" target="_blank">Visit @contact.NickName Info Page</a>
-                    @*<div class="card-body text-primary" style="height: 3rem;">
-                <h6 class="card-title mt-1"> Candidat In "@contact.GuildName" Guild</h6>
-                </div>*@
-                    <hr />
-                    <div class="box text-primary">@contact.Description</div>
+                    <div style="background-size: 100% 100%; background-image:url( /Img/DivBackgound/DB56.jpg)">
+                        <h3 class="card-header" style="color:aquamarine" >@contact.NickName</h3>
+                        <a class="link-info" href="@contact.UrlLink" style="height: 1rem;" target="_blank">Visit @contact.NickName Info Page</a>
+                        <hr />
+                    </div>
+                    <div class="box text-white"  style="background-size: 100% 100%; background-image:url( /Img/DivBackgound/DB8.jpg)">@contact.Description</div>
                     @if (contact.IsAccepted == true)
                     {
                         <button type="button" class="btn btn-success" disabled>Contact is Accept</button>
