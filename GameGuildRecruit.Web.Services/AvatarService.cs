@@ -109,10 +109,10 @@ namespace GameGuildRecruit.Web.Services
             }
         }
 
-        public async Task<IEnumerable<AvatarFormModel>> GetAvatarsAsync()
+        public async Task<IEnumerable<AvatarViewModel>> GetAvatarsAsync()
         {
             return await dbContext.Avatars
-              .Select(a => new AvatarFormModel
+              .Select(a => new AvatarViewModel
               {
                   Id = a.Id,
                   Name = a.Name,
