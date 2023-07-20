@@ -45,7 +45,7 @@ namespace GameGuildRecruit.Web.Services
                 NickName = contactModel.NickName,
                 Description = contactModel.Description,
                 UrlLink = contactModel.UrlLink,
-                UserId = userModel.Id,
+                GuildUserId = userModel.Id,
                 UserNickName = userModel.NickName,
                 GuildName = userModel.GuildName,
                 ServerName = userModel.ServerName,
@@ -82,7 +82,7 @@ namespace GameGuildRecruit.Web.Services
                      NickName = p.NickName,
                      Description = p.Description,
                      UrlLink = p.UrlLink,
-                     UserId = p.UserId,
+                     UserId = p.GuildUserId,
                      UserNickName = p.NickName,
                      GuildName = p.GuildName,
                      ServerName = p.ServerName,
@@ -142,7 +142,7 @@ namespace GameGuildRecruit.Web.Services
         public async Task<IEnumerable<ContactPlayerViewModel>> GetUserContactsAsync(Guid userId)
         {
             return await dbContext.ContactPlayers
-               .Where(x => x.UserId == userId)
+               .Where(x => x.GuildUserId == userId)
                .Select(c => new ContactPlayerViewModel
                {
                    Id = c.Id,
@@ -150,7 +150,7 @@ namespace GameGuildRecruit.Web.Services
                    UrlLink = c.UrlLink,
                    Description = c.Description,
                    GuildName = c.GuildName,
-                   UserId = c.UserId,
+                   UserId = c.GuildUserId,
                    GameName = c.GameName,
                    ServerName = c.ServerName,
                    UserNickName = c.UserNickName,
@@ -169,7 +169,7 @@ namespace GameGuildRecruit.Web.Services
                                                                 .Select(x => new ContactPlayer
                                                                 {
                                                                     Id = x.Id,
-                                                                    UserId = x.UserId,
+                                                                    GuildUserId = x.GuildUserId,
                                                                     NickName = x.NickName,
                                                                     UrlLink = x.UrlLink,
                                                                     Description = x.Description,

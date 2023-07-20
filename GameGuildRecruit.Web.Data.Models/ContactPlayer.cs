@@ -9,7 +9,7 @@ namespace GameGuildRecruit.Web.Data.Models
         public ContactPlayer()
         {
             this.Id = Guid.NewGuid();
-            this.UserId = Guid.NewGuid();
+            this.GuildUserId = Guid.NewGuid();
 
         }
 
@@ -30,7 +30,7 @@ namespace GameGuildRecruit.Web.Data.Models
 
         public string? UrlLink { get; set; }
 
-        public Guid UserId { get; set; }
+        public Guid GuildUserId { get; set; }
 
         public string? UserNickName { get; set; }
 

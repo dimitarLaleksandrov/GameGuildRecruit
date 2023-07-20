@@ -28,7 +28,7 @@ namespace GameGuildRecruit.Web.ViewModels.ContactPlayer
         [Display(Name = "UrlLink")]
         public string? UrlLink { get; set; }
 
-        [Display(Name = "UserName")]
+        [Display(Name = "UserId")]
         public Guid? UserId { get; set; }
 
         [Display(Name = "UserNickName")]

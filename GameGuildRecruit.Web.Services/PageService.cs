@@ -112,7 +112,7 @@ namespace GameGuildRecruit.Web.Services
         public async Task<IEnumerable<ContactPlayerViewModel>> GetUserContactsByIdAsync(Guid userId)
         {
             return await dbContext.ContactPlayers
-               .Where(x => x.UserId == userId)
+               .Where(x => x.GuildUserId == userId)
                .Select(c => new ContactPlayerViewModel
                {
                    Id = c.Id,
@@ -120,7 +120,7 @@ namespace GameGuildRecruit.Web.Services
                    UrlLink = c.UrlLink,
                    Description = c.Description,
                    GuildName = c.GuildName,
-                   UserId = c.UserId,
+                   UserId = c.GuildUserId,
                    GameName = c.GameName,
                    ServerName = c.ServerName,
                    UserNickName = c.UserNickName,

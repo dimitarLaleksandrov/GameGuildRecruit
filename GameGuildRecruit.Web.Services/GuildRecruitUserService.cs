@@ -30,7 +30,7 @@ namespace GameGuildRecruit.Web.Services
                                               NickName = p.NickName,
                                               Description = p.Description,
                                               UrlLink = p.UrlLink,
-                                              UserId = p.UserId,
+                                              UserId = p.GuildUserId,
                                               UserNickName = p.UserNickName,
                                               GameName = p.GameName,
                                               GuildName = p.GuildName,
@@ -183,7 +183,7 @@ namespace GameGuildRecruit.Web.Services
         {
 
             return await dbContext.ContactPlayers
-                .Where(cp => cp.UserId == userId)
+                .Where(cp => cp.GuildUserId == userId)
                 .Select(c => new ContactPlayerViewModel
                 {
                     Id = c.Id,
@@ -248,7 +248,7 @@ namespace GameGuildRecruit.Web.Services
                                                                .FirstOrDefaultAsync();
 
             var contactToBeDelete = await dbContext.ContactPlayers
-                                                   .Where(c => c.UserId == userModelToDelete!.Id)
+                                                   .Where(c => c.GuildUserId == userModelToDelete!.Id)
                                                    .ToArrayAsync();
 
 
