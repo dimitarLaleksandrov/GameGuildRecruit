@@ -123,5 +123,19 @@ namespace GameGuildRecruit.Web.Services
               .ThenBy(x => x.AvatarPixURL)
               .ToArrayAsync();
         }
+
+        public async Task<AvatarViewModel?> GetAvatarForSelectByIdAsync(Guid id)
+        {
+            return await dbContext.Avatars
+                .Where(x => x.Id == id)
+                .Select(a => new AvatarViewModel
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    AvatarPixURL = a.AvatarPixURL
+
+                })
+                .FirstOrDefaultAsync();
+        }
     }
 }

@@ -175,7 +175,7 @@ namespace GameGuildRecruit.Web.Controllers
                     return RedirectToAction("GetUsersError", "Errors");
                 }
 
-                var avatarModel = await avatarService.GetAvatarByIdAsync(avatarId!);
+                var avatarModel = await avatarService.GetAvatarForSelectByIdAsync(avatarId!);
                 if (avatarModel == null)
                 {
                     return RedirectToAction("GetUsersError", "Errors");
