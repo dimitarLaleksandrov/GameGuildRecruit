@@ -104,11 +104,11 @@ namespace GameGuildRecruit.Web.Services
             }
         }
 
-        public async Task<IEnumerable<BannerFormModel>> GetBannersAsync(string gameName)
+        public async Task<IEnumerable<BannerViewModel>> GetBannersAsync(string gameName)
         {
             return await dbContext.Banners
               .Where(b => b.GameName == gameName)
-              .Select(c => new BannerFormModel
+              .Select(c => new BannerViewModel
               {
                   Id = c.Id,
                   GameName = c.GameName,

@@ -19,7 +19,7 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
         Task RemoveBannerAsync(Guid id);
 
-        Task<IEnumerable<BannerFormModel>> GetBannersAsync(string gameName);
+        Task<IEnumerable<BannerViewModel>> GetBannersAsync(string gameName);
 
 
     }

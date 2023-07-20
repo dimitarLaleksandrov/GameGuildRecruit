@@ -1,11 +1,8 @@
-﻿using GameGuildRecruit.Web.Services;
-using GameGuildRecruit.Web.Services.Interfaces;
+﻿using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.Banner;
-using GameGuildRecruit.Web.ViewModels.Game;
-using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+
 
 namespace GameGuildRecruit.Web.Controllers
 {

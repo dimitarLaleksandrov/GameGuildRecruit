@@ -150,10 +150,10 @@ namespace GameGuildRecruit.Web.Services
                 })
                 .ToArrayAsync();
 
-            IEnumerable<BannerFormModel> allBanners = await bannerQuery
+            IEnumerable<BannerViewModel> allBanners = await bannerQuery
                .Skip((queryModel.CurrentPage - 1) * queryModel.UserPerPage)
                .Take(queryModel.UserPerPage)
-               .Select(b => new BannerFormModel
+               .Select(b => new BannerViewModel
                {
                    Id = b.Id,
                    GameName = b.GameName,

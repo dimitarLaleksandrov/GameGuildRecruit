@@ -4,7 +4,6 @@ using GameGuildRecruit.Web.ViewModels.Avatar;
 using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 using GameGuildRecruit.Web.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using GameGuildRecruit.Web.ViewModels.Banner;
 
 namespace GameGuildRecruit.Web.Services
 

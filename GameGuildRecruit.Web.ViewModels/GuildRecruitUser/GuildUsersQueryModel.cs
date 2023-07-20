@@ -13,7 +13,7 @@ namespace GameGuildRecruit.Web.ViewModels.GuildRecruitUser
             this.UserPerPage = EntitiesPerPage;
 
             this.GuildUsers = new HashSet<GuildRecruitUserFormModel>();
-            this.Banners = new HashSet<BannerFormModel>();
+            this.Banners = new HashSet<BannerViewModel>();
 
         }
 
@@ -32,6 +32,6 @@ namespace GameGuildRecruit.Web.ViewModels.GuildRecruitUser
 
         public int BannerCount { get; set; }
 
-        public IEnumerable<BannerFormModel> Banners { get; set; }
+        public IEnumerable<BannerViewModel> Banners { get; set; }
     }
 }
