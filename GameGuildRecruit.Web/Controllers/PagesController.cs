@@ -76,7 +76,7 @@ namespace GameGuildRecruit.Web.Controllers
         public async Task<IActionResult> StarCraftPreviousPage()
         {
 
-            return RedirectToAction("StarCraftPage", "Pages");
+            return RedirectToAction("StarCraft", "Pages");
         }
 
 
@@ -194,7 +194,7 @@ namespace GameGuildRecruit.Web.Controllers
         public async Task<IActionResult> DiabloPreviousPage()
         {
 
-            return RedirectToAction("DiabloPage", "Pages");
+            return RedirectToAction("Diablo", "Pages");
         }
 
 
@@ -252,7 +252,7 @@ namespace GameGuildRecruit.Web.Controllers
         public async Task<IActionResult> GooglePlayPreviousPage()
         {
 
-            return RedirectToAction("GooglePlayPage", "Pages");
+            return RedirectToAction("GooglePlay", "Pages");
         }
 
     }
