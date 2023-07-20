@@ -136,7 +136,7 @@ namespace GameGuildRecruit.Web.Controllers
         public async Task<IActionResult> WoWPreviousPage()
         {
 
-            return RedirectToAction("WoWPage", "Pages");
+            return RedirectToAction("WorldOfWarcraft", "Pages");
         }
 
 
