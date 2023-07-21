@@ -109,9 +109,32 @@
             {
                 if (user.UserName == User.Identity?.Name)
                 {
-                    <div class="outBox">
-                        <partial name="_LogerGuildUsersPartial" model="@user" />
-                    </div>
+                    var gameName = user.GameName;
+
+                    if (gameName == "StarCraft")
+                    {
+                        <div class="outBox">
+                            <partial name="_StarCraftLogerGuildUsersPartial" model="@user" />
+                        </div>
+                    }
+                    else if (gameName == "WorldOfWarcraft")
+                    {
+                        <div class="outBox">
+                            <partial name="_WoWLogerGuildUsersPartial" model="@user" />
+                        </div>
+                    }
+                    else if (gameName == "Diablo")
+                    {
+                        <div class="outBox">
+                            <partial name="_DiabloLogerGuildUsersPartial" model="@user" />
+                        </div>
+                    }
+                    else if (gameName == "GooglePlay")
+                    {
+                        <div class="outBox">
+                            <partial name="_GooglePlayLogerGuildUsersPartial" model="@user" />
+                        </div>
+                    }              
                     continue;
                 }
             }
