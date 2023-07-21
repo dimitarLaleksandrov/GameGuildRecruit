@@ -7,15 +7,15 @@ namespace GameGuildRecruit.Web.Services.Interfaces
     {
         Task<ContactPlayerFormModel> GetNewContactModelAsync();
 
-        Task<GuildRecruitUserFormModel?> GetUserByIdAsync(Guid id);
+        Task<GuildRecruitUserViewModel?> GetUserByIdAsync(Guid id);
 
-        Task CreateContactAsync(ContactPlayerFormModel contactModel, GuildRecruitUserFormModel userModel);
+        Task CreateContactAsync(ContactPlayerFormModel contactModel, GuildRecruitUserViewModel userModel);
 
         Task AddContactToUserAsync(Guid userId, Guid contactId);
 
-        Task<ContactPlayerFormModel?> GetContactByIdAsync(Guid id);
+        Task<ContactPlayerViewModel?> GetContactByIdAsync(Guid id);
 
-        Task RemoveContactAsync(ContactPlayerFormModel contact);
+        Task RemoveContactAsync(ContactPlayerViewModel contact);
 
         Task<IEnumerable<ContactPlayerViewModel>> GetUserContactsAsync(Guid userId);
 

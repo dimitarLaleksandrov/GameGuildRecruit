@@ -36,7 +36,7 @@ namespace GameGuildRecruit.Web.Services
 
         }
 
-        public async Task CreateContactAsync(ContactPlayerFormModel contactModel, GuildRecruitUserFormModel userModel)
+        public async Task CreateContactAsync(ContactPlayerFormModel contactModel, GuildRecruitUserViewModel userModel)
         {
 
             ContactPlayer contact = new ContactPlayer()
@@ -72,11 +72,11 @@ namespace GameGuildRecruit.Web.Services
 
         }
 
-        public async Task<ContactPlayerFormModel?> GetContactByIdAsync(Guid id)
+        public async Task<ContactPlayerViewModel?> GetContactByIdAsync(Guid id)
         {
             return await dbContext.ContactPlayers
                  .Where(c => c.Id == id)
-                 .Select(p => new ContactPlayerFormModel
+                 .Select(p => new ContactPlayerViewModel
                  {
                      Id = p.Id,
                      NickName = p.NickName,
@@ -120,11 +120,11 @@ namespace GameGuildRecruit.Web.Services
             return contactModel;
         }
 
-        public async Task<GuildRecruitUserFormModel?> GetUserByIdAsync(Guid id)
+        public async Task<GuildRecruitUserViewModel?> GetUserByIdAsync(Guid id)
         {
             return await dbContext.GuildRecruitUsers
                  .Where(x => x.Id == id)
-                 .Select(u => new GuildRecruitUserFormModel
+                 .Select(u => new GuildRecruitUserViewModel
                  {
                      Id = u.Id,
                      UserName = u.UserName,
@@ -161,7 +161,7 @@ namespace GameGuildRecruit.Web.Services
         }
 
 
-        public async Task RemoveContactAsync(ContactPlayerFormModel contact)
+        public async Task RemoveContactAsync(ContactPlayerViewModel contact)
         {
             var userContact = await dbContext.IdentityUserContacts.FirstOrDefaultAsync(x => x.ContactId == contact.Id && x.GuildUserId == contact.GuildUserId);
 
