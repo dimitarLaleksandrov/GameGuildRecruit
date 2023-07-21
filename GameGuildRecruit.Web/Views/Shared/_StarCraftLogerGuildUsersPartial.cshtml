@@ -42,7 +42,7 @@
             <div class="box text-primary">@Model.Description</div>
             @if (Model.UserContactNum >= 1)
             {
-                <button class="btn btn-info btn-sm" asp-area="" method="post" asp-controller="Contact" asp-action="UserContacts" asp-route-id="@Model.Id">See All Contacts</button>
+                <button class="btn btn-info btn-sm" asp-area="" method="post" asp-controller="Pages" asp-action="StarCraftContacts" asp-route-id="@Model.Id">See All Contacts</button>
             }
             @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
             {
