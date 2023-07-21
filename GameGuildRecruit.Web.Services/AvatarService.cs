@@ -62,7 +62,7 @@ namespace GameGuildRecruit.Web.Services
                 .FirstOrDefaultAsync();
         }
 
-        public async Task SetUserAvatarAsync(GuildRecruitUserFormModel userModel, string avatarPixURL)
+        public async Task SetUserAvatarAsync(GuildRecruitUserViewModel userModel, string avatarPixURL)
         {
             var user = await dbContext.GuildRecruitUsers.FindAsync(userModel.Id);
 

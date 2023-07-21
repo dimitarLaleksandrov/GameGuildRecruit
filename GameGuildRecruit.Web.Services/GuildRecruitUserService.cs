@@ -68,12 +68,12 @@ namespace GameGuildRecruit.Web.Services
             await this.dbContext.SaveChangesAsync();
         }
 
-        public async Task<GuildRecruitUserFormModel?> GetUserByUserNameAsync(string userName)
+        public async Task<GuildRecruitUserViewModel?> GetUserByUserNameAsync(string userName)
         {
 
             return await dbContext.GuildRecruitUsers
                  .Where(x => x.UserName == userName)
-                 .Select(b => new GuildRecruitUserFormModel
+                 .Select(b => new GuildRecruitUserViewModel
                  {
                      Id = b.Id,
                      NickName = b.NickName,
@@ -227,7 +227,7 @@ namespace GameGuildRecruit.Web.Services
                  .FirstOrDefaultAsync();
         }
 
-        public async Task RemoveGuildInfoAsync(GuildRecruitUserFormModel userModel)
+        public async Task RemoveGuildInfoAsync(GuildRecruitUserViewModel userModel)
         {  
 
             var userModelToDelete = await dbContext.GuildRecruitUsers

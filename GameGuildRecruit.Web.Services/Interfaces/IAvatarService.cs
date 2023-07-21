@@ -24,7 +24,7 @@ namespace GameGuildRecruit.Web.Services.Interfaces
         Task RemoveAvatarAsync(Guid id);
 
 
-        Task SetUserAvatarAsync(GuildRecruitUserFormModel userModel, string avatarPixURL);
+        Task SetUserAvatarAsync(GuildRecruitUserViewModel userModel, string avatarPixURL);
 
        
 

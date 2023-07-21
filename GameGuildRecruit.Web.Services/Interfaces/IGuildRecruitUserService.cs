@@ -6,7 +6,7 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 {
     public interface IGuildRecruitUserService
     {
-        Task<GuildRecruitUserFormModel?> GetUserByUserNameAsync(string userName);
+        Task<GuildRecruitUserViewModel?> GetUserByUserNameAsync(string userName);
 
         Task<GuildRecruitUserFormModel> GetNewUserModelAsync();
 
@@ -24,7 +24,7 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
         Task GetContactForRejectedByIdAsync(Guid id);
 
-        Task RemoveGuildInfoAsync(GuildRecruitUserFormModel userModel);
+        Task RemoveGuildInfoAsync(GuildRecruitUserViewModel userModel);
 
     }
 }

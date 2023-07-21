@@ -142,7 +142,7 @@ namespace GameGuildRecruit.Web.Controllers
            
 
         [HttpPost]
-        public async Task<IActionResult> AddContactFeedback(Guid id, ContactPlayerFormModel contactModel)
+        public async Task<IActionResult> AddContactFeedback(Guid id, ContactPlayerViewModel contactModel)
         {
             await contactService.CreateContactFeedback(contactModel, id);
 
