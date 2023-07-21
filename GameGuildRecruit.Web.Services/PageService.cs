@@ -48,10 +48,10 @@ namespace GameGuildRecruit.Web.Services
 
             }
 
-            IEnumerable<GuildRecruitUserFormModel> allGuildUsers = await guildUsersQuery
+            IEnumerable<GuildRecruitUserViewModel> allGuildUsers = await guildUsersQuery
                 .Skip((queryModel.CurrentPage - 1) * queryModel.UserPerPage)
                 .Take(queryModel.UserPerPage)
-                .Select(g => new GuildRecruitUserFormModel
+                .Select(g => new GuildRecruitUserViewModel
                 {
                     Id = g.Id,
                     NickName = g.NickName,

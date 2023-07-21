@@ -59,7 +59,7 @@ namespace GameGuildRecruit.Web.Services
             await this.dbContext.SaveChangesAsync();
         }
 
-        public async Task CreateContactFeedback(ContactPlayerViewModel contactModel, Guid id)
+        public async Task CreateContactFeedback(ContactPlayerFormModel contactModel, Guid id)
         {
             var contact = await dbContext.ContactPlayers.FindAsync(id);
 
@@ -94,11 +94,11 @@ namespace GameGuildRecruit.Web.Services
                  .FirstOrDefaultAsync();
         }
 
-        public async Task<ContactPlayerViewModel?> GetContactForFeedbackByIdAsync(Guid id)
+        public async Task<ContactPlayerFormModel?> GetContactForFeedbackByIdAsync(Guid id)
         {
             return await dbContext.ContactPlayers
                 .Where(c => c.Id == id)
-                .Select(p => new ContactPlayerViewModel
+                .Select(p => new ContactPlayerFormModel
                 {
                     Id = p.Id,
                     NickName = p.NickName,

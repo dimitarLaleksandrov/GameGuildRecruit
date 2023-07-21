@@ -8,6 +8,9 @@ namespace GameGuildRecruit.Web.Services.Interfaces
     {
         Task<GuildRecruitUserViewModel?> GetUserByUserNameAsync(string userName);
 
+        Task<GuildRecruitUserFormModel?> GetUserByUserNameFormModelAsync(string userName);
+
+
         Task<GuildRecruitUserFormModel> GetNewUserModelAsync();
 
         Task AddUserAsync(GuildRecruitUserFormModel userModel, string userName, Guid id);

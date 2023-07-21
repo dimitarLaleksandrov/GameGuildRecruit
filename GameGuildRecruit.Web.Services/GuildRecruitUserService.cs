@@ -89,6 +89,27 @@ namespace GameGuildRecruit.Web.Services
                  .FirstOrDefaultAsync();
         }
 
+        public async Task<GuildRecruitUserFormModel?> GetUserByUserNameFormModelAsync(string userName)
+        {
+            return await dbContext.GuildRecruitUsers
+                  .Where(x => x.UserName == userName)
+                  .Select(b => new GuildRecruitUserFormModel
+                  {
+                      Id = b.Id,
+                      NickName = b.NickName,
+                      UrlLink = b.UrlLink,
+                      GuildName = b.GuildName,
+                      ServerName = b.ServerName,
+                      GameName = b.GameName,
+                      Description = b.Description,
+                      UserName = b.UserName,
+                      UserAvatarPix = b.UserAvatarPix
+
+                  })
+                  .FirstOrDefaultAsync();
+        }
+
+
         public async Task EditUserAsync(GuildRecruitUserFormModel userModel, string userName)
         {
             var findUserByUserName = await dbContext.GuildRecruitUsers.Where(x => x.UserName == userName).FirstOrDefaultAsync();
@@ -105,6 +126,7 @@ namespace GameGuildRecruit.Web.Services
                 await dbContext.SaveChangesAsync();
             }
         }
+
         public async Task<GuildUsersPageServiceModel> GetUsersWithTheSameGameAsync(GuildUsersQueryModel queryModel, string gameName)
         {
 
@@ -132,10 +154,10 @@ namespace GameGuildRecruit.Web.Services
 
             }
 
-            IEnumerable<GuildRecruitUserFormModel> allGuildUsers = await guildUsersQuery
+            IEnumerable<GuildRecruitUserViewModel> allGuildUsers = await guildUsersQuery
                 .Skip((queryModel.CurrentPage - 1) * queryModel.UserPerPage)
                 .Take(queryModel.UserPerPage)
-                .Select(g => new GuildRecruitUserFormModel
+                .Select(g => new GuildRecruitUserViewModel
                 {
                     Id = g.Id,
                     NickName = g.NickName,
@@ -280,5 +302,7 @@ namespace GameGuildRecruit.Web.Services
 
             }
         }
+
+        
     }
 }

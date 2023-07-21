@@ -27,7 +27,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 var userName = this.User.Identity!.Name;
 
-                var userGuildExist = await userService.GetUserByUserNameAsync(userName!);
+                var userGuildExist = await userService.GetUserByUserNameFormModelAsync(userName!);
 
                 if (userGuildExist != null)
                 {
@@ -82,7 +82,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 var userName = this.User.Identity!.Name;
 
-                var user = await userService.GetUserByUserNameAsync(userName!);
+                var user = await userService.GetUserByUserNameFormModelAsync(userName!);
 
                 return View(user);
             }

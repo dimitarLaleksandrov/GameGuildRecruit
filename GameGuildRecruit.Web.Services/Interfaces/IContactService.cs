@@ -19,8 +19,8 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
         Task<IEnumerable<ContactPlayerViewModel>> GetUserContactsAsync(Guid userId);
 
-        Task<ContactPlayerViewModel?> GetContactForFeedbackByIdAsync(Guid id);
+        Task<ContactPlayerFormModel?> GetContactForFeedbackByIdAsync(Guid id);
 
-        Task CreateContactFeedback(ContactPlayerViewModel contactModel, Guid id);
+        Task CreateContactFeedback(ContactPlayerFormModel contactModel, Guid id);
     }
 }
