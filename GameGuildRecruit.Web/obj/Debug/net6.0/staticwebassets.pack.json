@@ -425,6 +425,38 @@
       "PackagePath": "staticwebassets\\Img\\Background\\Contact+Us.jpg"
     },
     {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Background\\DB56.jpg",
+      "PackagePath": "staticwebassets\\Img\\Background\\DB56.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Background\\DB57.jpg",
+      "PackagePath": "staticwebassets\\Img\\Background\\DB57.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Background\\DB58.jpg",
+      "PackagePath": "staticwebassets\\Img\\Background\\DB58.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Background\\DB59.jpg",
+      "PackagePath": "staticwebassets\\Img\\Background\\DB59.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Background\\DB60.jpg",
+      "PackagePath": "staticwebassets\\Img\\Background\\DB60.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Background\\DB61.jpg",
+      "PackagePath": "staticwebassets\\Img\\Background\\DB61.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Background\\DB62.jpg",
+      "PackagePath": "staticwebassets\\Img\\Background\\DB62.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Background\\DB63.jpg",
+      "PackagePath": "staticwebassets\\Img\\Background\\DB63.jpg"
+    },
+    {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\Background\\Fon.jpg",
       "PackagePath": "staticwebassets\\Img\\Background\\Fon.jpg"
     },
@@ -883,6 +915,270 @@
     {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\GooglePlay\\Google Logo\\Logo2.png",
       "PackagePath": "staticwebassets\\Img\\GooglePlay\\Google Logo\\Logo2.png"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB1.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB1.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB10.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB10.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB11.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB11.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB12.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB12.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB13.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB13.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB14.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB14.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB15.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB15.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB16.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB16.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB17.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB17.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB18.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB18.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB19.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB19.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB2.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB2.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB20.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB20.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB21.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB21.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB22.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB22.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB23.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB23.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB24.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB24.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB25.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB25.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB26.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB26.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB27.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB27.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB28.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB28.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB29.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB29.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB3.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB3.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB30.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB30.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB31.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB31.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB33.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB33.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB34.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB34.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB35.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB35.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB36.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB36.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB37.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB37.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB38.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB38.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB39.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB39.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB4.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB4.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB40.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB40.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB41.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB41.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB42.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB42.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB43.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB43.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB44.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB44.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB45.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB45.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB46.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB46.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB47.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB47.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB48.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB48.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB49.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB49.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB5.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB5.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB50.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB50.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB51.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB51.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB52.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB52.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB53.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB53.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB54.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB54.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB55.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB55.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB56.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB56.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB57.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB57.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB58.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB58.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB59.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB59.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB6.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB6.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB60.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB60.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB61.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB61.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB62.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB62.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB63.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB63.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB64.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB64.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB65.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB65.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB66.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB66.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB67.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB67.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB7.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB7.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB8.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB8.jpg"
+    },
+    {
+      "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SBackground\\SB9.jpg",
+      "PackagePath": "staticwebassets\\Img\\SBackground\\SB9.jpg"
     },
     {
       "Id": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web\\wwwroot\\Img\\SC\\1.jpg",
