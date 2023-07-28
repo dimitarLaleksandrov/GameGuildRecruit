@@ -168,10 +168,23 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Diablo([FromQuery] GuildUsersQueryModel queryModel)
         {
-            var usersGameName = "Diablo";
+            var gameName = "Diablo";
+
+            var gamePage = await pageService.GetGameByNameAsync(gameName);
+
+            if (gamePage == null)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
+            if (gamePage.IsGameHasView == false)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
             try
             {
-                GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, usersGameName);
+                GuildUsersPageServiceModel usersWhitTheSameGame = await pageService.GetAllUsersByGameNameAsync(queryModel, gameName);
 
                 queryModel.GuildUsers = usersWhitTheSameGame.GuildUsers;
                 queryModel.GuildUsersCount = usersWhitTheSameGame.GuildUsersCount;
