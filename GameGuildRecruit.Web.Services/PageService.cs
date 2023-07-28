@@ -5,7 +5,7 @@ using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 using GameGuildRecruit.Web.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using GameGuildRecruit.Web.ViewModels.Banner;
-
+using GameGuildRecruit.Web.ViewModels.Game;
 
 namespace GameGuildRecruit.Web.Services
 {
@@ -21,16 +21,16 @@ namespace GameGuildRecruit.Web.Services
 
 
 
-        public async Task<GuildUsersPageServiceModel> GetAllUsersByGameNameAsync(GuildUsersQueryModel queryModel, string usersGameName)
+        public async Task<GuildUsersPageServiceModel> GetAllUsersByGameNameAsync(GuildUsersQueryModel queryModel, string gameName)
         {
             IQueryable<GuildRecruitUser> guildUsersQuery = this.dbContext
                .GuildRecruitUsers
-               .Where(u => u.GameName == usersGameName)
+               .Where(u => u.GameName == gameName)
                .AsQueryable();
 
             IQueryable<Banner> bannerQuery = this.dbContext
              .Banners
-             .Where(b => b.GameName == usersGameName)
+             .Where(b => b.GameName == gameName)
              .AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(queryModel.GuildName))
@@ -107,6 +107,18 @@ namespace GameGuildRecruit.Web.Services
                    Feedback = p.Feedback
                })
                .FirstOrDefaultAsync();
+        }
+
+        public async Task<GameViewModel?> GetGameByNameAsync(string gameName)
+        {
+            return await dbContext.Games
+                        .Where(g => g.GameName == gameName)
+                        .Select(x => new GameViewModel 
+                        { 
+                            GameName = x.GameName,
+                            IsGameHasView = x.IsGameHasView
+                        })
+                        .FirstOrDefaultAsync();
         }
 
         public async Task<IEnumerable<ContactPlayerViewModel>> GetUserContactsByIdAsync(Guid userId)
