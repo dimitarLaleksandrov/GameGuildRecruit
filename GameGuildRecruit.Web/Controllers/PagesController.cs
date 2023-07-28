@@ -188,6 +188,20 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> WoWGetContactFeedback(Guid id)
         {
+            var gameName = "WorldOfWarcraft";
+
+            var gamePage = await pageService.GetGameByNameAsync(gameName);
+
+            if (gamePage == null)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
+            if (gamePage.IsGameHasView == false)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
             try
             {
                 var contactsModels = await pageService.GetBannersAsync(id);
