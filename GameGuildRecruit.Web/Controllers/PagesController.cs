@@ -258,6 +258,20 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> DiabloContacts(Guid id)
         {
+            var gameName = "Diablo";
+
+            var gamePage = await pageService.GetGameByNameAsync(gameName);
+
+            if (gamePage == null)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
+            if (gamePage.IsGameHasView == false)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
             try
             {
                 var contactsModels = await pageService.GetUserContactsByIdAsync(id);
@@ -273,6 +287,20 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> DiabloGetContactFeedback(Guid id)
         {
+            var gameName = "Diablo";
+
+            var gamePage = await pageService.GetGameByNameAsync(gameName);
+
+            if (gamePage == null)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
+            if (gamePage.IsGameHasView == false)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
             try
             {
                 var contactsModels = await pageService.GetBannersAsync(id);
@@ -329,6 +357,20 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> GooglePlayContacts(Guid id)
         {
+            var gameName = "GooglePlay";
+
+            var gamePage = await pageService.GetGameByNameAsync(gameName);
+
+            if (gamePage == null)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
+            if (gamePage.IsGameHasView == false)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
             try
             {
                 var contactsModels = await pageService.GetUserContactsByIdAsync(id);
@@ -344,6 +386,20 @@ namespace GameGuildRecruit.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> GooglePlayGetContactFeedback(Guid id)
         {
+            var gameName = "GooglePlay";
+
+            var gamePage = await pageService.GetGameByNameAsync(gameName);
+
+            if (gamePage == null)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
+            if (gamePage.IsGameHasView == false)
+            {
+                return RedirectToAction("PageError", "Errors");
+            }
+
             try
             {
                 var contactsModels = await pageService.GetBannersAsync(id);
