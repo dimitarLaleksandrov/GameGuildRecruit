@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web", "GameGuildRecruit.Web\GameGuildRecruit.Web.csproj", "{5569752C-1BA6-4003-81F0-14DDE28541EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameGuildRecruit.Web", "GameGuildRecruit.Web\GameGuildRecruit.Web.csproj", "{5569752C-1BA6-4003-81F0-14DDE28541EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web.Data.Models", "GameGuildRecruit.Web.Data.Models\GameGuildRecruit.Web.Data.Models.csproj", "{7B5291A8-B4DA-44E8-84D8-901E390A24D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameGuildRecruit.Web.Data.Models", "GameGuildRecruit.Web.Data.Models\GameGuildRecruit.Web.Data.Models.csproj", "{7B5291A8-B4DA-44E8-84D8-901E390A24D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web.Common", "GameGuildRecruit.Web.Common\GameGuildRecruit.Web.Common.csproj", "{9EE1A0F9-246E-4AFF-9CF6-E29A10AF25B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameGuildRecruit.Web.Common", "GameGuildRecruit.Web.Common\GameGuildRecruit.Web.Common.csproj", "{9EE1A0F9-246E-4AFF-9CF6-E29A10AF25B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web.Data", "GameGuildRecruit.Web.Data\GameGuildRecruit.Web.Data.csproj", "{A45B95D9-874E-4E8A-AB05-292DE32B477D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameGuildRecruit.Web.Data", "GameGuildRecruit.Web.Data\GameGuildRecruit.Web.Data.csproj", "{A45B95D9-874E-4E8A-AB05-292DE32B477D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web.ViewModels", "GameGuildRecruit.Web.ViewModels\GameGuildRecruit.Web.ViewModels.csproj", "{5529D173-10EB-465F-AEF9-5EF79F7B56EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameGuildRecruit.Web.ViewModels", "GameGuildRecruit.Web.ViewModels\GameGuildRecruit.Web.ViewModels.csproj", "{5529D173-10EB-465F-AEF9-5EF79F7B56EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruit.Web.Services", "GameGuildRecruit.Web.Services\GameGuildRecruit.Web.Services.csproj", "{88B2E351-D94F-4231-B960-926618E02361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameGuildRecruit.Web.Services", "GameGuildRecruit.Web.Services\GameGuildRecruit.Web.Services.csproj", "{88B2E351-D94F-4231-B960-926618E02361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruitTests", "GameGuildRecruitTests\GameGuildRecruitTests.csproj", "{455B343F-7B79-4186-B133-6D4C12AD5ED1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{88B2E351-D94F-4231-B960-926618E02361}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88B2E351-D94F-4231-B960-926618E02361}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88B2E351-D94F-4231-B960-926618E02361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{455B343F-7B79-4186-B133-6D4C12AD5ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455B343F-7B79-4186-B133-6D4C12AD5ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455B343F-7B79-4186-B133-6D4C12AD5ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455B343F-7B79-4186-B133-6D4C12AD5ED1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
