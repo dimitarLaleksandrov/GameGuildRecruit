@@ -3579,6 +3579,7 @@
       "GameGuildRecruit.Web.Data >= 1.0.0",
       "GameGuildRecruit.Web.Data.Models >= 1.0.0",
       "GameGuildRecruit.Web.Services >= 1.0.0",
+      "GameGuildRecruit.Web.ViewModels >= 1.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 6.0.11",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
       "Moq >= 4.18.4",
@@ -3623,6 +3624,9 @@
             },
             "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web.Services\\GameGuildRecruit.Web.Services.csproj": {
               "projectPath": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web.Services\\GameGuildRecruit.Web.Services.csproj"
+            },
+            "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web.ViewModels\\GameGuildRecruit.Web.ViewModels.csproj": {
+              "projectPath": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web.ViewModels\\GameGuildRecruit.Web.ViewModels.csproj"
             }
           }
         }

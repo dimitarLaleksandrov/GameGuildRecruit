@@ -24,6 +24,7 @@
     <ProjectReference Include="..\GameGuildRecruit.Web.Data.Models\GameGuildRecruit.Web.Data.Models.csproj" />
     <ProjectReference Include="..\GameGuildRecruit.Web.Data\GameGuildRecruit.Web.Data.csproj" />
     <ProjectReference Include="..\GameGuildRecruit.Web.Services\GameGuildRecruit.Web.Services.csproj" />
+    <ProjectReference Include="..\GameGuildRecruit.Web.ViewModels\GameGuildRecruit.Web.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>
