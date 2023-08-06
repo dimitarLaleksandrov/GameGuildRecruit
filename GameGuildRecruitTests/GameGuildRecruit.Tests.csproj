@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.11" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="Moq" Version="4.18.4" />
@@ -20,12 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GameGuildRecruit.Web.Data.Models\GameGuildRecruit.Web.Data.Models.csproj" />
     <ProjectReference Include="..\GameGuildRecruit.Web.Data\GameGuildRecruit.Web.Data.csproj" />
     <ProjectReference Include="..\GameGuildRecruit.Web.Services\GameGuildRecruit.Web.Services.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="UnitTests\" />
   </ItemGroup>
 
 </Project>
