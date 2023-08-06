@@ -24,4 +24,8 @@
     <ProjectReference Include="..\GameGuildRecruit.Web.Services\GameGuildRecruit.Web.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UnitTests\" />
+  </ItemGroup>
+
 </Project>
