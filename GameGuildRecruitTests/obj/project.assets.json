@@ -221,6 +221,22 @@
           "lib/netstandard2.0/_._": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/6.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.11"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/6.0.18": {
         "type": "package",
         "dependencies": {
@@ -1901,6 +1917,20 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.InMemory/6.0.11": {
+      "sha512": "2h5Pyy5e5EJhvMVl1UGPTLst1Q/+8rwEIvjsFwQDrsOmbsgzlbkvCJM2K89wvjA3UKAn5nTyRxCzKu9MMaJYkg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/6.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.6.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.Relational/6.0.18": {
       "sha512": "lCEvmkKips9cn77uc5umOF4VtU/O5hDSHbMQXDsKwUeEc2pIMdGI+IrwM0Wk8mGTartdPAqNmNd1QD3vsqn6TQ==",
       "type": "package",
@@ -3486,7 +3516,9 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "GameGuildRecruit.Web.Data >= 1.0.0",
       "GameGuildRecruit.Web.Services >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.InMemory >= 6.0.11",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
       "Moq >= 4.18.4",
       "NUnit >= 3.13.3",
@@ -3501,9 +3533,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruitTests\\GameGuildRecruitTests.csproj",
-      "projectName": "GameGuildRecruitTests",
-      "projectPath": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruitTests\\GameGuildRecruitTests.csproj",
+      "projectUniqueName": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruitTests\\GameGuildRecruit.Tests.csproj",
+      "projectName": "GameGuildRecruit.Tests",
+      "projectPath": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruitTests\\GameGuildRecruit.Tests.csproj",
       "packagesPath": "C:\\Users\\Rainor\\.nuget\\packages\\",
       "outputPath": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruitTests\\obj\\",
       "projectStyle": "PackageReference",
@@ -3522,6 +3554,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web.Data\\GameGuildRecruit.Web.Data.csproj": {
+              "projectPath": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web.Data\\GameGuildRecruit.Web.Data.csproj"
+            },
             "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web.Services\\GameGuildRecruit.Web.Services.csproj": {
               "projectPath": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruit.Web.Services\\GameGuildRecruit.Web.Services.csproj"
             }
@@ -3538,6 +3573,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[6.0.11, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.5.0, )"

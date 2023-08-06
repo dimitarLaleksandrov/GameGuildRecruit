@@ -1,18 +1,20 @@
 ﻿using GameGuildRecruit.Web.Data;
 using GameGuildRecruit.Web.Services;
+using GameGuildRecruit.Web.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameGuildRecruitTests
+namespace GameGuildRecruit.Tests
 {
-    internal class GuildRecruitUserTest
+    public class GuildRecruitUserTest
     {
 
-        private GuildRecruitUserService userService;
+        private IGuildRecruitUserService userService;
 
         private readonly GameGuildRecruitDbContext dbContext;
 
@@ -20,14 +22,16 @@ namespace GameGuildRecruitTests
         [SetUp]
         public void Setup()
         {
-            userService = new GuildRecruitUserService(dbContext);
+            var mockedGuildRecruitUserService = new Mock<IGuildRecruitUserService>();
+
+            mockedGuildRecruitUserService.Setup(x => x.GetNewUserModelAsync());
+
+
+           userService = new GuildRecruitUserService(dbContext);
         }
 
 
 
-        [Test]
-
-        public void 
 
 
 

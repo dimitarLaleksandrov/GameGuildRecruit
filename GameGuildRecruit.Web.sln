@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameGuildRecruit.Web.ViewMo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameGuildRecruit.Web.Services", "GameGuildRecruit.Web.Services\GameGuildRecruit.Web.Services.csproj", "{88B2E351-D94F-4231-B960-926618E02361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuildRecruitTests", "GameGuildRecruitTests\GameGuildRecruitTests.csproj", "{455B343F-7B79-4186-B133-6D4C12AD5ED1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameGuildRecruit.Tests", "GameGuildRecruitTests\GameGuildRecruit.Tests.csproj", "{455B343F-7B79-4186-B133-6D4C12AD5ED1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

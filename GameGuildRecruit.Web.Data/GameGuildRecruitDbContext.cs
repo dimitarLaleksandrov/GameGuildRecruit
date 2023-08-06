@@ -9,9 +9,23 @@ namespace GameGuildRecruit.Web.Data
 {
     public class GameGuildRecruitDbContext : IdentityDbContext
     {
-        public GameGuildRecruitDbContext(DbContextOptions<GameGuildRecruitDbContext> options)
+
+        private bool _seedDb;
+
+        public GameGuildRecruitDbContext(DbContextOptions<GameGuildRecruitDbContext> options, bool seed = true)
         : base(options)
-        {
+        {       
+
+            if (Database.IsRelational())
+            {
+                Database.Migrate();
+            }
+            else
+            {
+                Database.EnsureCreated();
+            }
+
+            _seedDb = seed;
 
         }
 

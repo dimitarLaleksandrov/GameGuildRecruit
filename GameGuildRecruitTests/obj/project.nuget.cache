@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HgO389LMSLBnLlNcWSkA/o12Tz2FZNcqZHnxfZr6aqPXy9rlYWWxRVz5Rx1FVpwfBAsdimjPJquQSSRSN/T+jA==",
+  "dgSpecHash": "Qz9HWlrmMV/I/CGaWRtjKPuBTDBJsFReRT7pUO0Te4oM1moSTeF/R2bxhWpsADKxCDcvD7BrGHIEcP1PGrlU8A==",
   "success": true,
-  "projectFilePath": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruitTests\\GameGuildRecruitTests.csproj",
+  "projectFilePath": "D:\\Coding\\Game Guild Recruit Web Project\\GameGuildRecruitTests\\GameGuildRecruit.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rainor\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Rainor\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
@@ -17,6 +17,7 @@
     "C:\\Users\\Rainor\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.18\\microsoft.entityframeworkcore.6.0.18.nupkg.sha512",
     "C:\\Users\\Rainor\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.18\\microsoft.entityframeworkcore.abstractions.6.0.18.nupkg.sha512",
     "C:\\Users\\Rainor\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.18\\microsoft.entityframeworkcore.analyzers.6.0.18.nupkg.sha512",
+    "C:\\Users\\Rainor\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\6.0.11\\microsoft.entityframeworkcore.inmemory.6.0.11.nupkg.sha512",
     "C:\\Users\\Rainor\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.18\\microsoft.entityframeworkcore.relational.6.0.18.nupkg.sha512",
     "C:\\Users\\Rainor\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.18\\microsoft.entityframeworkcore.sqlserver.6.0.18.nupkg.sha512",
     "C:\\Users\\Rainor\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
