@@ -6,6 +6,7 @@ using System.ComponentModel;
 using Moq;
 using Moq.EntityFrameworkCore;
 using static GameGuildRecruit.Tests.UnitTests.DbMockSeedData;
+using static GameGuildRecruit.Tests.UnitTests.DataBaseSeeder;
 
 namespace GameGuildRecruit.Tests.UnitTests
 {
@@ -21,13 +22,17 @@ namespace GameGuildRecruit.Tests.UnitTests
 
 
         [OneTimeSetUp]
-        public void SetUp()
+        public void OneTimeSetUp()
         {
             dbOptions = new DbContextOptionsBuilder<GameGuildRecruitDbContext>()
                .UseInMemoryDatabase("GameGuildRecruitInMemoryDb" + Guid.NewGuid().ToString())
                .Options;
-
+            
             dbContext = new GameGuildRecruitDbContext(dbOptions);
+
+            dbContext.Database.EnsureCreated();
+
+            SeedDataBase(dbContext);
 
         }
 
@@ -41,9 +46,14 @@ namespace GameGuildRecruit.Tests.UnitTests
         [Test]
         public void GetUserByUserNameAsyncShouldReturnUser()
         {
-            dbMock = new Mock<GameGuildRecruitDbContext>()
-                  .Setup(db => db.GuildRecruitUsers)
-                  .ReturnsDbSet(guildUsers);   
+            //dbMock = new Mock<GameGuildRecruitDbContext>()
+            //      .Setup(db => db.GuildRecruitUsers)
+            //      .ReturnsDbSet(guildUsers);
+
+
+     
+
+
             
 
 
