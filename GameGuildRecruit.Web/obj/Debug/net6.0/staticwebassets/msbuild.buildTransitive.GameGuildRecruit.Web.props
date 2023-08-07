@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\GameGuildRecruit.Web.props" />
-</Project>

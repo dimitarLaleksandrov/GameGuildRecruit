@@ -1,6 +1,0 @@
-D:\Coding\Game Guild Recruit Web Project\GameGuildRecruitTests\bin\Debug\net6.0\CoverletSourceRootsMapping
-D:\Coding\Game Guild Recruit Web Project\GameGuildRecruitTests\obj\Debug\net6.0\GameGuildRecruitTests.csproj.AssemblyReference.cache
-D:\Coding\Game Guild Recruit Web Project\GameGuildRecruitTests\obj\Debug\net6.0\GameGuildRecruitTests.GeneratedMSBuildEditorConfig.editorconfig
-D:\Coding\Game Guild Recruit Web Project\GameGuildRecruitTests\obj\Debug\net6.0\GameGuildRecruitTests.AssemblyInfoInputs.cache
-D:\Coding\Game Guild Recruit Web Project\GameGuildRecruitTests\obj\Debug\net6.0\GameGuildRecruitTests.AssemblyInfo.cs
-D:\Coding\Game Guild Recruit Web Project\GameGuildRecruitTests\obj\Debug\net6.0\GameGuildRecruitTests.csproj.CoreCompileInputs.cache
