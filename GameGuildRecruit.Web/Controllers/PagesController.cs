@@ -156,7 +156,7 @@ namespace GameGuildRecruit.Web.Controllers
             }       
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> WoWContacts(Guid id)
         {
             var gameName = "WorldOfWarcraft";
