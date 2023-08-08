@@ -38,10 +38,7 @@
         {
             <div class="outBox">
                 <div class="card col-4" style="width: 14rem;" method="post">
-                    <form class="input-group-sm" asp-controller="Contact" asp-action="CreateContactFeedback" asp-route-id="@contact.Id">
-                        <input type="submit" value="Feedback" class="fs-6 btn btn-outline-info mb-3 p-2" />
-                    </form>
-                    @* <a class="btn btn-info" asp-controller="Contact" asp-action="CreateContactFeedback"  asp-route-id="@contact.Id">Feedback</a>*@
+                    <a class="btn btn-outline-info btn-sm" style="background-size: 100% 100%; background-image:url( /Img/DivBackgound/DB16.jpg)" asp-area="" method="get" asp-controller="Contact" asp-action="CreateContactFeedback" asp-route-id="@contact.Id">Feedback</a>
                     <div class="card-header">@contact.NickName</div>
                     <a class="link-info" href="@contact.UrlLink" style="height: 1rem;" target="_blank">Visit @contact.NickName Info Page</a>
                     <hr />

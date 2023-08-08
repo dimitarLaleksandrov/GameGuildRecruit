@@ -108,7 +108,7 @@ namespace GameGuildRecruit.Web.Controllers
            
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> GetUserWithSameGameContactFeedback(Guid id)
         {
             try
@@ -124,7 +124,7 @@ namespace GameGuildRecruit.Web.Controllers
             
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> CreateContactFeedback(Guid id)
         {
             try
