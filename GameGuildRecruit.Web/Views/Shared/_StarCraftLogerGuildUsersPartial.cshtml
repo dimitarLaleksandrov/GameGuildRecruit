@@ -4,53 +4,50 @@
 @inject UserManager<IdentityUser> UserManager
 
 <div class="text-center  position-relative top-0 start-0 ">
-    <form class="input-group-sm" asp-action="AddContact" method="post">
-
-        <div class="card col-4 border-primary" style="width: 15rem;">
-            <div class="card-header bg-primary-subtle " style="background-color:lightblue">Guild "@Model.GuildName"</div>
-            <div>
-                @if (Model.UserAvatarPix != null)
+    <div class="card col-4 border-primary" style="width: 15rem;">
+        <div class="card-header bg-primary-subtle " style="background-color:lightblue">Guild "@Model.GuildName"</div>
+        <div>
+            @if (Model.UserAvatarPix != null)
+            {
+                <img height="70" width=" 70" src="@Model.UserAvatarPix">
+            }
+            @if (Model.UserContactNum > 0)
+            {
+                @if (Model.UserContactNum == 1)
                 {
-                    <img height="70" width=" 70" src="@Model.UserAvatarPix">
+                    <a class="card-title mt-1">Has @Model.UserContactNum Candidat</a>
                 }
-                @if (Model.UserContactNum > 0)
+                else
                 {
-                    @if (Model.UserContactNum == 1)
-                    {
-                        <a class="card-title mt-1">Has @Model.UserContactNum Candidat</a>
-                    }
-                    else
-                    {
-                        <a class="card-title mt-1">Has @Model.UserContactNum Candidats</a>
-                    }
+                    <a class="card-title mt-1">Has @Model.UserContactNum Candidats</a>
                 }
-            </div>
-            <div class="card-body text-primary">
-                <h6 class="card-title mt-1">"@Model.NickName"</h6>
-            </div>
-            @if (Model.UrlLink != null)
-            {
-                <a class="link-info" href="@Model.UrlLink" target="_blank">Visit @Model.NickName Info Page</a>
-            }
-            @if (Model.ServerName != null)
-            {
-                <div class="card-body text-primary" style="height: 3rem;">
-                    <h6 class="card-title mt-1">In "@Model.ServerName" Server</h6>
-                </div>
-            }
-            <hr />
-            <div class="box text-primary">@Model.Description</div>
-            @if (Model.UserContactNum >= 1)
-            {
-                <button class="btn btn-info btn-sm" asp-area="" method="post" asp-controller="Pages" asp-action="StarCraftContacts" asp-route-id="@Model.Id">See All Contacts</button>
-            }
-            @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
-            {
-                <hr />
-                <button class="btn btn-outline-danger btn-sm" asp-area="" method="post" asp-controller="Game" asp-action="RemoveGuild" asp-route-id="@Model.Id">Remove Guild</button>
             }
         </div>
-    </form>
+        <div class="card-body text-primary">
+            <h6 class="card-title mt-1">"@Model.NickName"</h6>
+        </div>
+        @if (Model.UrlLink != null)
+        {
+            <a class="link-info" href="@Model.UrlLink" target="_blank">Visit @Model.NickName Info Page</a>
+        }
+        @if (Model.ServerName != null)
+        {
+            <div class="card-body text-primary" style="height: 3rem;">
+                <h6 class="card-title mt-1">In "@Model.ServerName" Server</h6>
+            </div>
+        }
+        <hr />
+        <div class="box text-primary">@Model.Description</div>
+        @if (Model.UserContactNum >= 1)
+        {
+            <a class="btn btn-info btn-sm" asp-area="" method="get" asp-controller="Pages" asp-action="StarCraftContacts" asp-route-id="@Model.Id">See All Contacts</a>
+        }
+        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+        {
+            <hr />
+            <a class="btn btn-outline-danger btn-sm" asp-area="" method="post" asp-controller="Game" asp-action="RemoveGuild" asp-route-id="@Model.Id">Remove Guild</a>
+        }
+    </div>
 </div>
 
 

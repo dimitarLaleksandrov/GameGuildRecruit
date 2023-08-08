@@ -91,7 +91,7 @@ namespace GameGuildRecruit.Web.Controllers
 
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> UserContacts(Guid id)
         {
             try

@@ -54,7 +54,7 @@ namespace GameGuildRecruit.Web.Controllers
 
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> StarCraftContacts(Guid id)
         {
             var gameName = "StarCraft";
@@ -255,7 +255,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> DiabloContacts(Guid id)
         {
             var gameName = "Diablo";
@@ -354,7 +354,7 @@ namespace GameGuildRecruit.Web.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> GooglePlayContacts(Guid id)
         {
             var gameName = "GooglePlay";
