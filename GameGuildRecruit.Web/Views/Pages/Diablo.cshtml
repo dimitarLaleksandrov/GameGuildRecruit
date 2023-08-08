@@ -90,7 +90,7 @@
         @{
             var counter = 0;
         }
-        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "DimitarAleksandrov")
         {
             @if (Model.GuildUsersCount <= 1)
             {
@@ -120,7 +120,7 @@
             </div>          
         }
         <div class="text-center  position-absolute top-0 end-0">
-            @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+            @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "DimitarAleksandrov")
             {
                 <a class="btn btn-outline-info btn-sm" asp-area="" asp-controller="Banner" asp-action="DiabloBanners" asp-route-id="">See All Banners</a>
             }

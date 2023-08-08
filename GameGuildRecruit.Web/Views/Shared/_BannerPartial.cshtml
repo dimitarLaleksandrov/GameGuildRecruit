@@ -12,7 +12,7 @@
             <p class="card-text" style="color:yellow">@Model.Description</p> 
             <a href="@Model.BannerURL" class="btn btn-outline-info" target="_blank">@Model.BannerTitle</a>
         </div>
-        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "DimitarAleksandrov")
         {
             <a class="btn btn-outline-light btn-sm" asp-controller="Banner" asp-action="Edit" asp-route-id="@Model.Id">Edite Banner</a>
         }

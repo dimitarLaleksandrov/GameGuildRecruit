@@ -43,7 +43,7 @@
         {
             <a class="btn btn-info btn-sm" asp-area="" method="get" asp-controller="Pages" asp-action="DiabloContacts" asp-route-id="@Model.Id">See All Contacts</a>
         }
-        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+        @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "DimitarAleksandrov")
         {
             <hr />
             <a class="btn btn-outline-danger btn-sm" asp-area="" method="post" asp-controller="Game" asp-action="RemoveGuild" asp-route-id="@Model.Id">Remove Guild</a>

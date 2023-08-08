@@ -45,7 +45,7 @@
     {
         <div class="outBox">
             <img type="image" height="120" width=" 120" src="@avatar.AvatarPixURL">
-            @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "KirilToshev")
+            @if (SignInManager.IsSignedIn(User) && User.Identity?.Name == "DimitarAleksandrov")
             {
                 <a class="btn btn-outline-light btn-sm" asp-controller="Avatar" asp-action="Edit" asp-route-id="@avatar.Id">Edite Avatar</a>
             }
