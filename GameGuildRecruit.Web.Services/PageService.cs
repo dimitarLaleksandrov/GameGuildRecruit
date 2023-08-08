@@ -141,5 +141,7 @@ namespace GameGuildRecruit.Web.Services
                })
                .ToArrayAsync();
         }
+
+       
     }
 }

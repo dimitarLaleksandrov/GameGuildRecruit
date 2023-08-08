@@ -2,6 +2,7 @@
 using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.ConstrainedExecution;
 
 namespace GameGuildRecruit.Web.Controllers
 {
@@ -10,10 +11,13 @@ namespace GameGuildRecruit.Web.Controllers
 
         private readonly IPageService pageService;
 
-        public PagesController(IPageService pageService)
+        private readonly IGuildRecruitUserService guildRecruitUserService;
+
+
+        public PagesController(IPageService pageService, IGuildRecruitUserService guildRecruitUserService)
         {
             this.pageService = pageService;
-
+            this.guildRecruitUserService = guildRecruitUserService;
         }
 
 
@@ -158,7 +162,7 @@ namespace GameGuildRecruit.Web.Controllers
 
         [HttpGet]
         public async Task<IActionResult> WoWContacts(Guid id)
-        {
+        {    
             var gameName = "WorldOfWarcraft";
 
             var gamePage = await pageService.GetGameByNameAsync(gameName);
@@ -177,7 +181,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 var contactsModels = await pageService.GetUserContactsByIdAsync(id);
 
-                return View(contactsModels);
+                return View();
             }
             catch (Exception)
             {
