@@ -41,9 +41,7 @@
                 <div class="card col-4" style="width: 14rem;">
                     @if (contact.Feedback != null)
                     {
-                        <form class="input-group-sm" asp-controller="Pages" asp-action="GooglePlayGetContactFeedback" asp-route-id="@contact.Id">
-                            <input type="submit" value="See Feedback" class="fs-6 btn btn-outline-info mb-3 p-2" />
-                        </form>
+                        <a class="btn btn-outline-info btn-sm" style="background-size: 100% 100%; background-image:url( /Img/DivBackgound/DB16.jpg)" asp-area="" method="get" asp-controller="Pages" asp-action="GooglePlayGetContactFeedback" asp-route-id="@contact.Id">See Feedback</a>
                     }
                     else
                     {
