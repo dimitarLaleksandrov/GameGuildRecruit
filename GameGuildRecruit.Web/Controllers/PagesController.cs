@@ -11,13 +11,10 @@ namespace GameGuildRecruit.Web.Controllers
 
         private readonly IPageService pageService;
 
-        private readonly IGuildRecruitUserService guildRecruitUserService;
 
-
-        public PagesController(IPageService pageService, IGuildRecruitUserService guildRecruitUserService)
+        public PagesController(IPageService pageService)
         {
             this.pageService = pageService;
-            this.guildRecruitUserService = guildRecruitUserService;
         }
 
 
@@ -181,7 +178,7 @@ namespace GameGuildRecruit.Web.Controllers
             {
                 var contactsModels = await pageService.GetUserContactsByIdAsync(id);
 
-                return View();
+                return View(contactsModels);
             }
             catch (Exception)
             {
