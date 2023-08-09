@@ -24,7 +24,7 @@ namespace GameGuildRecruit.Tests.UnitTests
             SeedDatabase();
         }
 
-        public GuildRecruitUser GuildRecruitUser { get; private set; }
+      
         public Game Game { get; private set; }
 
         public ContactPlayer Contact { get; private set; }
@@ -36,18 +36,8 @@ namespace GameGuildRecruit.Tests.UnitTests
 
         private void SeedDatabase() 
         {
-            GuildRecruitUser = new GuildRecruitUser()
-            {
-                Id = Guid.NewGuid(),
-                NickName = "Avatar",
-                UrlLink = "",
-                GuildName = "Test",
-                ServerName = "DiabloTest",
-                GameName = "Diablo",
-                Description = "TestDescription",
-                UserName = "TestName",
-                UserAvatarPix = "MyPix"
-            };
+            GuildRecruitUser = FakeData.GuildRecruitUsers[0];
+          
             _data.GuildRecruitUsers.Add(GuildRecruitUser);
 
             Game = new Game()

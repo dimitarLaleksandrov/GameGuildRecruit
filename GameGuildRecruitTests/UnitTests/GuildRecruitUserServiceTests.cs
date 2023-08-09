@@ -5,17 +5,17 @@ using Moq.Language.Flow;
 using System.ComponentModel;
 using Moq;
 using Moq.EntityFrameworkCore;
-using static GameGuildRecruit.Tests.UnitTests.DbMockSeedData;
 using static GameGuildRecruit.Tests.UnitTests.DataBaseSeeder;
 using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.Services;
 using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
+using GameGuildRecruit.Tests.Mocks;
 
 namespace GameGuildRecruit.Tests.UnitTests
 {
 
     [TestFixture]
-    public class GuildRecruitUserServiceTests : UnitTestsBase
+    public class GuildRecruitUserServiceTests
     {
 
         private DbContextOptions<GameGuildRecruitDbContext> dbOptions;
@@ -23,7 +23,6 @@ namespace GameGuildRecruit.Tests.UnitTests
 
         private IGuildRecruitUserService guildRecruitUserService;
 
-        private IReturnsResult<GameGuildRecruitDbContext> dbMock;
 
 
         [OneTimeSetUp]
@@ -57,32 +56,11 @@ namespace GameGuildRecruit.Tests.UnitTests
             //      .Setup(db => db.GuildRecruitUsers)
             //      .ReturnsDbSet(guildUsers);
 
+            var expected = FakeData.GuildRecruitUsers[0];
 
-     
-             
-            string existingUserName = GuildRecruitUser.UserName!;
+            var result = await guildRecruitUserService.GetUserByUserNameAsync(expected.UserName!);
 
-            var user = dbContext.GuildRecruitUsers
-                                .Where(u => u.UserName == existingUserName)
-                                .Select(u => new GuildRecruitUserViewModel() 
-                                {
-                                    Id = u.Id,
-                                    NickName = u.NickName,
-                                    UrlLink = u.UrlLink,
-                                    GuildName = u.GuildName,
-                                    ServerName = u.ServerName,
-                                    GameName = u.GameName,
-                                    Description = u.Description,
-                                    UserName = u.UserName,
-                                    UserAvatarPix = u.UserAvatarPix
-                                });
-
-
-
-            var result = await guildRecruitUserService.GetUserByUserNameAsync(existingUserName);
-
-            Assert.AreEqual(result, user);
-
+            Assert.That(expected.Id, Is.EqualTo(result!.Id));
 
         }
 
