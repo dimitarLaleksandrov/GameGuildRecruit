@@ -42,20 +42,12 @@ namespace GameGuildRecruit.Tests.UnitTests
 
         }
 
-        [SetUp]
-        public void Setup() 
-        { 
-
-        }
 
 
         [Test]
         public async Task GetUserByUserNameAsyncShouldReturnUser()
         {
-            //dbMock = new Mock<GameGuildRecruitDbContext>()
-            //      .Setup(db => db.GuildRecruitUsers)
-            //      .ReturnsDbSet(guildUsers);
-
+           
             var expected = FakeData.GuildRecruitUsers[0];
 
             var result = await guildRecruitUserService.GetUserByUserNameAsync(expected.UserName!);
