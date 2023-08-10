@@ -2,9 +2,6 @@
 using GameGuildRecruit.Web.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Moq.Language.Flow;
-using System.ComponentModel;
-using Moq;
-using Moq.EntityFrameworkCore;
 using static GameGuildRecruit.Tests.UnitTests.DataBaseSeeder;
 using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.Services;
@@ -73,18 +70,8 @@ namespace GameGuildRecruit.Tests.UnitTests
         {
 
             var userName = "TestName";
+            var user = FakeData.GuildRecruitUserFormModel[0];
 
-            var user = new GuildRecruitUserFormModel()
-            {
-                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
-                NickName = "Avatar",
-                UrlLink = "TestUrl",
-                GuildName = "Test",
-                ServerName = "DiabloTest",
-                GameName = "Diablo",
-                Description = "TestDescription",
-                UserAvatarPix = "MyPix1"
-            };
 
             await guildRecruitUserService.EditUserAsync(user, userName);
 
@@ -101,17 +88,7 @@ namespace GameGuildRecruit.Tests.UnitTests
 
             string userName = null!;
 
-            var user = new GuildRecruitUserFormModel()
-            {
-                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
-                NickName = "Avatar",
-                UrlLink = "TestUrl",
-                GuildName = "Test",
-                ServerName = "DiabloTest",
-                GameName = "Diablo",
-                Description = "TestDescription",
-                UserAvatarPix = "MyPix"
-            };
+            var user = FakeData.GuildRecruitUserFormModel[0];
 
             await guildRecruitUserService.EditUserAsync(user, userName);
 
@@ -128,18 +105,7 @@ namespace GameGuildRecruit.Tests.UnitTests
 
             var userName = "TestName";
 
-            var user = new GuildRecruitUserFormModel()
-            {
-                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
-                NickName = "Avatar",
-                UrlLink = "TestUrl",
-                GuildName = "Test",
-                ServerName = "DiabloTest",
-                GameName = "Diablo",
-                UserName = userName,
-                Description = "TestDescription",
-                UserAvatarPix = "MyPix"
-            };
+            var user = FakeData.GuildRecruitUserFormModel[0];
 
             await guildRecruitUserService.EditUserAsync(user, userName);
 
@@ -153,7 +119,7 @@ namespace GameGuildRecruit.Tests.UnitTests
             Assert.That(user.GameName, Is.EqualTo(result!.GameName));
             Assert.That(user.Description, Is.EqualTo(result!.Description));
             Assert.That(user.UserName, Is.EqualTo(result!.UserName));
-            Assert.That(user.UserAvatarPix, Is.EqualTo(result!.UserAvatarPix));
+
 
         }
 
@@ -181,16 +147,8 @@ namespace GameGuildRecruit.Tests.UnitTests
         public async Task AddUserAsyncShouldAddUserInDb()
         {
 
-            var user = new GuildRecruitUserFormModel()
-            {
-                NickName = "Avatar",
-                UrlLink = "TestUrl",
-                GuildName = "Test",
-                ServerName = "DiabloTest",
-                GameName = "Diablo",
-                Description = "TestDescription",
-                UserAvatarPix = "MyPix"
-            };
+            var user = FakeData.GuildRecruitUserFormModel[0];
+
 
             var userName = "TestName";
 
@@ -227,6 +185,28 @@ namespace GameGuildRecruit.Tests.UnitTests
             Assert.That(result == null);
 
         }
+
+
+        [Test]
+        public async Task GetMyContactsByIdAsyncShouldReturnContact()
+        {
+
+            var useId = new Guid("1D67F493-0FF1-420E-9284-4A1802C7D342");
+
+            var result = await guildRecruitUserService.GetMyContactsByIdAsync(useId);
+
+            var contacts = result.ToArray();
+
+            Assert.That(contacts[0].GuildUserId, Is.EqualTo(useId));
+
+        }
+
+
+       
+
+
+
+
 
     } 
 

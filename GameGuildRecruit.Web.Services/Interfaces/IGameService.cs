@@ -21,11 +21,7 @@ namespace GameGuildRecruit.Web.Services.Interfaces
 
         Task EditGameAsync(GameFormModel gameModel);
 
-
         Task RemoveGameAsync(GameViewModel game);
-
-
-
 
 
     }
