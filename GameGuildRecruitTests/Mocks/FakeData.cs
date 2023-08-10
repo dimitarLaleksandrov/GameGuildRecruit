@@ -10,7 +10,7 @@ namespace GameGuildRecruit.Tests.Mocks
         {
             new GuildRecruitUser()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
                 NickName = "Avatar",
                 UrlLink = "TestUrl",
                 GuildName = "Test",
@@ -23,7 +23,7 @@ namespace GameGuildRecruit.Tests.Mocks
 
              new GuildRecruitUser()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("4BFC818A-EBCD-459A-B1B9-756AC08F0EFA"),
                 NickName = "Avatar1",
                 UrlLink = "TestUrl1",
                 GuildName = "Test1",
@@ -36,7 +36,7 @@ namespace GameGuildRecruit.Tests.Mocks
 
               new GuildRecruitUser()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("01C58ED3-63E5-41A5-BA3D-ACC4AFEC36FE"),
                 NickName = "Avatar2",
                 UrlLink = "TestUrl2",
                 GuildName = "Test2",
@@ -53,11 +53,11 @@ namespace GameGuildRecruit.Tests.Mocks
         {
             new ContactPlayer()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("01C58ED3-63E5-41A5-BA3D-ACC4AFEC36FE"),
                 NickName = "TestName",
                 Description = "TestDescription",
                 UrlLink = "Test",
-                GuildUserId = Guid.NewGuid(),
+                GuildUserId = new Guid("5D67F493-07F1-420E-9284-4A1802C7D342"),
                 UserNickName = "TestName",
                 GuildName = "TestGuildName",
                 ServerName = "TestServerName",
@@ -68,11 +68,11 @@ namespace GameGuildRecruit.Tests.Mocks
 
              new ContactPlayer()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("4BFC818A-EBCD-459A-B1B9-756AC08F0EFA"),
                 NickName = "TestName1",
                 Description = "TestDescription1",
                 UrlLink = "Test1",
-                GuildUserId = Guid.NewGuid(),
+                GuildUserId = new Guid("5767F493-0FF1-420E-9284-4A1802C7D342"),
                 UserNickName = "TestName1",
                 GuildName = "TestGuildName1",
                 ServerName = "TestServerName1",
@@ -83,11 +83,11 @@ namespace GameGuildRecruit.Tests.Mocks
 
               new ContactPlayer()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
                 NickName = "TestName2",
                 Description = "TestDescription2",
                 UrlLink = "Test2",
-                GuildUserId = Guid.NewGuid(),
+                GuildUserId = new Guid("1D67F493-0FF1-420E-9284-4A1802C7D342"),
                 UserNickName = "TestName2",
                 GuildName = "TestGuildName2",
                 ServerName = "TestServerName2",
@@ -102,7 +102,7 @@ namespace GameGuildRecruit.Tests.Mocks
         {
             new Game()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
                 GameName = "WoW",
                 GameSlideImageURL = "Test",
                 GameLogoImageURL = "Test",
@@ -111,7 +111,7 @@ namespace GameGuildRecruit.Tests.Mocks
 
               new Game()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("4BFC818A-EBCD-459A-B1B9-756AC08F0EFA"),
                 GameName = "WoW1",
                 GameSlideImageURL = "Test1",
                 GameLogoImageURL = "Test1",
@@ -120,7 +120,7 @@ namespace GameGuildRecruit.Tests.Mocks
 
                 new Game()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("01C58ED3-63E5-41A5-BA3D-ACC4AFEC36FE"),
                 GameName = "WoW2",
                 GameSlideImageURL = "Test2",
                 GameLogoImageURL = "Test2",
@@ -132,7 +132,7 @@ namespace GameGuildRecruit.Tests.Mocks
         {
             new Banner()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
                 GameName = "TestGameName",
                 BannerImageURL = "TestBannerImageURL",
                 BannerTitle = "TestBannerTitle",
@@ -142,7 +142,7 @@ namespace GameGuildRecruit.Tests.Mocks
 
             new Banner()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("01C58ED3-63E5-41A5-BA3D-ACC4AFEC36FE"),
                 GameName = "TestGameName1",
                 BannerImageURL = "TestBannerImageURL1",
                 BannerTitle = "TestBannerTitle1",
@@ -152,7 +152,7 @@ namespace GameGuildRecruit.Tests.Mocks
 
             new Banner()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("01C588D3-63E5-41A5-BA3D-ACC4AFEC36FE"),
                 GameName = "TestGameName2",
                 BannerImageURL = "TestBannerImageURL2",
                 BannerTitle = "TestBannerTitle2",
@@ -165,21 +165,21 @@ namespace GameGuildRecruit.Tests.Mocks
         {
             new Avatar()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("01C588D3-63E5-41A5-BA3D-ACC4AFEC36FE"),
                 Name = "TestName",
                 AvatarPixURL = "TestAvatarPixURL"
             },
 
              new Avatar()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("01C58ED3-63E5-41A5-BA3D-ACC4AFEC36FE"),
                 Name = "TestName1",
                 AvatarPixURL = "TestAvatarPixURL1"
             },
 
               new Avatar()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
                 Name = "TestName2",
                 AvatarPixURL = "TestAvatarPixURL2"
             }

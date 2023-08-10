@@ -24,7 +24,6 @@ namespace GameGuildRecruit.Tests.UnitTests
         private IGuildRecruitUserService guildRecruitUserService;
 
 
-
         [OneTimeSetUp]
         public void OneTimeSetUp()
         {
@@ -56,7 +55,179 @@ namespace GameGuildRecruit.Tests.UnitTests
 
         }
 
-       
+        [Test]
+        public async Task GetUserByUserNameAsyncShouldReturnNull()
+        {
+
+            string expected = null!;
+
+            var result = await guildRecruitUserService.GetUserByUserNameAsync(expected);
+
+            Assert.That(result == null);
+
+        }
+
+
+        [Test]
+        public async Task EditUserAsyncShouldEditUser()
+        {
+
+            var userName = "TestName";
+
+            var user = new GuildRecruitUserFormModel()
+            {
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
+                NickName = "Avatar",
+                UrlLink = "TestUrl",
+                GuildName = "Test",
+                ServerName = "DiabloTest",
+                GameName = "Diablo",
+                Description = "TestDescription",
+                UserAvatarPix = "MyPix1"
+            };
+
+            await guildRecruitUserService.EditUserAsync(user, userName);
+
+            var result = await guildRecruitUserService.GetUserByUserNameAsync(userName);
+
+
+            Assert.That(user.Id, Is.EqualTo(result!.Id));
+
+        }
+
+        [Test]
+        public async Task EditUserAsyncShouldReturnNull()
+        {
+
+            string userName = null!;
+
+            var user = new GuildRecruitUserFormModel()
+            {
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
+                NickName = "Avatar",
+                UrlLink = "TestUrl",
+                GuildName = "Test",
+                ServerName = "DiabloTest",
+                GameName = "Diablo",
+                Description = "TestDescription",
+                UserAvatarPix = "MyPix"
+            };
+
+            await guildRecruitUserService.EditUserAsync(user, userName);
+
+            var result = await guildRecruitUserService.GetUserByUserNameAsync(userName);
+
+
+            Assert.That(result == null);
+
+        }
+
+        [Test]
+        public async Task EditUserAsyncShouldReturnUserProp()
+        {
+
+            var userName = "TestName";
+
+            var user = new GuildRecruitUserFormModel()
+            {
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
+                NickName = "Avatar",
+                UrlLink = "TestUrl",
+                GuildName = "Test",
+                ServerName = "DiabloTest",
+                GameName = "Diablo",
+                UserName = userName,
+                Description = "TestDescription",
+                UserAvatarPix = "MyPix"
+            };
+
+            await guildRecruitUserService.EditUserAsync(user, userName);
+
+            var result = await guildRecruitUserService.GetUserByUserNameAsync(userName);
+
+            Assert.That(user.Id, Is.EqualTo(result!.Id));
+            Assert.That(user.NickName, Is.EqualTo(result!.NickName));
+            Assert.That(user.UrlLink, Is.EqualTo(result!.UrlLink));
+            Assert.That(user.GuildName, Is.EqualTo(result!.GuildName));
+            Assert.That(user.ServerName, Is.EqualTo(result!.ServerName));
+            Assert.That(user.GameName, Is.EqualTo(result!.GameName));
+            Assert.That(user.Description, Is.EqualTo(result!.Description));
+            Assert.That(user.UserName, Is.EqualTo(result!.UserName));
+            Assert.That(user.UserAvatarPix, Is.EqualTo(result!.UserAvatarPix));
+
+        }
+
+        [Test]
+        public async Task GetUserByUserNameAsyncShouldReturnUserProp()
+        {
+
+            var expected = FakeData.GuildRecruitUsers[0];
+
+            var result = await guildRecruitUserService.GetUserByUserNameAsync(expected.UserName!);
+
+            Assert.That(expected.Id, Is.EqualTo(result!.Id));
+            Assert.That(expected.NickName, Is.EqualTo(result!.NickName));
+            Assert.That(expected.UrlLink, Is.EqualTo(result!.UrlLink));
+            Assert.That(expected.GuildName, Is.EqualTo(result!.GuildName));
+            Assert.That(expected.ServerName, Is.EqualTo(result!.ServerName));
+            Assert.That(expected.GameName, Is.EqualTo(result!.GameName));
+            Assert.That(expected.Description, Is.EqualTo(result!.Description));
+            Assert.That(expected.UserName, Is.EqualTo(result!.UserName));
+            Assert.That(expected.UserAvatarPix, Is.EqualTo(result!.UserAvatarPix));
+
+        }
+
+        [Test]
+        public async Task AddUserAsyncShouldAddUserInDb()
+        {
+
+            var user = new GuildRecruitUserFormModel()
+            {
+                NickName = "Avatar",
+                UrlLink = "TestUrl",
+                GuildName = "Test",
+                ServerName = "DiabloTest",
+                GameName = "Diablo",
+                Description = "TestDescription",
+                UserAvatarPix = "MyPix"
+            };
+
+            var userName = "TestName";
+
+            var id = new Guid("5D67F493-07F1-420E-9284-4A1802C7D342");
+
+            await guildRecruitUserService.AddUserAsync(user, userName, id);
+
+            Assert.That(dbContext.GuildRecruitUsers.Count() == 4);
+
+        }
+
+        [Test]
+        public async Task GetUserByUserNameForIdAsyncShouldReturnUser()
+        {
+
+            var userName = "TestName1";
+            var id = new Guid("4BFC818A-EBCD-459A-B1B9-756AC08F0EFA");
+
+            var result = await guildRecruitUserService.GetUserByUserNameForIdAsync(userName);
+
+            Assert.That(result.Id, Is.EqualTo(id));
+
+        }
+
+        [Test]
+        public async Task GetUserByUserNameForIdAsyncShouldReturnNull()
+        {
+
+            var userName = "Tes";
+            var id = new Guid("4BFC818A-EBCD-459A-B1B9-756AC08F0EFA");
+
+            var result = await guildRecruitUserService.GetUserByUserNameForIdAsync(userName);
+
+            Assert.That(result == null);
+
+        }
+
     } 
 
 }
