@@ -20,7 +20,7 @@ namespace GameGuildRecruit.Tests.UnitTests
             dbContext.GuildRecruitUsers.AddRange(FakeData.GuildRecruitUsers.ToArray());
 
             dbContext.ContactPlayers.AddRange(FakeData.ContactPlayers.ToArray());
-
+   
             dbContext.Games.AddRange(FakeData.Games.ToArray());
 
             dbContext.Banners.AddRange(FakeData.Banners.ToArray());

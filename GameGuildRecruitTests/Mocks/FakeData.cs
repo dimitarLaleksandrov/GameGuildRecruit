@@ -1,5 +1,7 @@
 ﻿using GameGuildRecruit.Web.Data.Models;
+using GameGuildRecruit.Web.ViewModels.Banner;
 using GameGuildRecruit.Web.ViewModels.ContactPlayer;
+using GameGuildRecruit.Web.ViewModels.Game;
 using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 
 namespace GameGuildRecruit.Tests.Mocks
@@ -294,6 +296,66 @@ namespace GameGuildRecruit.Tests.Mocks
             }
         };
 
+        public static List<GameFormModel> GameFormModel => new List<GameFormModel>()
+        {
+            new GameFormModel()
+            {
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
+                GameName = "WoW",
+                GameSlideImageURL = "Test",
+                GameLogoImageURL = "Test",
+                IsGameHasView = false
+            },
+
+              new GameFormModel()
+            {
+                Id = new Guid("4BFC818A-EBCD-459A-B1B9-756AC08F0EFA"),
+                GameName = "WoW1",
+                GameSlideImageURL = "Test1",
+                GameLogoImageURL = "Test1",
+                IsGameHasView = false
+            },
+
+                new GameFormModel()
+            {
+                Id = new Guid("01C58ED3-63E5-41A5-BA3D-ACC4AFEC36FE"),
+                GameName = "WoW2",
+                GameSlideImageURL = "Test2",
+                GameLogoImageURL = "Test2",
+                IsGameHasView = false
+            }
+        };
+
+        public static List<GameViewModel> GameViewModel => new List<GameViewModel>()
+        {
+            new GameViewModel()
+            {
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
+                GameName = "WoW",
+                GameSlideImageURL = "Test",
+                GameLogoImageURL = "Test",
+                IsGameHasView = false
+            },
+
+              new GameViewModel()
+            {
+                Id = new Guid("4BFC818A-EBCD-459A-B1B9-756AC08F0EFA"),
+                GameName = "WoW1",
+                GameSlideImageURL = "Test1",
+                GameLogoImageURL = "Test1",
+                IsGameHasView = false
+            },
+
+                new GameViewModel()
+            {
+                Id = new Guid("01C58ED3-63E5-41A5-BA3D-ACC4AFEC36FE"),
+                GameName = "WoW2",
+                GameSlideImageURL = "Test2",
+                GameLogoImageURL = "Test2",
+                IsGameHasView = false
+            }
+        };
+
         public static List<Banner> Banners => new List<Banner>()
         {
             new Banner()
@@ -326,6 +388,73 @@ namespace GameGuildRecruit.Tests.Mocks
                 BannerURL = "TestBannerURL2"
             }
         };
+
+        public static List<BannerFormModel> BannerFormModels => new List<BannerFormModel>()
+        {
+            new BannerFormModel()
+            {
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
+                GameName = "TestGameName",
+                BannerImageURL = "TestBannerImageURL",
+                BannerTitle = "TestBannerTitle",
+                Description = "TestDescription",
+                BannerURL = "TestBannerURL"
+            },
+
+            new BannerFormModel()
+            {
+                Id = new Guid("01C58ED3-63E5-41A5-BA3D-ACC4AFEC36FE"),
+                GameName = "TestGameName1",
+                BannerImageURL = "TestBannerImageURL1",
+                BannerTitle = "TestBannerTitle1",
+                Description = "TestDescription1",
+                BannerURL = "TestBannerURL1"
+            },
+
+            new BannerFormModel()
+            {
+                Id = new Guid("01C588D3-63E5-41A5-BA3D-ACC4AFEC36FE"),
+                GameName = "TestGameName2",
+                BannerImageURL = "TestBannerImageURL2",
+                BannerTitle = "TestBannerTitle2",
+                Description = "TestDescription2",
+                BannerURL = "TestBannerURL2"
+            }
+        };
+
+        public static List<BannerViewModel> BannerViewModel => new List<BannerViewModel>()
+        {
+            new BannerViewModel()
+            {
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
+                GameName = "TestGameName",
+                BannerImageURL = "TestBannerImageURL",
+                BannerTitle = "TestBannerTitle",
+                Description = "TestDescription",
+                BannerURL = "TestBannerURL"
+            },
+
+            new BannerViewModel()
+            {
+                Id = new Guid("01C58ED3-63E5-41A5-BA3D-ACC4AFEC36FE"),
+                GameName = "TestGameName1",
+                BannerImageURL = "TestBannerImageURL1",
+                BannerTitle = "TestBannerTitle1",
+                Description = "TestDescription1",
+                BannerURL = "TestBannerURL1"
+            },
+
+            new BannerViewModel()
+            {
+                Id = new Guid("01C588D3-63E5-41A5-BA3D-ACC4AFEC36FE"),
+                GameName = "TestGameName2",
+                BannerImageURL = "TestBannerImageURL2",
+                BannerTitle = "TestBannerTitle2",
+                Description = "TestDescription2",
+                BannerURL = "TestBannerURL2"
+            }
+        };
+
 
         public static List<Avatar> Avatars => new List<Avatar>()
         {
