@@ -1,4 +1,5 @@
 ﻿using GameGuildRecruit.Web.Data.Models;
+using GameGuildRecruit.Web.ViewModels.Avatar;
 using GameGuildRecruit.Web.ViewModels.Banner;
 using GameGuildRecruit.Web.ViewModels.ContactPlayer;
 using GameGuildRecruit.Web.ViewModels.Game;
@@ -478,6 +479,60 @@ namespace GameGuildRecruit.Tests.Mocks
                 Name = "TestName2",
                 AvatarPixURL = "TestAvatarPixURL2"
             }
+
+
+        };
+
+        public static List<AvatarFormModel> AvatarFormModel => new List<AvatarFormModel>()
+        {
+            new AvatarFormModel()
+            {
+                Id = new Guid("01C588D3-63E5-41A5-BA3D-ACC4AFEC36FE"),
+                Name = "TestName",
+                AvatarPixURL = "TestAvatarPixURL"
+            },
+
+             new AvatarFormModel()
+            {
+                Id = new Guid("01C58ED3-63E5-41A5-BA3D-ACC4AFEC36FE"),
+                Name = "TestName1",
+                AvatarPixURL = "TestAvatarPixURL1"
+            },
+
+              new AvatarFormModel()
+            {
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
+                Name = "TestName2",
+                AvatarPixURL = "TestAvatarPixURL2"
+            }
+
+
+        };
+
+        public static List<AvatarViewModel> AvatarViewModel => new List<AvatarViewModel>()
+        {
+            new AvatarViewModel()
+            {
+                Id = new Guid("01C588D3-63E5-41A5-BA3D-ACC4AFEC36FE"),
+                Name = "TestName",
+                AvatarPixURL = "TestAvatarPixURL"
+            },
+
+             new AvatarViewModel()
+            {
+                Id = new Guid("01C58ED3-63E5-41A5-BA3D-ACC4AFEC36FE"),
+                Name = "TestName1",
+                AvatarPixURL = "TestAvatarPixURL1"
+            },
+
+              new AvatarViewModel()
+            {
+                Id = new Guid("5D67F493-0FF1-420E-9284-4A1802C7D342"),
+                Name = "TestName2",
+                AvatarPixURL = "TestAvatarPixURL2"
+            }
+
+
         };
     }
 }
