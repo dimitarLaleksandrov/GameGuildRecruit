@@ -3,7 +3,6 @@ using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.Services;
 using Microsoft.EntityFrameworkCore;
 using static GameGuildRecruit.Tests.UnitTests.DataBaseSeeder;
-using GameGuildRecruit.Web.ViewModels.Game;
 using GameGuildRecruit.Web.ViewModels.Banner;
 using GameGuildRecruit.Tests.Mocks;
 

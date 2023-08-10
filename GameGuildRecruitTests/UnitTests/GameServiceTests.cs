@@ -5,8 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using static GameGuildRecruit.Tests.UnitTests.DataBaseSeeder;
 using GameGuildRecruit.Tests.Mocks;
 using GameGuildRecruit.Web.ViewModels.Game;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using GameGuildRecruit.Web.Data.Migrations;
+
 
 namespace GameGuildRecruit.Tests.UnitTests
 {
