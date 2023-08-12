@@ -182,7 +182,7 @@ namespace GameGuildRecruit.Web.Controllers
 
 
         [Authorize]
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> RemoveGuild(Guid id)
         {
             var userModel = await contactService.GetUserByIdAsync(id);
