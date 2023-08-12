@@ -3,8 +3,6 @@ using GameGuildRecruit.Web.Data.Models;
 using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.ContactPlayer;
 using GameGuildRecruit.Web.ViewModels.Game;
-using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameGuildRecruit.Web.Services

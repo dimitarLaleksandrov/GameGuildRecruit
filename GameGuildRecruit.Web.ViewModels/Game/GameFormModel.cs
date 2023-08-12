@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using static GameGuildRecruit.Web.Common.EntityValidations.Game;
 
 namespace GameGuildRecruit.Web.ViewModels.Game

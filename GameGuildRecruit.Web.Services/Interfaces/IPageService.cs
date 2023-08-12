@@ -1,5 +1,4 @@
-﻿using GameGuildRecruit.Web.ViewModels.Banner;
-using GameGuildRecruit.Web.ViewModels.ContactPlayer;
+﻿using GameGuildRecruit.Web.ViewModels.ContactPlayer;
 using GameGuildRecruit.Web.ViewModels.Game;
 using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 

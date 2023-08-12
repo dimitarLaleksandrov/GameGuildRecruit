@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Authorization;
 using GameGuildRecruit.Web.ViewModels.Avatar;
 
 
-
 namespace GameGuildRecruit.Web.Controllers
 {
     public class AvatarController : BaseController

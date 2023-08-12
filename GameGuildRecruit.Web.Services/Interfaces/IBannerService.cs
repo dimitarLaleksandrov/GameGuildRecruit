@@ -1,8 +1,4 @@
-﻿
-
-using GameGuildRecruit.Web.ViewModels.Banner;
-using GameGuildRecruit.Web.ViewModels.Game;
-using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
+﻿using GameGuildRecruit.Web.ViewModels.Banner;
 
 namespace GameGuildRecruit.Web.Services.Interfaces
 {

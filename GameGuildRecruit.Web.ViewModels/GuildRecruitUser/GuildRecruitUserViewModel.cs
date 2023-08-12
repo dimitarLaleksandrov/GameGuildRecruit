@@ -1,8 +1,6 @@
 ﻿
-
-using GameGuildRecruit.Web.Common.Enums;
-
 namespace GameGuildRecruit.Web.ViewModels.GuildRecruitUser
+
 {
     public class GuildRecruitUserViewModel
     {

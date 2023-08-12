@@ -1,5 +1,4 @@
-﻿using GameGuildRecruit.Web.Common.Enums;
-using GameGuildRecruit.Web.ViewModels.ContactPlayer;
+﻿using GameGuildRecruit.Web.ViewModels.ContactPlayer;
 using System.ComponentModel.DataAnnotations;
 using static GameGuildRecruit.Web.Common.EntityValidations.GuildRecruitUser;
 

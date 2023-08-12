@@ -1,6 +1,4 @@
-﻿
-using GameGuildRecruit.Web.ViewModels.ContactPlayer;
-using GameGuildRecruit.Web.ViewModels.Game;
+﻿using GameGuildRecruit.Web.ViewModels.Game;
 
 
 namespace GameGuildRecruit.Web.Services.Interfaces

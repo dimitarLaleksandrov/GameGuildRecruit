@@ -1,7 +1,4 @@
-﻿
-
-using GameGuildRecruit.Web.ViewModels.Avatar;
-using GameGuildRecruit.Web.ViewModels.Banner;
+﻿using GameGuildRecruit.Web.ViewModels.Avatar;
 using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 
 namespace GameGuildRecruit.Web.Services.Interfaces

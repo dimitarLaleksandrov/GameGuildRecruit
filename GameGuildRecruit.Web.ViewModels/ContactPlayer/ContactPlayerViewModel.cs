@@ -1,6 +1,5 @@
-﻿
+﻿namespace GameGuildRecruit.Web.ViewModels.ContactPlayer
 
-namespace GameGuildRecruit.Web.ViewModels.ContactPlayer
 {
     public class ContactPlayerViewModel
     {

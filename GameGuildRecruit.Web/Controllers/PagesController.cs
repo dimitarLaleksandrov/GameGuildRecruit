@@ -2,7 +2,6 @@
 using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.GuildRecruitUser;
 using Microsoft.AspNetCore.Mvc;
-using System.Runtime.ConstrainedExecution;
 
 namespace GameGuildRecruit.Web.Controllers
 {

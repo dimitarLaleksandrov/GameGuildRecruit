@@ -1,6 +1,4 @@
-﻿
-
-using GameGuildRecruit.Web.Data;
+﻿using GameGuildRecruit.Web.Data;
 using GameGuildRecruit.Web.Services.Interfaces;
 using GameGuildRecruit.Web.ViewModels.Game;
 using Microsoft.EntityFrameworkCore;
