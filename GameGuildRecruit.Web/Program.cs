@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using GameGuildRecruit.Web.Services;
 using GameGuildRecruit.Web.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using GameGuildRecruit.Web.Hubs;
 
 namespace GameGuildRecruit.Web
 {
@@ -50,6 +51,8 @@ namespace GameGuildRecruit.Web
 
             builder.Services.AddScoped<IAvatarService, AvatarService>();
 
+            builder.Services.AddSignalR();
+
 
 
 
@@ -88,6 +91,8 @@ namespace GameGuildRecruit.Web
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
+
+            app.MapHub<ChatHub>("/chatHub");
 
             app.Run();
         }
